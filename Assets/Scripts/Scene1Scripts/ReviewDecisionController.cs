@@ -21,6 +21,12 @@ public class ReviewDecisionController : MonoBehaviour
     [Header("Correct decision")]
     public bool isValid;
 
+    [Header("Decision manager")]
+    public DecisionManager decisionManager;
+
+    [Header("Time manager")]
+    public TimeManager timeManager;
+
     private bool decisionMade = false;
 
     public void Admit()
@@ -29,15 +35,27 @@ public class ReviewDecisionController : MonoBehaviour
         decisionMade = true;
 
         // ---- GAME LOGIC ----
+        
         if (isValid)
         {
-            GameManager.Instance.DecideStudentCorrectly();
+            // adding the null check so we can run scene 1 on its own
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.DecideStudentCorrectly();
+            }
+            
+        } else
+        {
+            // else: incorrect admission (no increment, show message)
+            decisionManager.ShowRedIndicator();
         }
-        // else: incorrect admission (no increment)
 
         ResetPapers();
 
         student.Admit();
+
+        // advance time
+        timeManager.AdvanceTime();
     }
 
     public void Deny()
@@ -48,13 +66,22 @@ public class ReviewDecisionController : MonoBehaviour
         // ---- GAME LOGIC ----
         if (!isValid)
         {
-            GameManager.Instance.DecideStudentCorrectly();
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.DecideStudentCorrectly();
+            }
+        } else
+        {
+            // else: incorrect admission (no increment, show message)
+            decisionManager.ShowRedIndicator();
         }
-        // else: incorrect admission (no increment)
 
         ResetPapers();
 
         student.Deny();
+
+        // advance time
+        timeManager.AdvanceTime();
     }
 
     private void ResetPapers()

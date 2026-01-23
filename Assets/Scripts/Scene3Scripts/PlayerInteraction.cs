@@ -44,6 +44,8 @@ public class PlayerInteraction : MonoBehaviour
 
         int totalMoney = GameManager.Instance.totalMoney;
 
+        // deductions (if we want to add it later) $"Deductions: -${Mathf.Max(0, 5 * deductStudents)}\n" +
+
         paycheckText.text =
             $"Correct Admissions: {correctToday}\n" +
             $"Reported Students: {reportedToday}\n" +
