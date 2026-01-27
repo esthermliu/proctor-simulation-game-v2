@@ -44,6 +44,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -7752701061509794690}
     m_Position: {x: 400, y: 80, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 9029442160306022610}
+    m_Position: {x: 435, y: 145, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -110,7 +113,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Student1EmilyChen_0
+  m_Name: Student1EmilyChen
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Admit
@@ -187,6 +190,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 587f4c336f86d48cea72ecc0910f0f2a, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &9029442160306022610
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BobEntranceV2
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 1cdf57723f98c4ea98305f10cbc7bb3e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
