@@ -36,17 +36,10 @@ public class StudentAnimationController : MonoBehaviour
         if (nextStudent != null)
         {
             nextStudent.SetActive(true);
-
-            // Trigger entrance animation
-            Animator anim = nextStudent.GetComponent<Animator>();
-            if (anim != null)
-            {
-                anim.SetTrigger("Entrance");
-            }
         } else
         {
             // at this point, we load next scene
-            Debug.Log("ON EXIT FINISHED CALLED");
+            Debug.Log("LOADING NEXT SCENE");
             SceneManager.LoadScene(scene2Name);
         }
     }
