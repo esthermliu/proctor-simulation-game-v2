@@ -93,8 +93,8 @@ public class ReviewDecisionController : MonoBehaviour
         reviewFolderEnlarged.SetActive(false);
         examGuideEnlarged.SetActive(false);
 
-        // get the next misconduct review sheet
-        reviewFolder.SetActive(false);
+        // get the next misconduct review sheet (if there isn't another one, keep the latest one)
+        reviewFolder.SetActive(false); 
         nextReviewFolderSmall.SetActive(true);
 
         //reviewFolder.SetActive(true);
