@@ -29,8 +29,12 @@ public class ReviewFolder : MonoBehaviour
     [Header("Correct decision")]
     public bool isValid;
 
+    // TODO: remove Decision Manager if notification manager is done being set up
     [Header("Decision manager")]
     public DecisionManager decisionManager;
+
+    [Header("Notification manager")]
+    public NotificationManager notificationManager;
 
     [Header("Time manager")]
     public TimeManager timeManager;
@@ -55,6 +59,10 @@ public class ReviewFolder : MonoBehaviour
         if (decisionMade) return;
         decisionMade = true;
 
+        // reset all papers + notifications
+        ResetPapers();
+        notificationManager.ResetIncorrectIcons();
+
         // ---- GAME LOGIC ----
 
         if (isValid)
@@ -68,25 +76,16 @@ public class ReviewFolder : MonoBehaviour
         }
         else
         {
-            // else: incorrect admission (no increment, show message)
-            decisionManager.ShowRedIndicator();
+            // else: incorrect admission (no increment, show incorrect icon)
+            //decisionManager.ShowRedIndicator();
+            notificationManager.ShowIncorrectIcon();
         }
 
-        ResetPapers();
+        // increment notification manager student number to keep track of corresponding incorrect icon
+        notificationManager.IncrementStudent();
 
         // play the admit animation at bottom of screen
         student.Admit();
-
-        // TODO: Get the small green icon on the top part of screen to show
-        // connect the Green character's script to here
-        // On admit, we will call the showGreenCharacter() function or smth
-        // this function will cause the green guy to activate AND deactivate
-        // the gray guy
-        // then, the function will set the animation trigger "GreenWalkRight", which
-        // will cause the green guy to start walking off screen
-        // at the end of the green guy's animation, add an animation event, which
-        // is linked to another GreenCharacter script function called hideGreenCharacter()
-        // which will deactivate the character
 
         // play the green character animation at top of screen
         studentTopIcons.ShowGreenCharacter();
@@ -100,6 +99,10 @@ public class ReviewFolder : MonoBehaviour
         if (decisionMade) return;
         decisionMade = true;
 
+        // reset all papers + notifications
+        ResetPapers();
+        notificationManager.ResetIncorrectIcons();
+
         // ---- GAME LOGIC ----
         if (!isValid)
         {
@@ -110,11 +113,13 @@ public class ReviewFolder : MonoBehaviour
         }
         else
         {
-            // else: incorrect admission (no increment, show message)
-            decisionManager.ShowRedIndicator();
+            // else: incorrect admission (no increment, show incorrect icon)
+            //decisionManager.ShowRedIndicator();
+            notificationManager.ShowIncorrectIcon();
         }
 
-        ResetPapers();
+        // increment notification manager student number to keep track of corresponding incorrect icon
+        notificationManager.IncrementStudent();
 
         // play the deny animation at bottom of screen
         student.Deny();
@@ -238,12 +243,13 @@ public class ReviewFolder : MonoBehaviour
         examGuideEnlarged.SetActive(false);
         materialsEnlarged.SetActive(false);
 
-        // get the next misconduct review sheet
-		// NOTE: If there isn't another student, keep the latest one
+        // get the next misconduct review sheet and exam guide
+		// NOTE: If there isn't another student, keep the latest options
         nextReviewFolderSmall.SetActive(true);
-
-        // get the next exam guide
-        // NOTE: If there isn't another student, keep the latest one
         nextExamGuideSmall.SetActive(true);
+
+        // TODO: IF the player got the PREVIOUS student wrong, then make sure
+        //      that the notification icon AND message for that student are INACTIVE
+
     }
 }

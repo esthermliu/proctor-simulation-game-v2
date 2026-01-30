@@ -24,7 +24,7 @@ public class Draggable : MonoBehaviour, IDragHandler, IPointerDownHandler
                 smallPaper.SetActive(true);
             } else
             {
-                Debug.Log("ERROR (Draggable.cs): Missing link to smaller version");
+                Debug.Log("Draggable.cs: Missing link to smaller version (ignore for the email notifications)");
             }
 
             return;

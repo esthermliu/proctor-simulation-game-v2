@@ -16,9 +16,6 @@ public class Clickable : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Clicked UI item");
-
-
         // 1) Hide the small version of the paper
         gameObject.SetActive(false);
 
@@ -28,12 +25,11 @@ public class Clickable : MonoBehaviour, IPointerDownHandler
         {
             enlargedPaper.SetActive(true);
 
-            // Bring enlarged paper to the FRONT of all other ppaers
+            // Bring enlarged paper to the FRONT of all other papers
             enlargedPaper.transform.SetAsLastSibling();
         } else
         {
             Debug.Log("ERROR (Clickable.cs): Missing enlarged version of paper");
         }
-
     }
 }
