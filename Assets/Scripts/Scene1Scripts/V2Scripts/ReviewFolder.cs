@@ -23,6 +23,9 @@ public class ReviewFolder : MonoBehaviour
     [Header("Student")]
     public StudentAnimationController student;
 
+    [Header("Student's top icons")]
+    public StudentTopIconsManager studentTopIcons;
+
     [Header("Correct decision")]
     public bool isValid;
 
@@ -71,7 +74,22 @@ public class ReviewFolder : MonoBehaviour
 
         ResetPapers();
 
+        // play the admit animation at bottom of screen
         student.Admit();
+
+        // TODO: Get the small green icon on the top part of screen to show
+        // connect the Green character's script to here
+        // On admit, we will call the showGreenCharacter() function or smth
+        // this function will cause the green guy to activate AND deactivate
+        // the gray guy
+        // then, the function will set the animation trigger "GreenWalkRight", which
+        // will cause the green guy to start walking off screen
+        // at the end of the green guy's animation, add an animation event, which
+        // is linked to another GreenCharacter script function called hideGreenCharacter()
+        // which will deactivate the character
+
+        // play the green character animation at top of screen
+        studentTopIcons.ShowGreenCharacter();
 
         // advance time
         timeManager.AdvanceTime();
@@ -98,7 +116,11 @@ public class ReviewFolder : MonoBehaviour
 
         ResetPapers();
 
+        // play the deny animation at bottom of screen
         student.Deny();
+
+        // play the red character animation at top of screen
+        studentTopIcons.ShowRedCharacter();
 
         // advance time
         timeManager.AdvanceTime();
@@ -223,9 +245,5 @@ public class ReviewFolder : MonoBehaviour
         // get the next exam guide
         // NOTE: If there isn't another student, keep the latest one
         nextExamGuideSmall.SetActive(true);
-
-
-        //reviewFolder.SetActive(true);
-        //examGuide.SetActive(true);
     }
 }
