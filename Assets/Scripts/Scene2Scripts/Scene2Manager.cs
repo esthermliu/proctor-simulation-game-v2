@@ -79,6 +79,6 @@ public class Scene2Manager : MonoBehaviour
 
         Debug.Log("Scene 2 finished");
 
-        SceneManager.LoadScene("Scene3_Day1");
+        SceneManager.LoadScene("Scene3_Day1_V2");
     }
 }
