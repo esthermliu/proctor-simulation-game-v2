@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class Student : MonoBehaviour
 {
+    [Header("Bad Behavior (red) OR Question (green)")]
     public GameObject indicator;
+
+    [Header("Investigation Link")]
     public GameObject investigate;
-    public GameObject explanation;
+
+    [Header("Question Links")]
     public GameObject question;
     public GameObject guide;
     public GameObject goodResponse;
     public GameObject badResponse;
 
-    // SHOW Methods
+    [Header("Explanation Manager")]
+    public ExplanationManager explanationManager;
+
+    // ========== SHOW Methods ==========
     public void ShowIndicator()
     {
         indicator.SetActive(true);
@@ -23,7 +30,7 @@ public class Student : MonoBehaviour
 
     public void ShowExplanation()
     {
-        explanation.SetActive(true);
+        explanationManager.StartExplanation();
     }
 
     public void ShowQuestion()
@@ -47,7 +54,7 @@ public class Student : MonoBehaviour
     }
 
 
-    // HIDE Methods
+    // ========== HIDE Methods ==========
     public void HideIndicator()
     {
         indicator.SetActive(false);

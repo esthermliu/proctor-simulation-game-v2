@@ -25,6 +25,11 @@ public class Scene2Manager : MonoBehaviour
     public TMP_Text timerText;
     private float timeRemaining = 60f;
 
+    // Keep track of whether a review or question is ongoing (there can only be one ongoing
+    // review/question at a time); true if exists ongoing event, false otherwise
+    // Starts as false initially
+    private bool ongoingEvent = false;
+
     void Start()
     {
         badTime1 = Random.Range(5f, 15f);
@@ -80,5 +85,29 @@ public class Scene2Manager : MonoBehaviour
         Debug.Log("Scene 2 finished");
 
         SceneManager.LoadScene("Scene3_Day1_V2");
+    }
+
+    // ================================================
+    // Functions to make sure only one ongoing event
+    // ================================================
+
+    // Function to check whether the player can click on a new student (aka start a new
+    // investigation or question)
+    // Returns true if there is an ongoing event (investigation/question), false otherwise
+    public bool ExistsOngoingEvent()
+    {
+        return ongoingEvent;
+    }
+
+    // Function called when a new event is started
+    public void SetOngoingEvent()
+    {
+        ongoingEvent = true;
+    }
+
+    // Function called when ongoing event ends
+    public void ResetOngoingEvent()
+    {
+        ongoingEvent = false;
     }
 }

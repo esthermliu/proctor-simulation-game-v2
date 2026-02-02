@@ -8,11 +8,18 @@ public class GameManager : MonoBehaviour
     // ----- Per Day Stats -----
     public int correctToday = 0;
     public int reportedToday = 0;
+    public int helpedToday = 0;
+    public int flaggedToday = 0;
 
     // ----- Total Stats -----
     public int totalCorrect = 0;
     public int totalReported = 0;
+    public int totalHelped = 0;
+    public int totalFlagged = 0;
+
+    // TODO: remove money
     public int totalMoney = 0;
+    
 
     private void Awake()
     {
@@ -41,6 +48,20 @@ public class GameManager : MonoBehaviour
         totalReported++;
     }
 
+    // ----- Called when a student is helped (question answered correctly) -----
+    public void HelpStudent()
+    {
+        helpedToday++;
+        totalHelped++;
+    }
+
+    // ----- Called when a student is flagged -----
+    public void FlagStudent()
+    {
+        flaggedToday++;
+        totalFlagged++;
+    }
+
     // ---- called at EOD to add up salary ---
     public void AddSalary()
     {
@@ -60,5 +81,7 @@ public class GameManager : MonoBehaviour
     {
         correctToday = 0;
         reportedToday = 0;
+        helpedToday = 0;
+        flaggedToday = 0;
     }
 }

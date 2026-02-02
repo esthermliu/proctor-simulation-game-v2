@@ -29,27 +29,36 @@ public class PlayerInteraction : MonoBehaviour
     {
         Debug.Log("CALLED UPDATE PAYCHECK");
 
-        int reportedToday = GameManager.Instance.reportedToday;
         int correctToday = GameManager.Instance.correctToday;
-        
-        // calculate salary for the day
-        int salaryToday = (correctToday * 10);
-        int deductStudents = (5 - correctToday) - 1;
-        if (deductStudents > 0)
-            salaryToday -= (5 * deductStudents);
-        salaryToday = Mathf.Max(0, salaryToday);
+        int flaggedToday = GameManager.Instance.flaggedToday;
+        int reportedToday = GameManager.Instance.reportedToday;
+        int helpedToday = GameManager.Instance.helpedToday;
 
-        // accumulate total money
-        GameManager.Instance.AddSalary();
 
-        int totalMoney = GameManager.Instance.totalMoney;
+        // TODO: Delete all salary stuff
+        //// calculate salary for the day
+        //int salaryToday = (correctToday * 10);
+        //int deductStudents = (5 - correctToday) - 1;
+        //if (deductStudents > 0)
+        //    salaryToday -= (5 * deductStudents);
+        //salaryToday = Mathf.Max(0, salaryToday);
+
+        //// accumulate total money
+        //GameManager.Instance.AddSalary();
+
+        //int totalMoney = GameManager.Instance.totalMoney;
 
         // deductions (if we want to add it later) $"Deductions: -${Mathf.Max(0, 5 * deductStudents)}\n" +
+        // $"Correct Admissions: {correctToday}\n" +
+        //$"Students Reported: {reportedToday}\n" +
+        //$"Students Helped: {helpedToday}\n" +
+        //$"Money Earned Today: ${salaryToday}\n" +
+        //$"Total Bank: ${totalMoney}";
 
         paycheckText.text =
             $"Correct Admissions: {correctToday}\n" +
-            $"Reported Students: {reportedToday}\n" +
-            $"Money Earned Today: ${salaryToday}\n" +
-            $"Total Bank: ${totalMoney}";
+            $"Students Flagged: {flaggedToday}\n" +
+            $"Students Reported: {reportedToday}\n" +
+            $"Students Helped: {helpedToday}\n"; 
     }
 }
