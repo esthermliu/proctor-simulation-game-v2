@@ -46,6 +46,7 @@ public class Scene2Manager : MonoBehaviour
 
         UpdateTimerUI();
 
+        // Show Red Indicator 1
         if (!bad1Triggered && timeRemaining <= 60f - badTime1)
         {
             students[badStudent1Index].ShowIndicator();
@@ -72,8 +73,12 @@ public class Scene2Manager : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        int seconds = Mathf.CeilToInt(timeRemaining);
-        timerText.text = $"{seconds}";
+        int totalSeconds = Mathf.CeilToInt(timeRemaining);
+
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
+
+        timerText.text = $"{minutes}:{seconds:00}";
     }
 
 

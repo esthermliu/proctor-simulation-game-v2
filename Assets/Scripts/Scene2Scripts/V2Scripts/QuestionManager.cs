@@ -8,6 +8,17 @@ public class QuestionManager : MonoBehaviour
     [Header("Link to corresponding student")]
     public Student student;
 
+    private Animator studentAnimator;
+
+    void Start()
+    {
+        // Get the Animator component from the student
+        if (student != null)
+        {
+            studentAnimator = student.GetComponent<Animator>();
+        }
+    }
+
     public void OnCorrectOptionClick()
     {
         // Always hide purple question
@@ -26,6 +37,13 @@ public class QuestionManager : MonoBehaviour
 
         // End the question event
         scene2Manager.ResetOngoingEvent();
+
+        // Transition from STILL to IDLE animation
+        if (studentAnimator != null)
+        {
+            studentAnimator.SetTrigger("StartIdle");
+        }
+
     }
 
     public void OnIncorrectOptionClick()

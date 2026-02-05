@@ -26,6 +26,17 @@ public class Investigate : MonoBehaviour
 
     // keep track of if the investigation question was answered
     private bool investigateAnswered = false;
+    private Animator studentAnimator;
+
+
+    void Start()
+    {
+        // Get the Animator component from the student
+        if (student != null)
+        {
+            studentAnimator = student.GetComponent<Animator>();
+        }
+    }
 
 
     // ============== BUTTON FUNCTIONS FOR Q1 =============
@@ -99,6 +110,12 @@ public class Investigate : MonoBehaviour
 
         // Event ended, allow player to click on other events
         scene2Manager.ResetOngoingEvent();
+
+        // Trigger the idle animation for the character again
+        if (studentAnimator != null)
+        {
+            studentAnimator.SetTrigger("StartIdle");
+        }
     }
 
 

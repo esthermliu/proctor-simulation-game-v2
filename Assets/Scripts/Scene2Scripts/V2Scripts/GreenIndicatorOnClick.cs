@@ -7,10 +7,17 @@ public class GreenIndicatorOnClick : MonoBehaviour, IPointerClickHandler
     public Scene2Manager scene2Manager;
 
     private Student student;
+    private Animator studentAnimator;
 
     void Start()
     {
         student = GetComponentInParent<Student>();
+
+        // Get the Animator component from the student
+        if (student != null)
+        {
+            studentAnimator = student.GetComponent<Animator>();
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -29,5 +36,9 @@ public class GreenIndicatorOnClick : MonoBehaviour, IPointerClickHandler
         // Show purple + orange
         student.ShowQuestion();
         student.ShowGuide();
+
+        // Trigger the QUESTION DOWN, then STILL animation
+        studentAnimator.SetTrigger("StartQuestionDown");
+        studentAnimator.SetTrigger("StartStillFromQuestionDown");
     }
 }

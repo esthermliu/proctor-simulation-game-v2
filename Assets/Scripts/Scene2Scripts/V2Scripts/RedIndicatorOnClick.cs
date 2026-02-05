@@ -7,10 +7,17 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler
     public Scene2Manager scene2Manager;
 
     private Student student;
+    private Animator studentAnimator;
 
     void Start()
     {
         student = GetComponentInParent<Student>();
+
+        // Get the Animator component from the student
+        if (student != null)
+        {
+            studentAnimator = student.GetComponent<Animator>();
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -32,5 +39,8 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler
 
         // Show yellow consequence
         student.ShowInvestigate();
+
+        // Trigger the STILL animation
+        studentAnimator.SetTrigger("StartStill");
     }
 }

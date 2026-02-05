@@ -17,10 +17,20 @@ public class Student : MonoBehaviour
     [Header("Explanation Manager")]
     public ExplanationManager explanationManager;
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // ========== SHOW Methods ==========
     public void ShowIndicator()
     {
         indicator.SetActive(true);
+
+        // trigger the behavior animation
+        PlayBehaviorAnimation();
     }
 
     public void ShowInvestigate()
@@ -83,5 +93,12 @@ public class Student : MonoBehaviour
     public void HideBadResponse()
     {
         badResponse.SetActive(false);
+    }
+
+
+    // Play the animation corresponding to the behavior
+    public void PlayBehaviorAnimation()
+    {
+        animator.SetTrigger("StartBehavior");
     }
 }
