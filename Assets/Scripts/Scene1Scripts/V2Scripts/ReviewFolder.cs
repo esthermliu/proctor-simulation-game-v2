@@ -29,10 +29,6 @@ public class ReviewFolder : MonoBehaviour
     [Header("Correct decision")]
     public bool isValid;
 
-    // TODO: remove Decision Manager if notification manager is done being set up
-    [Header("Decision manager")]
-    public DecisionManager decisionManager;
-
     [Header("Notification manager")]
     public NotificationManager notificationManager;
 
@@ -77,7 +73,6 @@ public class ReviewFolder : MonoBehaviour
         else
         {
             // else: incorrect admission (no increment, show incorrect icon)
-            //decisionManager.ShowRedIndicator();
             notificationManager.ShowIncorrectIcon();
         }
 
@@ -114,7 +109,6 @@ public class ReviewFolder : MonoBehaviour
         else
         {
             // else: incorrect admission (no increment, show incorrect icon)
-            //decisionManager.ShowRedIndicator();
             notificationManager.ShowIncorrectIcon();
         }
 

@@ -14,7 +14,14 @@ public class TimeManager : MonoBehaviour
     // Call this after a player makes a decision
     public void AdvanceTime()
     {
+        // TODO: call the other advancetime function
         totalMinutes += studentDuration;
+        UpdateTimeDisplay();
+    }
+
+    public void AdvanceTime(int time)
+    {
+        totalMinutes += time;
         UpdateTimeDisplay();
     }
 

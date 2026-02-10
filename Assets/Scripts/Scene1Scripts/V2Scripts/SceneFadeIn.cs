@@ -6,6 +6,8 @@ public class SceneFadeIn : MonoBehaviour
     public CanvasGroup fadeCanvasGroup;
     public float fadeDuration = 1f;
 
+    public System.Action OnFadeInComplete;
+
     void Start()
     {
         StartCoroutine(FadeIn());
@@ -23,5 +25,8 @@ public class SceneFadeIn : MonoBehaviour
 
         fadeCanvasGroup.alpha = 0f;
         fadeCanvasGroup.blocksRaycasts = false; // allow clicks after fade
+
+        // Notify listeners
+        OnFadeInComplete?.Invoke();
     }
 }
