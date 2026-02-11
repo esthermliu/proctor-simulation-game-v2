@@ -20,7 +20,7 @@ public class StartDay : MonoBehaviour
     [Header("Supervisor top character")]
     public Animator supervisorTopCharacter;
 
-   public void OnClockIn()
+    public void OnClockIn()
     {
         // this will end the tutorial and start the day
 
@@ -44,7 +44,17 @@ public class StartDay : MonoBehaviour
         clockInButton.SetActive(false);
     }
 
-    // CALLED BY ANIMATION EVENT
+    // Called when supervisor should just exit after the conversation ends
+    public void SupervisorExit()
+    {
+        // then, animate supervisor leaving to the right
+        gameObject.GetComponent<Animator>().SetTrigger("SupervisorExit");
+
+        // Animate the little top supervisor character leaving to right as well
+        supervisorTopCharacter.SetTrigger("SupervisorExit");
+    }
+
+    // CALLED BY ANIMATION EVENT TO ACTIVATE THE FIRST STUDENT
     public void OnSupervisorExitAnimationFinished()
     {
         gameObject.SetActive(false);

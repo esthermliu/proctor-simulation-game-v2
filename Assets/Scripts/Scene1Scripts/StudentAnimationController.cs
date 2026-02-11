@@ -4,6 +4,7 @@ public class StudentAnimationController : MonoBehaviour
 {
     private Animator animator;
     public GameObject nextStudent;
+    public GameObject supervisorGrayCharacter;
 
     void Awake()
     {
@@ -27,12 +28,18 @@ public class StudentAnimationController : MonoBehaviour
         SpawnNextStudent();
     }
 
-
     public void SpawnNextStudent()
     {
         if (nextStudent != null)
         {
             nextStudent.SetActive(true);
+        } else if (supervisorGrayCharacter != null) {
+            // This should be the last student for the day
+            // If there is a supervisor scene, then also spawn the supervisor
+
+            // show the supervisor gray character
+            supervisorGrayCharacter.SetActive(true);
         }
+
     }
 }

@@ -34,20 +34,56 @@ public class SupervisorSpeechManager : MonoBehaviour
     [SerializeField] private TutorialClickable smallMaterialsClickable;
     [SerializeField] private TutorialClickable smallFolderClickable;
 
-    [Header("Clock In Btn")]
+    [Header("Buttons")]
     public GameObject clockInButton;
+    public GameObject skipOrientationButton;
 
     private bool waitingForInteraction = false;
     private int currentIndex = 0;
+
+    // whether this is the last interaction of the day
+    [Header("Supervisor management")]
+    public bool supervisorEndDay = false;
 
     // This function should be triggered by an animation event after the supervisor character
     // stops moving
     public void StartDialogue()
     {
+        if (skipOrientationButton != null)
+        {
+            // Need to show the "Skip Orientation" Button
+            skipOrientationButton.SetActive(true);
+        }
+
         currentIndex = 0;
         ShowCurrentBubble();
     }
 
+    public void OnSkipOrientation()
+    {
+        // the supervisor character should leave to the right, the gray characters should show up
+        //       and the first student should show up on screen
+        // OR, we can skip to the clock-in button scene
+
+        // Let's FIRST activate all the top characters and make sure they are in position BEFORE
+        // we call OnClickIn. We know all the gray characters are in position when the 6 seconds are up
+        // for the animation
+
+        // we can connect it to an animation event on gray character for student 1, which will call a function
+        // that has the rest of the code below
+
+        // Activate all the gray characters
+        ActivateTopCharacters();
+
+        // specify a skip on the gray 1 character, so at the end of the animation, we will clock in
+        gray1.GetComponent<GrayAnimationTrigger>().SetSkip(true);
+
+        // Hide the skip orientation button
+        skipOrientationButton.SetActive(false);
+
+        // Hide all dialogue bubbles (should only need to disable the one at which the skip orientation button was clicked)
+        dialogueBubbles[currentIndex].SetActive(false);
+    }
 
     public void ResumeDialogue()
     {
@@ -64,8 +100,22 @@ public class SupervisorSpeechManager : MonoBehaviour
     {
         if (currentIndex >= dialogueBubbles.Length)
         {
+            if (skipOrientationButton != null)
+            {
+                // hide the skip orientation button
+                skipOrientationButton.SetActive(false);
+            }
+            
             // end of tutorial speech, show the clock-in button
             clockInButton.SetActive(true);
+
+            // if this is the last interaction, the supervisor just leaves after
+            // the conversation
+            if (supervisorEndDay)
+            {
+                gameObject.GetComponent<StartDay>().SupervisorExit();
+            }
+
             return;
         }
 
@@ -145,16 +195,22 @@ public class SupervisorSpeechManager : MonoBehaviour
         {
             // check if this index is when we need to trigger top students animation
             // if it is, then activate all the top characters
-            gray1.SetActive(true);
-            gray2.SetActive(true);
-            gray3.SetActive(true);
-            gray4.SetActive(true);
-            gray5.SetActive(true);
+            ActivateTopCharacters();
         }
 
         // Advance
         currentIndex++;
         ShowCurrentBubble();
+    }
+
+
+    private void ActivateTopCharacters()
+    {
+        gray1.SetActive(true);
+        gray2.SetActive(true);
+        gray3.SetActive(true);
+        gray4.SetActive(true);
+        gray5.SetActive(true);
     }
 
 }
