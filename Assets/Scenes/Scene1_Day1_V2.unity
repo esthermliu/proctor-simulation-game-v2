@@ -22856,9 +22856,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TransitionManager
   fadeIn: {fileID: 384702033}
   revealSequence:
-  - {fileID: 1545906787}
-  - {fileID: 252383457}
-  delayBetween: 0.5
+  - obj: {fileID: 1545906787}
+    delayAfter: 0.5
+  - obj: {fileID: 252383457}
+    delayAfter: 0.5
 --- !u!114 &1044097324
 MonoBehaviour:
   m_ObjectHideFlags: 0

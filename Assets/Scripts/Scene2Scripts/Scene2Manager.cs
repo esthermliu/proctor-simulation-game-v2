@@ -12,6 +12,9 @@ public class Scene2Manager : MonoBehaviour
     public int questionStudentIndex = 1;
     public int badStudent2Index = 4;
 
+    [Header("Pencils Down Bubble")]
+    public GameObject pencilsDownBubble;
+
     private float badTime1;
     private float questionTime;
     private float badTime2;
@@ -23,49 +26,68 @@ public class Scene2Manager : MonoBehaviour
     private bool sceneEnded = false;
 
     public TMP_Text timerText;
-    private float timeRemaining = 60f;
 
-    // Keep track of whether a review or question is ongoing (there can only be one ongoing
-    // review/question at a time); true if exists ongoing event, false otherwise
-    // Starts as false initially
+    // ==============================
+    // TIMER SETTINGS
+    // ==============================
+
+    [Header("Timer Settings")]
+
+    // How long the scene lasts (seconds)
+    public float totalDuration = 110f;
+
+    // What time the clock should START at (minutes + seconds)
+    public int startMinutes = 1;
+    public int startSeconds = 0;
+
+    private float elapsedTime = 0f;
+    private float startTimeInSeconds;
+
     private bool ongoingEvent = false;
+    private bool startTime = false;
 
     void Start()
     {
-        badTime1 = Random.Range(5f, 15f);
-        questionTime = Random.Range(20f, 40f);
-        badTime2 = Random.Range(30f, 50f);
+        // Convert starting display time to seconds
+        startTimeInSeconds = (startMinutes * 60f) + startSeconds;
+
+        // HARDCODED EVENT TIMES (seconds after scene starts)
+        badTime1 = 11f;
+        questionTime = 45f;
+        badTime2 = 80f;
 
         Debug.Log($"Bad1 at {badTime1}, Question at {questionTime}, Bad2 at {badTime2}");
     }
 
     void Update()
     {
-        timeRemaining -= Time.deltaTime;
-        timeRemaining = Mathf.Clamp(timeRemaining, 0f, 60f);
+        if (!startTime) return;
+
+        // Internal timer counts up from 0
+        elapsedTime += Time.deltaTime;
+        elapsedTime = Mathf.Clamp(elapsedTime, 0f, totalDuration);
 
         UpdateTimerUI();
 
-        // Show Red Indicator 1
-        if (!bad1Triggered && timeRemaining <= 60f - badTime1)
+        if (!bad1Triggered && elapsedTime >= badTime1)
         {
             students[badStudent1Index].ShowIndicator();
             bad1Triggered = true;
         }
 
-        if (!questionTriggered && timeRemaining <= 60f - questionTime)
+        if (!questionTriggered && elapsedTime >= questionTime)
         {
             students[questionStudentIndex].ShowIndicator();
             questionTriggered = true;
         }
 
-        if (!bad2Triggered && timeRemaining <= 60f - badTime2)
+        if (!bad2Triggered && elapsedTime >= badTime2)
         {
             students[badStudent2Index].ShowIndicator();
             bad2Triggered = true;
         }
 
-        if (timeRemaining <= 0f)
+        if (elapsedTime >= totalDuration)
         {
             EndScene();
         }
@@ -73,7 +95,10 @@ public class Scene2Manager : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        int totalSeconds = Mathf.CeilToInt(timeRemaining);
+        // Add offset to elapsed time
+        float displayedTime = startTimeInSeconds + elapsedTime;
+
+        int totalSeconds = Mathf.FloorToInt(displayedTime);
 
         int minutes = totalSeconds / 60;
         int seconds = totalSeconds % 60;
@@ -81,38 +106,40 @@ public class Scene2Manager : MonoBehaviour
         timerText.text = $"{minutes}:{seconds:00}";
     }
 
-
     void EndScene()
     {
         if (sceneEnded) return;
         sceneEnded = true;
 
-        Debug.Log("Scene 2 finished");
+        // 1) Show the Pencils Down bubble
+        pencilsDownBubble.SetActive(true);
 
-        SceneManager.LoadScene("Scene3_Day1_V2");
+
+        //SceneManager.LoadScene("Scene3_Day1_V2");
     }
 
     // ================================================
-    // Functions to make sure only one ongoing event
+    // Ongoing event control
     // ================================================
 
-    // Function to check whether the player can click on a new student (aka start a new
-    // investigation or question)
-    // Returns true if there is an ongoing event (investigation/question), false otherwise
     public bool ExistsOngoingEvent()
     {
         return ongoingEvent;
     }
 
-    // Function called when a new event is started
     public void SetOngoingEvent()
     {
         ongoingEvent = true;
     }
 
-    // Function called when ongoing event ends
     public void ResetOngoingEvent()
     {
         ongoingEvent = false;
+    }
+
+    public void EnableStartTime()
+    {
+        startTime = true;
+        elapsedTime = 0f;
     }
 }
