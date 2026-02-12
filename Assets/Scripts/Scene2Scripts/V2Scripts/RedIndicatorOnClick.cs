@@ -42,5 +42,9 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler
 
         // Trigger the STILL animation
         studentAnimator.SetTrigger("StartStill");
+
+        // Also, make note that the player flagged the behavior
+        // This avoids sending an email notification
+        student.BehaviorClicked();
     }
 }

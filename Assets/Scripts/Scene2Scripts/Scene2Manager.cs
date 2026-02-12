@@ -113,7 +113,15 @@ public class Scene2Manager : MonoBehaviour
         pencilsDownBubble.SetActive(true);
 
 
-        //SceneManager.LoadScene("Scene3_Day1_V2");
+        // 2) Make extra check that any questions were answered, show notification otherwise
+        students[questionStudentIndex].CheckQuestionAnswered();
+
+        // 3) Make sure to hide the question guide and any speech bubbles if the question
+        // is still ongoing
+        students[questionStudentIndex].HideQuestion();
+        students[questionStudentIndex].HideGuide();
+        students[questionStudentIndex].HideGoodResponse();
+        students[questionStudentIndex].HideBadResponse();
     }
 
     // ================================================

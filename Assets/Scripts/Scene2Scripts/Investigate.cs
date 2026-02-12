@@ -105,7 +105,16 @@ public class Investigate : MonoBehaviour
             GameManager.Instance.ReportStudent();
         }
 
-        // Hide the review folder
+        // notify Student script if we reported student
+        if (reportYesCheck.activeSelf)
+        {
+            student.ReportedStudent();
+        }
+
+        // Check whether the report decision was correct or not
+        student.CheckReport();
+
+        //// Hide the review folder
         student.HideInvestigate();
 
         // Event ended, allow player to click on other events

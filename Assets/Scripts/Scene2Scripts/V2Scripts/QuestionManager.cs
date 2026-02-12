@@ -44,6 +44,8 @@ public class QuestionManager : MonoBehaviour
             studentAnimator.SetTrigger("StartIdle");
         }
 
+        // make sure to note that the question WAS answered, so no notification shows up
+        student.QuestionAnswered();
     }
 
     public void OnIncorrectOptionClick()

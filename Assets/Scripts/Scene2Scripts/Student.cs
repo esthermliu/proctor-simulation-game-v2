@@ -19,6 +19,21 @@ public class Student : MonoBehaviour
 
     private Animator animator;
 
+    // Keep track of if behavior is missed or not
+    private bool behaviorClicked = false;
+    private bool questionAnswered = false;
+
+    [Header("Missed Behavior Settings")]
+    public float missedNotificationDelay = 2f;
+    public GameObject missedBehaviorNotification;
+
+    [Header("Check for Correct Report")]
+    public bool shouldReport;
+    public GameObject incorrectNotification;
+
+    // keep track of actual report decision
+    private bool reported = false;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -101,4 +116,68 @@ public class Student : MonoBehaviour
     {
         animator.SetTrigger("StartBehavior");
     }
+
+
+    public void BehaviorClicked()
+    {
+        this.behaviorClicked = true;
+    }
+
+    public void CheckBehaviorClicked() {
+        if (!this.behaviorClicked)
+        {
+            StartCoroutine(DelayedMissedNotification());
+        }
+    }
+
+    // extra miss check for questions
+    public void QuestionAnswered()
+    {
+        this.questionAnswered = true;
+    }
+
+    public void CheckQuestionAnswered() {
+        // if there was a question, that question WAS clicked, but it was NOT answered
+        if (question != null && this.behaviorClicked && !questionAnswered)
+        {
+            StartCoroutine(DelayedMissedNotification());
+        }
+    }
+
+    private System.Collections.IEnumerator DelayedMissedNotification()
+    {
+        yield return new WaitForSeconds(missedNotificationDelay);
+        missedBehaviorNotification.SetActive(true);
+
+        // Move to front (top of hierarchy under same parent)
+        missedBehaviorNotification.transform.SetAsLastSibling();
+    }
+
+
+    // Mark decision as report
+    public void ReportedStudent()
+    {
+        this.reported = true;
+    }
+
+    // Check whether Report Decision was correct
+    public void CheckReport()
+    {
+        bool correct = (this.shouldReport && this.reported) || (!this.shouldReport && !this.reported);
+        if (!correct)
+        {
+            // show the incorrect notification on delay
+            StartCoroutine(DelayedIncorrectNotification());
+        }
+    }
+
+    private System.Collections.IEnumerator DelayedIncorrectNotification()
+    {
+        yield return new WaitForSeconds(missedNotificationDelay);
+        incorrectNotification.SetActive(true);
+
+        // Move to front (top of hierarchy under same parent)
+        incorrectNotification.transform.SetAsLastSibling();
+    }
+
 }
