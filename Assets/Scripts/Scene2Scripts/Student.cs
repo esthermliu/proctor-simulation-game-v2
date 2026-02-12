@@ -168,6 +168,18 @@ public class Student : MonoBehaviour
         {
             // show the incorrect notification on delay
             StartCoroutine(DelayedIncorrectNotification());
+        } else
+        {
+            // at this point, we know that the report or lack or report was CORRECT
+            // if we reported, then increment report student
+
+            // Otherwise, all questions answered, allow for review to be over
+            // if YES checkmark for report is true, call GameManager ReportStudent
+            // (adding the null check so we can run scene 2 on its own)
+            if (GameManager.Instance != null && this.reported)
+            {
+                GameManager.Instance.ReportStudent();
+            }
         }
     }
 

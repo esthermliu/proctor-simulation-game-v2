@@ -97,13 +97,15 @@ public class Investigate : MonoBehaviour
 
         if (q1Unanswered || q2Unanswered) return;
 
-        // Otherwise, all questions answered, allow for review to be over
-        // if YES checkmark for report is true, call GameManager ReportStudent
-        // (adding the null check so we can run scene 2 on its own)
-        if (GameManager.Instance != null && reportYesCheck.activeSelf)
-        {
-            GameManager.Instance.ReportStudent();
-        }
+
+        // MOVED LOGIC TO STUDENT SO WE KNOW IF CORRECT REPORT OR NOT
+        //// Otherwise, all questions answered, allow for review to be over
+        //// if YES checkmark for report is true, call GameManager ReportStudent
+        //// (adding the null check so we can run scene 2 on its own)
+        //if (GameManager.Instance != null && reportYesCheck.activeSelf)
+        //{
+        //    GameManager.Instance.ReportStudent();
+        //}
 
         // notify Student script if we reported student
         if (reportYesCheck.activeSelf)

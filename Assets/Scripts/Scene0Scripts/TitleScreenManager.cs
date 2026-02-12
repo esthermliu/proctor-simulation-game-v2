@@ -26,10 +26,10 @@ public class TitleScreenManager : MonoBehaviour
     public GameObject creditsPaperEdge;
 
     // This function will be called when the button is clicked
-    public void PlayGame()
-    {
-        FadeManager.Instance.FadeToScene("Scene1_Day1_V2");
-    }
+    //public void PlayGame()
+    //{
+    //    FadeManager.Instance.FadeToScene("Scene1_Day1_V2");
+    //}
 
     // ========================================
     //          NAVIGATION FUNCTIONS
