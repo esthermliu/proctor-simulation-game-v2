@@ -55,8 +55,6 @@ public class Scene2Manager : MonoBehaviour
         badTime1 = 11f;
         questionTime = 45f;
         badTime2 = 80f;
-
-        Debug.Log($"Bad1 at {badTime1}, Question at {questionTime}, Bad2 at {badTime2}");
     }
 
     void Update()
