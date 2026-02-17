@@ -1156,6 +1156,7 @@ MonoBehaviour:
   reviewFolder: {fileID: 665257448}
   examGuide: {fileID: 114820269}
   materials: {fileID: 41370255}
+  externalTicket: {fileID: 0}
   nextReviewFolderSmall: {fileID: 883703888}
   nextExamGuideSmall: {fileID: 2077765586}
   studentIDEnlarged: {fileID: 1159398329}
@@ -1163,6 +1164,7 @@ MonoBehaviour:
   reviewFolderEnlarged: {fileID: 84809690}
   examGuideEnlarged: {fileID: 1140934841}
   materialsEnlarged: {fileID: 1398020655}
+  externalTicketEnlarged: {fileID: 0}
   student: {fileID: 1826846337}
   studentTopIcons: {fileID: 346563082}
   isValid: 1
@@ -2387,6 +2389,7 @@ MonoBehaviour:
   studentID: {fileID: 191456764}
   examTicket: {fileID: 1273778349}
   materials: {fileID: 471841329}
+  externalTicket: {fileID: 0}
 --- !u!114 &170333257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2659,6 +2662,7 @@ MonoBehaviour:
   reviewFolder: {fileID: 883703888}
   examGuide: {fileID: 2077765586}
   materials: {fileID: 1589262932}
+  externalTicket: {fileID: 0}
   nextReviewFolderSmall: {fileID: 883703888}
   nextExamGuideSmall: {fileID: 2077765586}
   studentIDEnlarged: {fileID: 925469365}
@@ -2666,6 +2670,7 @@ MonoBehaviour:
   reviewFolderEnlarged: {fileID: 177246513}
   examGuideEnlarged: {fileID: 1210908817}
   materialsEnlarged: {fileID: 1346267700}
+  externalTicketEnlarged: {fileID: 0}
   student: {fileID: 2090917087}
   studentTopIcons: {fileID: 1380531900}
   isValid: 0
@@ -4088,6 +4093,7 @@ MonoBehaviour:
   studentID: {fileID: 764402788}
   examTicket: {fileID: 430177213}
   materials: {fileID: 651649681}
+  externalTicket: {fileID: 0}
 --- !u!114 &248765986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15970,6 +15976,7 @@ MonoBehaviour:
   reviewFolder: {fileID: 1256517055}
   examGuide: {fileID: 992086155}
   materials: {fileID: 471841329}
+  externalTicket: {fileID: 0}
   nextReviewFolderSmall: {fileID: 665257448}
   nextExamGuideSmall: {fileID: 114820269}
   studentIDEnlarged: {fileID: 441143765}
@@ -15977,6 +15984,7 @@ MonoBehaviour:
   reviewFolderEnlarged: {fileID: 772347257}
   examGuideEnlarged: {fileID: 1770859068}
   materialsEnlarged: {fileID: 367052719}
+  externalTicketEnlarged: {fileID: 0}
   student: {fileID: 170333257}
   studentTopIcons: {fileID: 487197789}
   isValid: 1
@@ -24908,6 +24916,7 @@ MonoBehaviour:
   reviewFolder: {fileID: 1249686297}
   examGuide: {fileID: 589513316}
   materials: {fileID: 1325380196}
+  externalTicket: {fileID: 0}
   nextReviewFolderSmall: {fileID: 1886809977}
   nextExamGuideSmall: {fileID: 1750597339}
   studentIDEnlarged: {fileID: 1151691858}
@@ -24915,6 +24924,7 @@ MonoBehaviour:
   reviewFolderEnlarged: {fileID: 1165377090}
   examGuideEnlarged: {fileID: 1657431999}
   materialsEnlarged: {fileID: 1167146372}
+  externalTicketEnlarged: {fileID: 0}
   student: {fileID: 1578436179}
   studentTopIcons: {fileID: 590862982}
   isValid: 1
@@ -33170,6 +33180,7 @@ MonoBehaviour:
   studentID: {fileID: 430627074}
   examTicket: {fileID: 182213470}
   materials: {fileID: 1325380196}
+  externalTicket: {fileID: 0}
 --- !u!1 &1581878486
 GameObject:
   m_ObjectHideFlags: 0
@@ -37347,6 +37358,7 @@ MonoBehaviour:
   studentID: {fileID: 830115320}
   examTicket: {fileID: 752960790}
   materials: {fileID: 41370255}
+  externalTicket: {fileID: 0}
 --- !u!114 &1826846337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37722,6 +37734,7 @@ MonoBehaviour:
   reviewFolder: {fileID: 1886809977}
   examGuide: {fileID: 1750597339}
   materials: {fileID: 651649681}
+  externalTicket: {fileID: 0}
   nextReviewFolderSmall: {fileID: 1256517055}
   nextExamGuideSmall: {fileID: 992086155}
   studentIDEnlarged: {fileID: 1639621697}
@@ -37729,6 +37742,7 @@ MonoBehaviour:
   reviewFolderEnlarged: {fileID: 1831905393}
   examGuideEnlarged: {fileID: 603430043}
   materialsEnlarged: {fileID: 1521378821}
+  externalTicketEnlarged: {fileID: 0}
   student: {fileID: 248765986}
   studentTopIcons: {fileID: 573551523}
   isValid: 1
@@ -42405,6 +42419,7 @@ MonoBehaviour:
   studentID: {fileID: 551062148}
   examTicket: {fileID: 1533009784}
   materials: {fileID: 1589262932}
+  externalTicket: {fileID: 0}
 --- !u!114 &2090917087
 MonoBehaviour:
   m_ObjectHideFlags: 0

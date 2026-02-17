@@ -34,6 +34,6 @@ public class TimeManager : MonoBehaviour
         int displayHour = hours % 12;
         if (displayHour == 0) displayHour = 12;
 
-        timeText.text = $"{hours}:{minutes:00} {ampm}";
+        timeText.text = $"{displayHour}:{minutes:00} {ampm}";
     }
 }

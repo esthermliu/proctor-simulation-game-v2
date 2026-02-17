@@ -5,6 +5,8 @@ public class StudentAnimationController : MonoBehaviour
     private Animator animator;
     public GameObject nextStudent;
     public GameObject supervisorGrayCharacter;
+    public GameObject clockOutButton;
+
 
     void Awake()
     {
@@ -39,6 +41,10 @@ public class StudentAnimationController : MonoBehaviour
 
             // show the supervisor gray character
             supervisorGrayCharacter.SetActive(true);
+        } else
+        {
+            // no supervisor scene, no next student, so show the clock out button
+            clockOutButton.SetActive(true);
         }
 
     }
