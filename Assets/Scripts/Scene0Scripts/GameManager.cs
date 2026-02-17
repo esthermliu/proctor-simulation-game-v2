@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,10 +20,15 @@ public class GameManager : MonoBehaviour
 
     // TODO: remove money
     public int totalMoney = 0;
+
+    // javascript imports
+    [DllImport("__Internal")]
+    private static extern void AlertString(string str);
     
 
     private void Awake()
     {
+        AlertString("test message");
         // Singleton pattern
         if (Instance != null && Instance != this)
         {

@@ -1,0 +1,1 @@
+../Assets/WebGLTemplates/WebGLTemplateV1/firebase_manager.js
