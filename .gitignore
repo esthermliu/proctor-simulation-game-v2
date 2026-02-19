@@ -104,3 +104,4 @@ InitTestScene*.unity*
 
 # custom stuff
 .vscode
+build_web_test*

@@ -2,7 +2,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebas
 
 // Add Firebase products that you want to use
 import { getAuth } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js'
-import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js'
+import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore.js'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -20,12 +20,12 @@ const app = initializeApp(firebaseConfig);
 // get Cloud Firestore instance
 const db = getFirestore(app);
 
-try {
-    const docRef = await addDoc(collection(db, "test"), {
-        testField: "testValue2",
-        testField2: 246,
-    });
-    console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-    console.error("Error adding document: ", e);
-}
+window.firebaseManager = {
+    LogDocumentToFirestore: async function (collectionName, jsonData) {
+        const data = JSON.parse(jsonData);
+        await addDoc(collection(db, collectionName), {
+            ...data,
+            timestamp: serverTimestamp()
+        });
+    }
+};

@@ -24,11 +24,20 @@ public class GameManager : MonoBehaviour
     // javascript imports
     [DllImport("__Internal")]
     private static extern void AlertString(string str);
-    
+
+    // Analytics data
+    public string sessionId = System.Guid.NewGuid().ToString();
 
     private void Awake()
     {
-        AlertString("test message");
+        
+        // Log the game start event with the session ID
+        EventLogger.Log(new GameEvent
+        {
+            eventType = "game_start",
+            sessionId = sessionId
+        });
+
         // Singleton pattern
         if (Instance != null && Instance != this)
         {
