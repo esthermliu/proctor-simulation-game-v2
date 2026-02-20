@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     // Analytics data
     public string sessionId = System.Guid.NewGuid().ToString();
+    public string subversion = "A"; // TODO: set this based on A/B testing
 
     private void Awake()
     {
@@ -34,8 +36,9 @@ public class GameManager : MonoBehaviour
         // Log the game start event with the session ID
         EventLogger.Log(new GameEvent
         {
-            eventType = "game_start",
-            sessionId = sessionId
+            eventTypeEnum = EventType.session_start,
+            sessionId = sessionId,
+            subversion = subversion
         });
 
         // Singleton pattern
@@ -47,6 +50,32 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    // logging for scene changes
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Log the scene entered event with the session ID and scene name
+        EventLogger.Log(
+            new GameEvent
+            {
+                eventTypeEnum = EventType.scene_entered,
+                sessionId = sessionId,
+                subversion = subversion,
+                sceneName = scene.name
+            }
+        );
+
     }
 
     // ----- Called when a student is correctly admitted/denied -----

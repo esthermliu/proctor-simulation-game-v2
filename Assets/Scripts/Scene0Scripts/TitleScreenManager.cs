@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement; // Needed to load scenes
 
 public class TitleScreenManager : MonoBehaviour
 {
+
     [Header("Title References")]
     public GameObject titlePage;
     public GameObject titlePencilA;
@@ -63,6 +64,14 @@ public class TitleScreenManager : MonoBehaviour
         creditsPage.SetActive(false);
 
         controlsPage.SetActive(true);
+
+        // log
+        EventLogger.Log(new GameEvent
+        {
+            eventTypeEnum = EventType.controls_page_entered,
+            sessionId = GameManager.Instance.sessionId,
+            subversion = GameManager.Instance.subversion
+        });
     }
 
     // Called on click to Credits from title screen
@@ -75,6 +84,14 @@ public class TitleScreenManager : MonoBehaviour
         controlsPage.SetActive(false);
 
         creditsPage.SetActive(true);
+
+        // log
+        EventLogger.Log(new GameEvent
+        {
+            eventTypeEnum = EventType.credits_page_entered,
+            sessionId = GameManager.Instance.sessionId,
+            subversion = GameManager.Instance.subversion
+        });
     }
 
 
@@ -111,30 +128,30 @@ public class TitleScreenManager : MonoBehaviour
     // ========================================
     //          "CONTROLS" FUNCTIONS
     // ========================================
-    public void OnControlOptionClick(int optionNum) {
-        if (optionNum == 1) {
-            // Set all other option info to inactive
-            optionBInfo.SetActive(false);
-            optionCInfo.SetActive(false);
 
+    public void ClearControlOptionInfo()
+    {
+        optionAInfo.SetActive(false);
+        optionBInfo.SetActive(false);
+        optionCInfo.SetActive(false);
+    }
+
+    public void OnControlOptionClick(int optionNum) {
+        ClearControlOptionInfo();
+        if (optionNum == 1) {
             // Show option A info
             optionAInfo.SetActive(true);
+            
         } else if (optionNum == 2)
         {
-            // Set all other option info to inactive
-            optionAInfo.SetActive(false);
-            optionCInfo.SetActive(false);
-
             // Show option B info
             optionBInfo.SetActive(true);
+            
         } else if (optionNum == 3)
         {
-            // Set all other option info to inactive
-            optionAInfo.SetActive(false);
-            optionBInfo.SetActive(false);
-
             // Show option C info
             optionCInfo.SetActive(true);
+            
         } 
     }
 

@@ -34,6 +34,7 @@ public class SceneFadeIn : MonoBehaviour
 
     public void FadeToScene(string sceneName)
     {
+        
         StartCoroutine(FadeOutAndLoad(sceneName));
     }
 
