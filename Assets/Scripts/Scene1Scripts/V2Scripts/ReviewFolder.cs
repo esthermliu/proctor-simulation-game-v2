@@ -8,6 +8,7 @@ public class ReviewFolder : MonoBehaviour
     public GameObject reviewFolder;
     public GameObject examGuide;
     public GameObject materials;
+    public GameObject externalTicket;
 
     [Header("Next Paper parents (small)")]
     public GameObject nextReviewFolderSmall;
@@ -19,6 +20,7 @@ public class ReviewFolder : MonoBehaviour
     public GameObject reviewFolderEnlarged;
     public GameObject examGuideEnlarged;
     public GameObject materialsEnlarged;
+    public GameObject externalTicketEnlarged;
 
     [Header("Student")]
     public StudentAnimationController student;
@@ -38,12 +40,19 @@ public class ReviewFolder : MonoBehaviour
     [Header("Review folder")]
     public GameObject q1YesCheck;
     public GameObject q1NoCheck;
+    public GameObject q1NACheck;
 
     public GameObject q2YesCheck;
     public GameObject q2NoCheck;
+    public GameObject q2NACheck;
 
     public GameObject q3YesCheck;
     public GameObject q3NoCheck;
+    public GameObject q3NACheck;
+
+    public GameObject q4YesCheck;
+    public GameObject q4NoCheck;
+    public GameObject q4NACheck;
 
     public GameObject admitCheck;
     public GameObject denyCheck;
@@ -152,13 +161,13 @@ public class ReviewFolder : MonoBehaviour
     // This is connected to the AdmitZone button
     public void OnAdmitClicked()
     {
-        OnCheckboxClick(admitCheck, denyCheck);
+        OnCheckboxClick(admitCheck, denyCheck, null);
     }
 
     // This is connected to the DenyZone button
     public void OnDenyClicked()
     {
-        OnCheckboxClick(denyCheck, admitCheck);
+        OnCheckboxClick(denyCheck, admitCheck, null);
     }
 
     // This is connected to the CompleteZone button
@@ -170,6 +179,23 @@ public class ReviewFolder : MonoBehaviour
         bool q2Incomplete = !q2YesCheck.activeSelf && !q2NoCheck.activeSelf;
         bool q3Incomplete = !q3YesCheck.activeSelf && !q3NoCheck.activeSelf;
         bool decisionIncomplete = !admitCheck.activeSelf && !denyCheck.activeSelf;
+
+
+        // NEW: logic for extra N/A check completion (for days 2 and 3)
+        if (q1NACheck != null)
+        {
+            q1Incomplete &= !q1NACheck.activeSelf;
+            q2Incomplete &= !q2NACheck.activeSelf;
+            q3Incomplete &= !q3NACheck.activeSelf;
+
+            bool q4Incomplete = !q4YesCheck.activeSelf && !q4NoCheck.activeSelf && !q4NACheck.activeSelf;
+            if (q4Incomplete)
+            {
+                return;
+            }
+        }
+
+
         if (q1Incomplete || q2Incomplete || q3Incomplete || decisionIncomplete)
         {
             return;
@@ -190,34 +216,65 @@ public class ReviewFolder : MonoBehaviour
     //========= Q1 Button OnClick Events =========
     public void OnQ1YesClicked()
     {
-        OnCheckboxClick(q1YesCheck, q1NoCheck);
+        OnCheckboxClick(q1YesCheck, q1NoCheck, q1NACheck);
     }
 
     public void OnQ1NoClicked()
     {
-        OnCheckboxClick(q1NoCheck, q1YesCheck);
+        OnCheckboxClick(q1NoCheck, q1YesCheck, q1NACheck);
+    }
+
+    public void OnQ1NAClicked()
+    {
+        OnCheckboxClick(q1NACheck, q1YesCheck, q1NoCheck);
     }
 
     //========= Q2 Button OnClick Events =========
     public void OnQ2YesClicked()
     {
-        OnCheckboxClick(q2YesCheck, q2NoCheck);
+        OnCheckboxClick(q2YesCheck, q2NoCheck, q2NACheck);
     }
 
     public void OnQ2NoClicked()
     {
-        OnCheckboxClick(q2NoCheck, q2YesCheck);
+        OnCheckboxClick(q2NoCheck, q2YesCheck, q2NACheck);
+    }
+
+    public void OnQ2NAClicked()
+    {
+        OnCheckboxClick(q2NACheck, q2YesCheck, q2NoCheck);
     }
 
     //========= Q3 Button OnClick Events =========
     public void OnQ3YesClicked()
     {
-        OnCheckboxClick(q3YesCheck, q3NoCheck);
+        OnCheckboxClick(q3YesCheck, q3NoCheck, q3NACheck);
     }
 
     public void OnQ3NoClicked()
     {
-        OnCheckboxClick(q3NoCheck, q3YesCheck);
+        OnCheckboxClick(q3NoCheck, q3YesCheck, q3NACheck);
+    }
+
+    public void OnQ3NAClicked()
+    {
+        OnCheckboxClick(q3NACheck, q3YesCheck, q3NoCheck);
+    }
+
+    //========= Q4 Button OnClick Events =========
+    public void OnQ4YesClicked()
+    {
+        OnCheckboxClick(q4YesCheck, q4NoCheck, q4NACheck);
+    }
+
+    public void OnQ4NoClicked()
+    {
+        OnCheckboxClick(q4NoCheck, q4YesCheck, q4NACheck);
+    }
+
+    public void OnQ4NAClicked()
+    {
+        OnCheckboxClick(q4NACheck, q4YesCheck, q4NoCheck);
     }
 
     //===================================
@@ -226,10 +283,16 @@ public class ReviewFolder : MonoBehaviour
 
     // thisBox: the box being clicked
     // otherBox: the other option not being clicked
-    private void OnCheckboxClick(GameObject thisBox, GameObject otherBox)
+    // otherBox2: may be null, the other option not being clicked
+    private void OnCheckboxClick(GameObject thisBox, GameObject otherBox, GameObject otherBox2)
     {
         // can always set other box to unchecked (regardless of whether it was checked or not)
         otherBox.SetActive(false);
+
+        if (otherBox2 != null)
+        {
+            otherBox2.SetActive(false);
+        }
 
         // if this box is already checked, set inactive
         if (thisBox.activeSelf)
@@ -259,13 +322,16 @@ public class ReviewFolder : MonoBehaviour
         examGuideEnlarged.SetActive(false);
         materialsEnlarged.SetActive(false);
 
+        // reset external ticket if it exists
+        if (externalTicket != null)
+        {
+            externalTicket.SetActive(false);
+            externalTicketEnlarged.SetActive(false);
+        }
+
         // get the next misconduct review sheet and exam guide
-		// NOTE: If there isn't another student, keep the latest options
+        // NOTE: If there isn't another student, keep the latest options
         nextReviewFolderSmall.SetActive(true);
         nextExamGuideSmall.SetActive(true);
-
-        // TODO: IF the player got the PREVIOUS student wrong, then make sure
-        //      that the notification icon AND message for that student are INACTIVE
-
     }
 }

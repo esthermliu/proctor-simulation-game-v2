@@ -5,11 +5,28 @@ public class RevealPapers : MonoBehaviour
     public GameObject studentID;
     public GameObject examTicket;
     public GameObject materials;
+    public GameObject externalTicket;
 
     public void ShowDocuments()
     {
-        studentID.SetActive(true);
-        examTicket.SetActive(true);
-        materials.SetActive(true);
+        if (studentID != null)
+        {
+            studentID.SetActive(true);
+        }
+
+        if (examTicket != null)
+        {
+            examTicket.SetActive(true);
+        }
+
+        if (materials != null)
+        {
+            materials.SetActive(true);
+        }
+
+        if (externalTicket != null)
+        {
+            externalTicket.SetActive(true);
+        }
     }
 }
