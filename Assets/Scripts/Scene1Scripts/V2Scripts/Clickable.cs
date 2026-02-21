@@ -5,10 +5,13 @@ using UnityEngine.UI;
 public class Clickable : MonoBehaviour, IPointerDownHandler, 
 IPointerEnterHandler, IPointerExitHandler
 {
+    public static readonly Color DEFAULT_HOVER_COLOR = new Color(0.7f, 0.7f, 0.7f, 1f);
     public GameObject enlargedPaper;
-    public Color hoverColor = new Color(0.7f, 0.7f, 0.7f, 1f);
+    public Color hoverColor = DEFAULT_HOVER_COLOR;
 
     public bool logClick = false;
+
+    protected bool clickable = true;
 
     private Image image; 
 
@@ -25,6 +28,7 @@ IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!clickable) return;
         // 1) Hide the small version of the paper, reset color
         gameObject.SetActive(false);
         if (image != null)
@@ -61,6 +65,7 @@ IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (!clickable) return;
         if (image != null)
         {
             image.color = hoverColor;
@@ -69,9 +74,27 @@ IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (!clickable) return;
         if (image != null)
         {
             image.color = Color.white; // reset to original color
+        }
+    }
+
+    public void SetClickable(bool clickable)
+    {
+        Debug.Log("Setting clickable to " + clickable + " for " + gameObject.name);
+        this.clickable = clickable;
+        if (image != null)
+        {
+            if (!clickable)
+            {
+                image.color = new Color(1f, 1f, 1f, 0.5f); // make it look disabled
+            }
+            else
+            {
+                image.color = Color.white; // reset to original color
+            }
         }
     }
 }

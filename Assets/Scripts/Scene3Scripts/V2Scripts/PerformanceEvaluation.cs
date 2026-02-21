@@ -30,10 +30,10 @@ public class PerformanceEvaluation : MonoBehaviour
             return;
         }
 
-        int correctToday = GameManager.Instance.correctToday;
-        int flaggedToday = GameManager.Instance.flaggedToday;
-        int reportedToday = GameManager.Instance.reportedToday;
-        int helpedToday = GameManager.Instance.helpedToday;
+        int correctToday = GameManager.Instance.state.correctToday;
+        int flaggedToday = GameManager.Instance.state.flaggedToday;
+        int reportedToday = GameManager.Instance.state.reportedToday;
+        int helpedToday = GameManager.Instance.state.helpedToday;
 
 
         // update text
@@ -57,10 +57,10 @@ public class PerformanceEvaluation : MonoBehaviour
 
     private string OverallAssessmentDay1()
     {
-        int correctToday = GameManager.Instance.correctToday;
-        int flaggedToday = GameManager.Instance.flaggedToday;
-        int reportedToday = GameManager.Instance.reportedToday;
-        int helpedToday = GameManager.Instance.helpedToday;
+        int correctToday = GameManager.Instance.state.correctToday;
+        int flaggedToday = GameManager.Instance.state.flaggedToday;
+        int reportedToday = GameManager.Instance.state.reportedToday;
+        int helpedToday = GameManager.Instance.state.helpedToday;
 
         bool satisfactory = correctToday >= 4 && flaggedToday >= 1 && reportedToday == 1 && helpedToday == 1;
         bool requiresReview = correctToday >= 3 && flaggedToday >= 1 && reportedToday < 2 && helpedToday == 1;

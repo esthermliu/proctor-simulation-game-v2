@@ -32,10 +32,10 @@ public class PlayerInteraction : MonoBehaviour
             return;
         }
 
-        int correctToday = GameManager.Instance.correctToday;
-        int flaggedToday = GameManager.Instance.flaggedToday;
-        int reportedToday = GameManager.Instance.reportedToday;
-        int helpedToday = GameManager.Instance.helpedToday;
+        int correctToday = GameManager.Instance.state.correctToday;
+        int flaggedToday = GameManager.Instance.state.flaggedToday;
+        int reportedToday = GameManager.Instance.state.reportedToday;
+        int helpedToday = GameManager.Instance.state.helpedToday;
 
         paycheckText.text =
             $"Correct Admissions: {correctToday}\n" +

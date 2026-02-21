@@ -557,6 +557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1398020655}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &41370257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,10 +1174,16 @@ MonoBehaviour:
   timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 73797710}
   q1NoCheck: {fileID: 2096194257}
+  q1NACheck: {fileID: 0}
   q2YesCheck: {fileID: 1679722068}
   q2NoCheck: {fileID: 509337476}
+  q2NACheck: {fileID: 0}
   q3YesCheck: {fileID: 549128851}
   q3NoCheck: {fileID: 1716508441}
+  q3NACheck: {fileID: 0}
+  q4YesCheck: {fileID: 0}
+  q4NoCheck: {fileID: 0}
+  q4NACheck: {fileID: 0}
   admitCheck: {fileID: 1586795902}
   denyCheck: {fileID: 761423775}
 --- !u!114 &84809693
@@ -1239,7 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94005113}
   - component: {fileID: 94005114}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: NotificationManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,6 +1603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1140934841}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &114820271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2404,6 +2414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentAnimationController
   nextStudent: {fileID: 1826846334}
   supervisorGrayCharacter: {fileID: 0}
+  clockOutButton: {fileID: 0}
 --- !u!95 &170333258
 Animator:
   serializedVersion: 7
@@ -2678,10 +2689,16 @@ MonoBehaviour:
   timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1197806913}
   q1NoCheck: {fileID: 471886507}
+  q1NACheck: {fileID: 0}
   q2YesCheck: {fileID: 1836916813}
   q2NoCheck: {fileID: 739535462}
+  q2NACheck: {fileID: 0}
   q3YesCheck: {fileID: 722338316}
   q3NoCheck: {fileID: 2062642098}
+  q3NACheck: {fileID: 0}
+  q4YesCheck: {fileID: 0}
+  q4NoCheck: {fileID: 0}
+  q4NACheck: {fileID: 0}
   admitCheck: {fileID: 1964410846}
   denyCheck: {fileID: 1457137915}
 --- !u!114 &177246516
@@ -2824,6 +2841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 611985903}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!1 &186123589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2989,6 +3008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 441143765}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &191456766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4108,6 +4129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentAnimationController
   nextStudent: {fileID: 170333254}
   supervisorGrayCharacter: {fileID: 0}
+  clockOutButton: {fileID: 0}
 --- !u!95 &248765987
 Animator:
   serializedVersion: 7
@@ -4730,7 +4752,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1033724646}
   - {fileID: 750222256}
   - {fileID: 961131104}
   - {fileID: 1992367137}
@@ -6548,6 +6569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 720767083}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &424267473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6693,6 +6716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 923522812}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &430177215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6839,6 +6864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1151691858}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!1 &431614927
 GameObject:
   m_ObjectHideFlags: 0
@@ -7981,6 +8008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 367052719}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &471841331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9861,6 +9890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 925469365}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &551062150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10464,6 +10495,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1657431999}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!1 &590862980
 GameObject:
   m_ObjectHideFlags: 0
@@ -12350,6 +12383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1521378821}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &651649683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12845,6 +12880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 84809690}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &665257450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15293,6 +15330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 600117507}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &752960792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15589,6 +15628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1639621697}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &764402790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15992,10 +16033,16 @@ MonoBehaviour:
   timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 2051919181}
   q1NoCheck: {fileID: 1413320586}
+  q1NACheck: {fileID: 0}
   q2YesCheck: {fileID: 728123512}
   q2NoCheck: {fileID: 1254826755}
+  q2NACheck: {fileID: 0}
   q3YesCheck: {fileID: 1265411670}
   q3NoCheck: {fileID: 1175922296}
+  q3NACheck: {fileID: 0}
+  q4YesCheck: {fileID: 0}
+  q4NoCheck: {fileID: 0}
+  q4NACheck: {fileID: 0}
   admitCheck: {fileID: 666422924}
   denyCheck: {fileID: 880196114}
 --- !u!114 &772347260
@@ -17380,6 +17427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1159398329}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &830115322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18551,6 +18600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 177246513}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &883703890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21583,6 +21634,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1770859068}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &992086157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22288,8 +22341,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1033724646}
-  m_Layer: 5
-  m_Name: GAME_MANAGERS
+  m_Layer: 0
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22302,7 +22355,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033724645}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -22310,11 +22363,11 @@ RectTransform:
   - {fileID: 1387460750}
   - {fileID: 94005113}
   - {fileID: 1044097322}
-  m_Father: {fileID: 263635775}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 960, y: 540}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1036196987
@@ -22824,7 +22877,7 @@ GameObject:
   - component: {fileID: 1044097322}
   - component: {fileID: 1044097323}
   - component: {fileID: 1044097324}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TransitionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24932,10 +24985,16 @@ MonoBehaviour:
   timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1931999265}
   q1NoCheck: {fileID: 1554019562}
+  q1NACheck: {fileID: 0}
   q2YesCheck: {fileID: 874071726}
   q2NoCheck: {fileID: 1475983787}
+  q2NACheck: {fileID: 0}
   q3YesCheck: {fileID: 2140805591}
   q3NoCheck: {fileID: 427954550}
+  q3NACheck: {fileID: 0}
+  q4YesCheck: {fileID: 0}
+  q4NoCheck: {fileID: 0}
+  q4NACheck: {fileID: 0}
   admitCheck: {fileID: 1720292213}
   denyCheck: {fileID: 942767014}
 --- !u!1 &1165719519
@@ -26503,6 +26562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1165377090}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!1 &1250396643
 GameObject:
   m_ObjectHideFlags: 0
@@ -26747,6 +26808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 772347257}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &1256517057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26911,6 +26974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 807806451}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &1273778351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28157,6 +28222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1167146372}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!1 &1334994213
 GameObject:
   m_ObjectHideFlags: 0
@@ -32212,6 +32279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1102435624}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &1533009786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33165,6 +33234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentAnimationController
   nextStudent: {fileID: 248765983}
   supervisorGrayCharacter: {fileID: 0}
+  clockOutButton: {fileID: 0}
 --- !u!114 &1578436180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33325,6 +33395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1346267700}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &1589262934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36348,6 +36420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 603430043}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &1750597341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37373,6 +37447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentAnimationController
   nextStudent: {fileID: 2090917084}
   supervisorGrayCharacter: {fileID: 0}
+  clockOutButton: {fileID: 0}
 --- !u!95 &1826846338
 Animator:
   serializedVersion: 7
@@ -37750,10 +37825,16 @@ MonoBehaviour:
   timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1957912814}
   q1NoCheck: {fileID: 1689963095}
+  q1NACheck: {fileID: 0}
   q2YesCheck: {fileID: 779508724}
   q2NoCheck: {fileID: 144437506}
+  q2NACheck: {fileID: 0}
   q3YesCheck: {fileID: 967128977}
   q3NoCheck: {fileID: 1171389167}
+  q3NACheck: {fileID: 0}
+  q4YesCheck: {fileID: 0}
+  q4NoCheck: {fileID: 0}
+  q4NACheck: {fileID: 0}
   admitCheck: {fileID: 1477433493}
   denyCheck: {fileID: 1907885801}
 --- !u!114 &1831905396
@@ -38649,6 +38730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1831905393}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &1886809979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39966,6 +40049,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1830298344}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!1 &1957912814
 GameObject:
   m_ObjectHideFlags: 0
@@ -42042,6 +42127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1210908817}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 0
 --- !u!114 &2077765588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42434,6 +42521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentAnimationController
   nextStudent: {fileID: 0}
   supervisorGrayCharacter: {fileID: 696515404}
+  clockOutButton: {fileID: 0}
 --- !u!95 &2090917088
 Animator:
   serializedVersion: 7
@@ -42989,5 +43077,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 1033724646}
   - {fileID: 263635775}
   - {fileID: 1503633792}

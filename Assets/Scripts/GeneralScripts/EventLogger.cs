@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameEvent
 {
     public double gameVersion = Constants.GAME_VERSION; 
-    public string subversion = GameManager.Instance.subversion; // for A/B testing
+    public string subversion = GameManager.Instance?.subversion; // for A/B testing
     public string hostingPlatform = Constants.HOSTING_PLATFORM;
 
     [SerializeField]
@@ -15,10 +15,12 @@ public class GameEvent
         get => eventTypeEnum;
         set { eventType = value.ToString(); }
     }
-    public string sessionId = GameManager.Instance.sessionId;
+    public string sessionId = GameManager.Instance?.sessionId;
     public string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
     public string description = null;
+    public int index = 0;
+    public GameState gameState = null;
 }
 
 public enum EventType

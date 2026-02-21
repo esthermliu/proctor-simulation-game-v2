@@ -7,24 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    // ----- Per Day Stats -----
-    public int correctToday = 0;
-    public int reportedToday = 0;
-    public int helpedToday = 0;
-    public int flaggedToday = 0;
 
-    // ----- Total Stats -----
-    public int totalCorrect = 0;
-    public int totalReported = 0;
-    public int totalHelped = 0;
-    public int totalFlagged = 0;
+    public GameState state = new GameState();
 
     // TODO: remove money
     public int totalMoney = 0;
-
-    // javascript imports
-    [DllImport("__Internal")]
-    private static extern void AlertString(string str);
 
     // Analytics data
     public string sessionId = System.Guid.NewGuid().ToString();
@@ -37,8 +24,6 @@ public class GameManager : MonoBehaviour
         EventLogger.Log(new GameEvent
         {
             eventTypeEnum = EventType.session_start,
-            sessionId = sessionId,
-            subversion = subversion
         });
 
         // Singleton pattern
@@ -70,9 +55,8 @@ public class GameManager : MonoBehaviour
             new GameEvent
             {
                 eventTypeEnum = EventType.scene_entered,
-                sessionId = sessionId,
-                subversion = subversion,
-                sceneName = scene.name
+                sceneName = scene.name,
+                gameState = state,
             }
         );
 
@@ -81,36 +65,36 @@ public class GameManager : MonoBehaviour
     // ----- Called when a student is correctly admitted/denied -----
     public void DecideStudentCorrectly()
     {
-        correctToday++;
-        totalCorrect++;
+        state.correctToday++;
+        state.totalCorrect++;
     }
 
     // ----- Called when a student is reported -----
     public void ReportStudent()
     {
-        reportedToday++;
-        totalReported++;
+        state.reportedToday++;
+        state.totalReported++;
     }
 
     // ----- Called when a student is helped (question answered correctly) -----
     public void HelpStudent()
     {
-        helpedToday++;
-        totalHelped++;
+        state.helpedToday++;
+        state.totalHelped++;
     }
 
     // ----- Called when a student is flagged -----
     public void FlagStudent()
     {
-        flaggedToday++;
-        totalFlagged++;
+        state.flaggedToday++;
+        state.totalFlagged++;
     }
 
     // ---- called at EOD to add up salary ---
     public void AddSalary()
     {
-        totalMoney += (correctToday * 10);
-        int deductStudents = (5 - correctToday) - 1;
+        totalMoney += (state.correctToday * 10);
+        int deductStudents = (5 - state.correctToday) - 1;
         if (deductStudents > 0)
         {
             totalMoney -= (5 * deductStudents);
@@ -123,9 +107,6 @@ public class GameManager : MonoBehaviour
     // ----- Reset per-day stats (call at start of new day) -----
     public void ResetDailyStats()
     {
-        correctToday = 0;
-        reportedToday = 0;
-        helpedToday = 0;
-        flaggedToday = 0;
+        state.ResetDailyStats();
     }
 }

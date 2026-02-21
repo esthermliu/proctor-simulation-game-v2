@@ -1,17 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TutorialClickable : MonoBehaviour, IPointerDownHandler
+public class TutorialClickable : Clickable
 {
-    public GameObject enlargedPaper;
 
     public SupervisorPause2Manager supervisorPause2Manager;
     public SupervisorPause3Manager supervisorPause3Manager;
 
     public string whatAmI; // ID, ticket, or guide
-
-    // keeps track of when this item can be clicked, set to false for everything at first
-    private bool clickable = false;
 
     // keeps track of whether we are in pause 2
     private bool pause2 = false;
@@ -75,11 +71,6 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler
         {
             Debug.Log("ERROR (Clickable.cs): Missing enlarged version of paper");
         }
-    }
-
-    public void SetClickable(bool clickable)
-    {
-        this.clickable = clickable;
     }
 
     public void SetPause2(bool occurring)

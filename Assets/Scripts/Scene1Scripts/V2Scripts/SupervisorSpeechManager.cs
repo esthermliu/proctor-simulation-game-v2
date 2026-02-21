@@ -84,13 +84,24 @@ public class SupervisorSpeechManager : MonoBehaviour
         // Hide all dialogue bubbles (should only need to disable the one at which the skip orientation button was clicked)
         dialogueBubbles[currentIndex].SetActive(false);
 
+        // Hide all materials
+        smallID.SetActive(false);
+        smallExamTicket.SetActive(false);
+        smallMaterials.SetActive(false);
+        smallExamGuideClickable.gameObject.SetActive(false);
+        smallFolderClickable.gameObject.SetActive(false);
+
+        smallIDClickable.enlargedPaper.SetActive(false);
+        smallExamTicketClickable.enlargedPaper.SetActive(false);
+        smallMaterialsClickable.enlargedPaper.SetActive(false);
+        smallExamGuideClickable.enlargedPaper.SetActive(false);
+        smallFolderClickable.enlargedPaper.SetActive(false);
+
         // log the skip orientation event
         EventLogger.Log(new GameEvent
         {
             eventTypeEnum = EventType.orientation_skipped,
-            sessionId = GameManager.Instance.sessionId,
-            subversion = GameManager.Instance.subversion,
-            sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+            index = currentIndex, // log at which dialogue bubble the orientation was skipped
         });
     }
 
