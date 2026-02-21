@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Scene2Manager : MonoBehaviour
 {
+    public static Scene2Manager Instance;
+
     public List<Student> students;
 
     // Assign which student does what
@@ -41,10 +43,16 @@ public class Scene2Manager : MonoBehaviour
     public int startSeconds = 0;
 
     private float elapsedTime = 0f;
+    public float ElapsedTime { get => elapsedTime; }
     private float startTimeInSeconds;
 
     private bool ongoingEvent = false;
     private bool startTime = false;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {

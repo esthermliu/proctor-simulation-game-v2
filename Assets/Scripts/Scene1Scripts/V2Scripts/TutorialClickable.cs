@@ -24,7 +24,7 @@ public class TutorialClickable : Clickable
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public new void OnPointerDown(PointerEventData eventData)
     {
         // Check if the item can be clicked
         if (!clickable) return;

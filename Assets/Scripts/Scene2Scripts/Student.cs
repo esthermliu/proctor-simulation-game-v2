@@ -127,6 +127,11 @@ public class Student : MonoBehaviour
         if (!this.behaviorClicked)
         {
             StartCoroutine(DelayedMissedNotification());
+            EventLogger.Log(new GameEvent {
+                eventTypeEnum = EventType.bad_behavior_missed,
+                elapsedTime = Scene2Manager.Instance.ElapsedTime,
+                description = gameObject.name, // name of the student
+            });
         }
     }
 
@@ -141,6 +146,11 @@ public class Student : MonoBehaviour
         if (question != null && this.behaviorClicked && !questionAnswered)
         {
             StartCoroutine(DelayedMissedNotification());
+            EventLogger.Log(new GameEvent {
+                eventTypeEnum = EventType.question_missed,
+                elapsedTime = Scene2Manager.Instance.ElapsedTime,
+                description = gameObject.name, // name of the student
+            });
         }
     }
 

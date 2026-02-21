@@ -46,6 +46,11 @@ public class QuestionManager : MonoBehaviour
 
         // make sure to note that the question WAS answered, so no notification shows up
         student.QuestionAnswered();
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.question_answered_correctly,
+            elapsedTime = scene2Manager.ElapsedTime,
+        });
     }
 
     public void OnIncorrectOptionClick()
@@ -55,5 +60,10 @@ public class QuestionManager : MonoBehaviour
 
         // Incorrect: show black, keep orange visible
         student.ShowBadResponse();
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.question_answered_incorrectly,
+            elapsedTime = scene2Manager.ElapsedTime,
+        });
     }
 }

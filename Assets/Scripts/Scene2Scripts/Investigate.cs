@@ -57,6 +57,11 @@ public class Investigate : MonoBehaviour
         // Lock both buttons (so no hovering effects or anything if we decide to add them later)
         investigateYesButton.interactable = false;
         investigateNoButton.interactable = false;
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.investigation_initiated,
+            elapsedTime = scene2Manager.ElapsedTime,
+        });
         
     }
 
@@ -72,6 +77,11 @@ public class Investigate : MonoBehaviour
         // lock UI for buttons
         investigateYesButton.interactable = false;
         investigateNoButton.interactable = false;
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.investigation_declined,
+            elapsedTime = scene2Manager.ElapsedTime,
+        });
     }
 
     // ============== BUTTON FUNCTIONS FOR Q2 =============

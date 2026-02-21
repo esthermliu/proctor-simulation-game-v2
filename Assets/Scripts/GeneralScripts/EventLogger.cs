@@ -20,6 +20,7 @@ public class GameEvent
 
     public string description = null;
     public int index = 0;
+    public float elapsedTime = 0f; // for scene 2 only
     public GameState gameState = null;
 }
 
@@ -33,6 +34,16 @@ public enum EventType
     orientation_skipped,
     admission_decision_correct,
     admission_decision_incorrect,
+    bad_behavior_clicked,
+    bad_behavior_clicked_during_ongoing_event,
+    bad_behavior_missed,
+    question_clicked,
+    question_clicked_during_ongoing_event,
+    question_missed,
+    question_answered_correctly,
+    question_answered_incorrectly,
+    investigation_initiated,
+    investigation_declined,
 }
 
 
@@ -44,6 +55,11 @@ public static class EventLogger
 
         // Log the event to Firebase
         FirebaseProxy.LogDocument("game_events", gameEvent);
+
+        #else
+
+        // Log the event to the console
+        Debug.Log("Analytics Event: " + JsonUtility.ToJson(gameEvent));
 
         #endif
     }

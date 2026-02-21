@@ -23,7 +23,18 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         // Do NOT process the event if there is already an ongoing event
-        if (scene2Manager.ExistsOngoingEvent()) return;
+        if (scene2Manager.ExistsOngoingEvent()) {
+            EventLogger.Log(new GameEvent {
+                eventTypeEnum = EventType.bad_behavior_clicked_during_ongoing_event,
+                elapsedTime = scene2Manager.ElapsedTime,
+            });
+            return;
+        }
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.bad_behavior_clicked,
+            elapsedTime = scene2Manager.ElapsedTime,
+        });
 
         // Otherwise, there is no ongoing event, so set this as the current ongoing event
         scene2Manager.SetOngoingEvent();
