@@ -69,11 +69,23 @@ public class ReviewFolder : MonoBehaviour
                 GameManager.Instance.DecideStudentCorrectly();
             }
 
+            EventLogger.Log(new GameEvent
+            {
+                eventTypeEnum = EventType.admission_decision_correct,
+                description = "Admitted student " + student.name
+            });
+
         }
         else
         {
             // else: incorrect admission (no increment, show incorrect icon)
             notificationManager.ShowIncorrectIcon();
+
+            EventLogger.Log(new GameEvent
+            {
+                eventTypeEnum = EventType.admission_decision_incorrect,
+                description = "Admitted student " + student.name
+            });
         }
 
         // increment notification manager student number to keep track of corresponding incorrect icon
@@ -105,11 +117,21 @@ public class ReviewFolder : MonoBehaviour
             {
                 GameManager.Instance.DecideStudentCorrectly();
             }
+            EventLogger.Log(new GameEvent
+            {
+                eventTypeEnum = EventType.admission_decision_correct,
+                description = "Denied student " + student.name
+            });
         }
         else
         {
             // else: incorrect admission (no increment, show incorrect icon)
             notificationManager.ShowIncorrectIcon();
+            EventLogger.Log(new GameEvent
+            {
+                eventTypeEnum = EventType.admission_decision_incorrect,
+                description = "Denied student " + student.name
+            });
         }
 
         // increment notification manager student number to keep track of corresponding incorrect icon

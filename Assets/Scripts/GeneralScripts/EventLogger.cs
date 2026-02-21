@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameEvent
 {
     public double gameVersion = Constants.GAME_VERSION; 
-    public string subversion; // for A/B testing
+    public string subversion = GameManager.Instance.subversion; // for A/B testing
     public string hostingPlatform = Constants.HOSTING_PLATFORM;
 
     [SerializeField]
@@ -15,9 +15,10 @@ public class GameEvent
         get => eventTypeEnum;
         set { eventType = value.ToString(); }
     }
-    public string sessionId;
+    public string sessionId = GameManager.Instance.sessionId;
+    public string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
-    public string sceneName = null;
+    public string description = null;
 }
 
 public enum EventType
@@ -26,6 +27,10 @@ public enum EventType
     controls_page_entered,
     credits_page_entered,
     scene_entered,
+    item_clicked,
+    orientation_skipped,
+    admission_decision_correct,
+    admission_decision_incorrect,
 }
 
 

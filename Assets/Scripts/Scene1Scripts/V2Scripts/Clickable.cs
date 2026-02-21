@@ -8,6 +8,8 @@ IPointerEnterHandler, IPointerExitHandler
     public GameObject enlargedPaper;
     public Color hoverColor = new Color(0.7f, 0.7f, 0.7f, 1f);
 
+    public bool logClick = false;
+
     private Image image; 
 
     void Start()
@@ -41,6 +43,19 @@ IPointerEnterHandler, IPointerExitHandler
         } else
         {
             Debug.Log("ERROR (Clickable.cs): Missing enlarged version of paper");
+        }
+
+        // log if needed
+        if (logClick)
+        {
+            EventLogger.Log(new GameEvent
+            {
+                eventTypeEnum = EventType.item_clicked,
+                sessionId = GameManager.Instance.sessionId,
+                subversion = GameManager.Instance.subversion,
+                sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
+                description = gameObject.name
+            });
         }
     }
 
