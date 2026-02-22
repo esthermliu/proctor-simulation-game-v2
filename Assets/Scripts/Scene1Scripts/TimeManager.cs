@@ -3,6 +3,8 @@ using TMPro;
 
 public class TimeManager : MonoBehaviour
 {
+    public static TimeManager Instance { get; private set; }
+
     public TMP_Text timeText;
     public int startHour;
     public int startMinutes;
@@ -10,6 +12,24 @@ public class TimeManager : MonoBehaviour
     private int totalMinutes = 0; // total minutes elapsed
 
     private int studentDuration = 2; // 2 minutes per student
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
 
     // Call this after a player makes a decision
     public void AdvanceTime()

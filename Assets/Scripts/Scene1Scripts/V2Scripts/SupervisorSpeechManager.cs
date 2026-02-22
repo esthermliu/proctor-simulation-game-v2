@@ -45,6 +45,9 @@ public class SupervisorSpeechManager : MonoBehaviour
     [Header("Supervisor management")]
     public bool supervisorEndDay = false;
 
+    [Header("Help Texts")]
+    public string[] helpTexts;
+
     // This function should be triggered by an animation event after the supervisor character
     // stops moving
     public void StartDialogue()
@@ -83,13 +86,14 @@ public class SupervisorSpeechManager : MonoBehaviour
 
         // Hide all dialogue bubbles (should only need to disable the one at which the skip orientation button was clicked)
         dialogueBubbles[currentIndex].SetActive(false);
+        if (currentIndex + 1 < dialogueBubbles.Length) {
+            dialogueBubbles[currentIndex + 1].SetActive(false);
+        }
 
         // Hide all materials
         smallID.SetActive(false);
         smallExamTicket.SetActive(false);
         smallMaterials.SetActive(false);
-        smallExamGuideClickable.gameObject.SetActive(false);
-        smallFolderClickable.gameObject.SetActive(false);
 
         smallIDClickable.enlargedPaper.SetActive(false);
         smallExamTicketClickable.enlargedPaper.SetActive(false);
@@ -97,12 +101,15 @@ public class SupervisorSpeechManager : MonoBehaviour
         smallExamGuideClickable.enlargedPaper.SetActive(false);
         smallFolderClickable.enlargedPaper.SetActive(false);
 
+
         // log the skip orientation event
         EventLogger.Log(new GameEvent
         {
             eventTypeEnum = EventType.orientation_skipped,
             index = currentIndex, // log at which dialogue bubble the orientation was skipped
         });
+
+        GetComponent<StartDay>().BeginDay();
     }
 
     public void ResumeDialogue()
@@ -110,6 +117,8 @@ public class SupervisorSpeechManager : MonoBehaviour
         if (!waitingForInteraction) return;
 
         waitingForInteraction = false;
+
+        HelpManager.Instance.HideHelpPanel();
 
         currentIndex++;
         ShowCurrentBubble();
@@ -181,6 +190,9 @@ public class SupervisorSpeechManager : MonoBehaviour
 
                 // then, enable this ID card to be clickable
                 smallIDClickable.SetClickable(true);
+
+                HelpManager.Instance.SetHelpText(helpTexts[0]);
+                HelpManager.Instance.ShowHelpPanel();
             } else if (pauseIndices[1] == currentIndex)
             {
                 // if we are at the second pause, then show the exam ticket and make it clickable
@@ -195,6 +207,9 @@ public class SupervisorSpeechManager : MonoBehaviour
                 // enable the small exam guide to be clickable
                 smallExamGuideClickable.SetClickable(true);
                 smallExamGuideClickable.SetPause2(true);
+
+                HelpManager.Instance.SetHelpText(helpTexts[1]);
+                HelpManager.Instance.ShowHelpPanel();
             } else if (pauseIndices[2] == currentIndex)
             {
                 // if we are at the third pause, then show the materials pouch and make it clickable
@@ -205,10 +220,16 @@ public class SupervisorSpeechManager : MonoBehaviour
                 // also make the exam guide clickable
                 smallExamGuideClickable.SetClickable(true);
                 smallExamGuideClickable.SetPause3(true);
+
+                HelpManager.Instance.SetHelpText(helpTexts[2]);
+                HelpManager.Instance.ShowHelpPanel();
             } else if (pauseIndices[3] == currentIndex)
             {
                 // if we are at the last pause, then make the review folder clickable
                 smallFolderClickable.SetClickable(true);
+
+                HelpManager.Instance.SetHelpText(helpTexts[3]);
+                HelpManager.Instance.ShowHelpPanel();
             }
             yield break; // IMPORTANT: stops dialogue flow
         } else if (triggerTopStudentsIndex == currentIndex)

@@ -49,6 +49,9 @@ public class Scene2Manager : MonoBehaviour
     private bool ongoingEvent = false;
     private bool startTime = false;
 
+    [Header("Help Text")]
+    public string helpText;
+
     private void Awake()
     {
         Instance = this;
@@ -112,6 +115,11 @@ public class Scene2Manager : MonoBehaviour
         timerText.text = $"{minutes}:{seconds:00}";
     }
 
+    public void BeginExam() {
+        HelpManager.Instance.SetHelpText(helpText);
+        HelpManager.Instance.ShowHelpPanel();
+    }
+
     void EndScene()
     {
         if (sceneEnded) return;
@@ -130,6 +138,9 @@ public class Scene2Manager : MonoBehaviour
         students[questionStudentIndex].HideGuide();
         students[questionStudentIndex].HideGoodResponse();
         students[questionStudentIndex].HideBadResponse();
+
+        // 4) Hide the help panel
+        HelpManager.Instance.HideHelpPanel();
     }
 
     // ================================================

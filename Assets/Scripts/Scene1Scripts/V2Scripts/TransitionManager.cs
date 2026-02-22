@@ -10,10 +10,30 @@ public class RevealItem
 
 public class TransitionManager : MonoBehaviour
 {
+    public static TransitionManager Instance { get; private set; }
+
     public SceneFadeIn fadeIn;
 
     [Header("Objects to reveal in order")]
     public RevealItem[] revealSequence;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
 
     void Start()
     {

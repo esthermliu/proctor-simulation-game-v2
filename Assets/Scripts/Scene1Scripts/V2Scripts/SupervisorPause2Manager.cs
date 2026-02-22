@@ -30,18 +30,21 @@ public class SupervisorPause2Manager : MonoBehaviour
 
     public void ExamTicketClicked()
     {
+        Debug.Log("ExamTicketClicked");
         examTicketClicked = true;
         CheckAllItemsClicked();
     }
 
     public void IDCardClicked()
     {
+        Debug.Log("IDCardClicked");
         IDClicked = true;
         CheckAllItemsClicked();
     }
 
     public void ExamGuideClicked()
     {
+        Debug.Log("ExamGuideClicked");
         examGuideClicked = true;
         CheckAllItemsClicked();
     }

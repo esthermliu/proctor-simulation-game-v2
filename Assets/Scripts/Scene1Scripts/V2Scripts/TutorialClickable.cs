@@ -1,19 +1,29 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class TutorialClickable : Clickable
+public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    
+    public static readonly Color DEFAULT_HOVER_COLOR = new Color(0.7f, 0.7f, 0.7f, 1f);
+    public GameObject enlargedPaper;
+    public Color hoverColor = DEFAULT_HOVER_COLOR;
 
     public SupervisorPause2Manager supervisorPause2Manager;
     public SupervisorPause3Manager supervisorPause3Manager;
 
     public string whatAmI; // ID, ticket, or guide
 
+    // keeps track of when this item can be clicked, set to false for everything at first
+    private bool clickable = false;
+
     // keeps track of whether we are in pause 2
     private bool pause2 = false;
 
     // keeps track of whether we are in pause 3
     private bool pause3 = false;
+
+    private Image image;
 
     void Start()
     {
@@ -22,12 +32,19 @@ public class TutorialClickable : Clickable
         {
             enlargedPaper.SetActive(false);
         }
+        image = GetComponent<Image>();
     }
 
-    public new void OnPointerDown(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         // Check if the item can be clicked
         if (!clickable) return;
+
+        // reset color to default
+        if (image != null)
+        {
+            image.color = Color.white; // reset to original color
+        }
 
 
         // check if we are in pause 2 and have to keep track of whether we were clicked or not
@@ -71,6 +88,29 @@ public class TutorialClickable : Clickable
         {
             Debug.Log("ERROR (Clickable.cs): Missing enlarged version of paper");
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (!clickable) return;
+        if (image != null)
+        {
+            image.color = hoverColor;
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (!clickable) return;
+        if (image != null)
+        {
+            image.color = Color.white; // reset to original color
+        }
+    }
+
+    public void SetClickable(bool clickable)
+    {
+        this.clickable = clickable;
     }
 
     public void SetPause2(bool occurring)

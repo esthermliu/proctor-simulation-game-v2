@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class NotificationManager : MonoBehaviour
 {
+    public static NotificationManager Instance { get; private set; }
+
     [Header("Link incorrect icons for corresponding student")]
     public GameObject[] incorrectIcons;
 
@@ -14,6 +16,24 @@ public class NotificationManager : MonoBehaviour
 
     // index of icon/message to display
     private int studentNumber;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
 
     void Start()
     {

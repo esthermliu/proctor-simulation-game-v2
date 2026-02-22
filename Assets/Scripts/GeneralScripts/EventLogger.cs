@@ -21,7 +21,7 @@ public class GameEvent
     public string description = null;
     public int index = 0;
     public float elapsedTime = 0f; // for scene 2 only
-    public GameState gameState = null;
+    public GameState gameState = GameManager.Instance?.state;
 }
 
 public enum EventType
@@ -44,6 +44,7 @@ public enum EventType
     question_answered_incorrectly,
     investigation_initiated,
     investigation_declined,
+    help_clicked,
 }
 
 

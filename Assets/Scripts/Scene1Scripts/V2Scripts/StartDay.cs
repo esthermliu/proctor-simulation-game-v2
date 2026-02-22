@@ -14,25 +14,16 @@ public class StartDay : MonoBehaviour
     [Header("Clock In Button")]
     public GameObject clockInButton;
 
-    [Header("Time manager")]
-    public TimeManager timeManager;
-
     [Header("Supervisor top character")]
     public Animator supervisorTopCharacter;
+
+    [Header("Help Text")]
+    public string helpText;
 
     public void OnClockIn()
     {
         // this will end the tutorial and start the day
-
-        // show the first character's small items and hide the current small items
-        smallReviewFolder.SetActive(false);
-        smallExamGuide.SetActive(false);
-
-        nextSmallReviewFolder.SetActive(true);
-        nextSmallExamGuide.SetActive(true);
-
-        // then, advance time forward by 10 minutes
-        timeManager.AdvanceTime(10);
+        BeginDay();
 
         // then, animate supervisor leaving to the right
         gameObject.GetComponent<Animator>().SetTrigger("SupervisorExit");
@@ -42,6 +33,22 @@ public class StartDay : MonoBehaviour
 
         // Hide the clock-in button
         clockInButton.SetActive(false);
+    }
+
+    public void BeginDay() {
+
+        // show the first character's small items and hide the current small items
+        smallReviewFolder.SetActive(false);
+        smallExamGuide.SetActive(false);
+
+        nextSmallReviewFolder.SetActive(true);
+        nextSmallExamGuide.SetActive(true);
+
+        // then, advance time forward by 10 minutes
+        TimeManager.Instance.AdvanceTime(10);
+
+        HelpManager.Instance.SetHelpText(helpText);
+        HelpManager.Instance.ShowHelpPanel();
     }
 
     // Called when supervisor should just exit after the conversation ends

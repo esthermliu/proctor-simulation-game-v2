@@ -9,7 +9,7 @@ IPointerEnterHandler, IPointerExitHandler
     public GameObject enlargedPaper;
     public Color hoverColor = DEFAULT_HOVER_COLOR;
 
-    public bool logClick = false;
+    public bool logClick = true;
 
     protected bool clickable = true;
 

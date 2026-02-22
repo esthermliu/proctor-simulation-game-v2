@@ -31,12 +31,6 @@ public class ReviewFolder : MonoBehaviour
     [Header("Correct decision")]
     public bool isValid;
 
-    [Header("Notification manager")]
-    public NotificationManager notificationManager;
-
-    [Header("Time manager")]
-    public TimeManager timeManager;
-
     [Header("Review folder")]
     public GameObject q1YesCheck;
     public GameObject q1NoCheck;
@@ -66,7 +60,7 @@ public class ReviewFolder : MonoBehaviour
 
         // reset all papers + notifications
         ResetPapers();
-        notificationManager.ResetIncorrectIcons();
+        NotificationManager.Instance.ResetIncorrectIcons();
 
         // ---- GAME LOGIC ----
 
@@ -88,7 +82,7 @@ public class ReviewFolder : MonoBehaviour
         else
         {
             // else: incorrect admission (no increment, show incorrect icon)
-            notificationManager.ShowIncorrectIcon();
+            NotificationManager.Instance.ShowIncorrectIcon();
 
             EventLogger.Log(new GameEvent
             {
@@ -98,7 +92,7 @@ public class ReviewFolder : MonoBehaviour
         }
 
         // increment notification manager student number to keep track of corresponding incorrect icon
-        notificationManager.IncrementStudent();
+        NotificationManager.Instance.IncrementStudent();
 
         // play the admit animation at bottom of screen
         student.Admit();
@@ -107,7 +101,7 @@ public class ReviewFolder : MonoBehaviour
         studentTopIcons.ShowGreenCharacter();
 
         // advance time
-        timeManager.AdvanceTime();
+        TimeManager.Instance.AdvanceTime();
     }
 
     public void Deny()
@@ -117,7 +111,7 @@ public class ReviewFolder : MonoBehaviour
 
         // reset all papers + notifications
         ResetPapers();
-        notificationManager.ResetIncorrectIcons();
+        NotificationManager.Instance.ResetIncorrectIcons();
 
         // ---- GAME LOGIC ----
         if (!isValid)
@@ -135,7 +129,7 @@ public class ReviewFolder : MonoBehaviour
         else
         {
             // else: incorrect admission (no increment, show incorrect icon)
-            notificationManager.ShowIncorrectIcon();
+            NotificationManager.Instance.ShowIncorrectIcon();
             EventLogger.Log(new GameEvent
             {
                 eventTypeEnum = EventType.admission_decision_incorrect,
@@ -144,7 +138,7 @@ public class ReviewFolder : MonoBehaviour
         }
 
         // increment notification manager student number to keep track of corresponding incorrect icon
-        notificationManager.IncrementStudent();
+        NotificationManager.Instance.IncrementStudent();
 
         // play the deny animation at bottom of screen
         student.Deny();
@@ -153,7 +147,7 @@ public class ReviewFolder : MonoBehaviour
         studentTopIcons.ShowRedCharacter();
 
         // advance time
-        timeManager.AdvanceTime();
+        TimeManager.Instance.AdvanceTime();
     }
 
     //========= Admit/Deny Button OnClick Events =========

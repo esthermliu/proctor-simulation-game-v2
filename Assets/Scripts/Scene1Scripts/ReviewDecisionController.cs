@@ -24,9 +24,6 @@ public class ReviewDecisionController : MonoBehaviour
     [Header("Decision manager")]
     public DecisionManager decisionManager;
 
-    [Header("Time manager")]
-    public TimeManager timeManager;
-
     private bool decisionMade = false;
 
     public void Admit()
@@ -55,7 +52,7 @@ public class ReviewDecisionController : MonoBehaviour
         student.Admit();
 
         // advance time
-        timeManager.AdvanceTime();
+        TimeManager.Instance.AdvanceTime();
     }
 
     public void Deny()
@@ -81,7 +78,7 @@ public class ReviewDecisionController : MonoBehaviour
         student.Deny();
 
         // advance time
-        timeManager.AdvanceTime();
+        TimeManager.Instance.AdvanceTime();
     }
 
     private void ResetPapers()
