@@ -176,10 +176,20 @@ public class Student : MonoBehaviour
         bool correct = (this.shouldReport && this.reported) || (!this.shouldReport && !this.reported);
         if (!correct)
         {
+            EventLogger.Log(new GameEvent {
+                eventTypeEnum = EventType.report_incorrect,
+                elapsedTime = Scene2Manager.Instance.ElapsedTime,
+                description = gameObject.name, // name of the student
+            });
             // show the incorrect notification on delay
             StartCoroutine(DelayedIncorrectNotification());
         } else
         {
+            EventLogger.Log(new GameEvent {
+                eventTypeEnum = EventType.report_correct,
+                elapsedTime = Scene2Manager.Instance.ElapsedTime,
+                description = gameObject.name, // name of the student
+            });
             // at this point, we know that the report or lack or report was CORRECT
             // if we reported, then increment report student
 
