@@ -104,5 +104,4 @@ InitTestScene*.unity*
 
 # custom stuff
 .vscode
-build_web_test*
-build*.zip
+WebGL_Build*
