@@ -14,16 +14,23 @@ public class Scene2Manager : MonoBehaviour
     public int questionStudentIndex = 1;
     public int badStudent2Index = 4;
 
+    // Janky solution for now, but hardcoded day 3 additional bad student
+    [Header("Day 3 Specific Additional Bad Behavior")]
+    public bool day3 = false;
+    public int badStudent3Index = -1;
+
     [Header("Pencils Down Bubble")]
     public GameObject pencilsDownBubble;
 
-    private float badTime1;
-    private float questionTime;
-    private float badTime2;
+    public float badTime1 = 11f;
+    public float questionTime = 45f;
+    public float badTime2 = 80f;
+    public float badTime3 = -1f;
 
     private bool bad1Triggered = false;
     private bool questionTriggered = false;
     private bool bad2Triggered = false;
+    private bool bad3Triggered = false;
 
     private bool sceneEnded = false;
 
@@ -61,11 +68,6 @@ public class Scene2Manager : MonoBehaviour
     {
         // Convert starting display time to seconds
         startTimeInSeconds = (startMinutes * 60f) + startSeconds;
-
-        // HARDCODED EVENT TIMES (seconds after scene starts)
-        badTime1 = 11f;
-        questionTime = 45f;
-        badTime2 = 80f;
     }
 
     void Update()
@@ -96,6 +98,16 @@ public class Scene2Manager : MonoBehaviour
             bad2Triggered = true;
         }
 
+        // SPECIFIC additional bad behavior for Day 2
+        if (day3)
+        {
+            if (!bad3Triggered && elapsedTime >= badTime3)
+            {
+                students[badStudent3Index].ShowIndicator();
+                bad3Triggered = true;
+            }
+        }
+
         if (elapsedTime >= totalDuration)
         {
             EndScene();
@@ -112,7 +124,7 @@ public class Scene2Manager : MonoBehaviour
         int minutes = totalSeconds / 60;
         int seconds = totalSeconds % 60;
 
-        timerText.text = $"{minutes}:{seconds:00}";
+        timerText.text = $"0{minutes}:{seconds:00}";
     }
 
     public void BeginExam() {

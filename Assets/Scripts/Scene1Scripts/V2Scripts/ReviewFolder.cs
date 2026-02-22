@@ -9,6 +9,7 @@ public class ReviewFolder : MonoBehaviour
     public GameObject examGuide;
     public GameObject materials;
     public GameObject externalTicket;
+    public GameObject accommodations;
 
     [Header("Next Paper parents (small)")]
     public GameObject nextReviewFolderSmall;
@@ -21,6 +22,7 @@ public class ReviewFolder : MonoBehaviour
     public GameObject examGuideEnlarged;
     public GameObject materialsEnlarged;
     public GameObject externalTicketEnlarged;
+    public GameObject accommodationsEnlarged;
 
     [Header("Student")]
     public StudentAnimationController student;
@@ -321,6 +323,13 @@ public class ReviewFolder : MonoBehaviour
         {
             externalTicket.SetActive(false);
             externalTicketEnlarged.SetActive(false);
+        }
+
+        // reset accommodations if it exists
+        if (accommodations != null)
+        {
+            accommodations.SetActive(false);
+            accommodationsEnlarged.SetActive(false);
         }
 
         // get the next misconduct review sheet and exam guide

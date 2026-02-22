@@ -6,6 +6,7 @@ public class RevealPapers : MonoBehaviour
     public GameObject examTicket;
     public GameObject materials;
     public GameObject externalTicket;
+    public GameObject accommodations;
 
     public void ShowDocuments()
     {
@@ -27,6 +28,11 @@ public class RevealPapers : MonoBehaviour
         if (externalTicket != null)
         {
             externalTicket.SetActive(true);
+        }
+
+        if (accommodations != null)
+        {
+            accommodations.SetActive(true);
         }
     }
 }

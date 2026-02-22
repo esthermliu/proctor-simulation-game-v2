@@ -7,13 +7,21 @@ IPointerEnterHandler, IPointerExitHandler
 {
     public static readonly Color DEFAULT_HOVER_COLOR = new Color(0.7f, 0.7f, 0.7f, 1f);
     public GameObject enlargedPaper;
+
     public Color hoverColor = DEFAULT_HOVER_COLOR;
 
     public bool logClick = true;
 
     protected bool clickable = true;
+    public float hoverScale = 1.1f;
 
-    private Image image; 
+    private Image image;
+    private Vector3 originalScale;
+
+    void Awake()
+    {
+        originalScale = transform.localScale;
+    }
 
     void Start()
     {
@@ -31,10 +39,13 @@ IPointerEnterHandler, IPointerExitHandler
         if (!clickable) return;
         // 1) Hide the small version of the paper, reset color
         gameObject.SetActive(false);
-        if (image != null)
-        {
-            image.color = Color.white; // reset to original color
-        }
+        //if (image != null)
+        //{
+        //    image.color = Color.white; // reset to original color
+        //}
+
+        // reset to original scale
+        transform.localScale = originalScale;
 
 
         // 2) Show the enlarged version of the paper IF it exists
@@ -62,20 +73,26 @@ IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+
         if (!clickable) return;
-        if (image != null)
-        {
-            image.color = hoverColor;
-        }
+        //if (image != null)
+        //{
+        //    image.color = hoverColor;
+        //}
+
+        transform.localScale = originalScale * hoverScale;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if (!clickable) return;
-        if (image != null)
-        {
-            image.color = Color.white; // reset to original color
-        }
+
+        //if (image != null)
+        //{
+        //    image.color = Color.white; // reset to original color
+        //}
+
+        transform.localScale = originalScale;
     }
 
     public void SetClickable(bool clickable)

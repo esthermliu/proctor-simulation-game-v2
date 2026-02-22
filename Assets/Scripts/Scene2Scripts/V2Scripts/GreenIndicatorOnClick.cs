@@ -50,7 +50,7 @@ public class GreenIndicatorOnClick : MonoBehaviour, IPointerClickHandler
 
         // Trigger the QUESTION DOWN, then STILL animation
         studentAnimator.SetTrigger("StartQuestionDown");
-        studentAnimator.SetTrigger("StartStillFromQuestionDown");
+        //studentAnimator.SetTrigger("StartStillFromQuestionDown");
 
         // Also, make note that the player flagged the behavior
         // This avoids sending an email notification

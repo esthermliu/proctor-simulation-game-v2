@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1940623631}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &259166165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,13 +2723,17 @@ MonoBehaviour:
   badStudent1Index: 0
   questionStudentIndex: 1
   badStudent2Index: 2
+  day3: 0
+  badStudent3Index: -1
   pencilsDownBubble: {fileID: 1082865989}
+  badTime1: 11
+  questionTime: 45
+  badTime2: 80
+  badTime3: -1
   timerText: {fileID: 99965564}
   totalDuration: 110
   startMinutes: 1
   startSeconds: 0
-  helpText: Observe students as they take the exam. Click on students that exhibit
-    suspicious behavior or are asking questions.
 --- !u!4 &504664137
 Transform:
   m_ObjectHideFlags: 0
@@ -3581,7 +3585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1154336351}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &666623190
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,7 +5127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1014363844}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &947034884
 GameObject:
   m_ObjectHideFlags: 0
@@ -8359,7 +8363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1360244700}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 1
+  hoverScale: 1.1
 --- !u!95 &1374263592
 Animator:
   serializedVersion: 7
@@ -10443,7 +10447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1072793922}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1697772204
 GameObject:
   m_ObjectHideFlags: 0
@@ -11041,7 +11045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1875982099}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1781530414
 GameObject:
   m_ObjectHideFlags: 0
@@ -12920,7 +12924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 2058197267}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 1
+  hoverScale: 1.1
 --- !u!95 &1984981171
 Animator:
   serializedVersion: 7
