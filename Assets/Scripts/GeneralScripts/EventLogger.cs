@@ -58,7 +58,7 @@ public static class EventLogger
         #if UNITY_WEBGL && !UNITY_EDITOR
 
         // Log the event to Firebase
-        FirebaseProxy.LogDocument("game_events", gameEvent);
+        FirebaseProxy.LogDocument("game_events_dev", gameEvent);
 
         #else
 
