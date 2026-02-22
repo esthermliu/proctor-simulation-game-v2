@@ -12,6 +12,10 @@ public class SignatureAppear : MonoBehaviour
 
         // Show the clock out button
         endDay.SetActive(true);
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.eval_signed,
+        });
     }
 
 }

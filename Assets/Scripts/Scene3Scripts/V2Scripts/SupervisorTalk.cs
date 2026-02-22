@@ -28,5 +28,9 @@ public class SupervisorTalk : MonoBehaviour, IPointerClickHandler
         // Since we started talking to the supervisor, trigger the start looking animation
         supervisorAnimator.SetTrigger("StartLooking");
 
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.supervisor_talk_clicked,
+        });
+
     }
 }

@@ -14,12 +14,12 @@ public class GameManager : MonoBehaviour
     public int totalMoney = 0;
 
     // Analytics data
-    public string sessionId = System.Guid.NewGuid().ToString();
+    public string sessionId = null;
     public string subversion = "A"; // TODO: set this based on A/B testing
 
     private void Awake()
     {
-        
+        sessionId = System.Guid.NewGuid().ToString();
         // Log the game start event with the session ID
         EventLogger.Log(new GameEvent
         {

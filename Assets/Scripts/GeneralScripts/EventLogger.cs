@@ -48,6 +48,8 @@ public enum EventType
     scroll_clicked,
     report_correct,
     report_incorrect,
+    supervisor_talk_clicked,
+    eval_signed,
 }
 
 
@@ -58,7 +60,7 @@ public static class EventLogger
         #if UNITY_WEBGL && !UNITY_EDITOR
 
         // Log the event to Firebase
-        FirebaseProxy.LogDocument("game_events_dev", gameEvent);
+        FirebaseProxy.LogDocument("game_events", gameEvent);
 
         #else
 

@@ -19086,10 +19086,9 @@ MonoBehaviour:
   - Compare Amanda's EXAM TICKET with her STUDENT ID and the EXAM GUIDE for discrepancies.
     Click COMPLETE INSPECTION when done.\n\nLEFT CLICK documents to inspect.\n\nRIGHT
     CLICK opened documents to close.
-  - Compare Amanda's MATERIALS POUCH with the EXAM GUIDE for discrepancies. Fill
-    out the STUDENT MISCONDUCT REVIEW FORM when done.\n\nLEFT CLICK documents to
-    inspect.\n\nCLICK & DRAG to move documents.\n\nRIGHT CLICK opened documents to
-    close.
+  - Compare Amanda's MATERIALS POUCH with the EXAM GUIDE for discrepancies. Click
+    COMPLETE INSPECTION when done.\n\nLEFT CLICK documents to inspect.\n\nCLICK &
+    DRAG to move documents.\n\nRIGHT CLICK opened documents to close.
   - Fill out the STUDENT MISCONDUCT REVIEW form. Click MARK AS COMPLETE when done.
 --- !u!114 &882431184
 MonoBehaviour:
