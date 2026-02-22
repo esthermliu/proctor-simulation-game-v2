@@ -55,9 +55,6 @@ IPointerEnterHandler, IPointerExitHandler
             EventLogger.Log(new GameEvent
             {
                 eventTypeEnum = EventType.item_clicked,
-                sessionId = GameManager.Instance.sessionId,
-                subversion = GameManager.Instance.subversion,
-                sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
                 description = gameObject.name
             });
         }
