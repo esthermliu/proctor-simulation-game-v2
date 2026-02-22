@@ -45,6 +45,7 @@ public enum EventType
     investigation_initiated,
     investigation_declined,
     help_clicked,
+    scroll_clicked,
 }
 
 

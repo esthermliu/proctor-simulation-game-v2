@@ -14,6 +14,11 @@ public class ScrollManager : MonoBehaviour
 
         // hide the current scroll component
         gameObject.SetActive(false);
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.scroll_clicked,
+            description = prevScroll.name,
+        });
     }
 
     public void OnNextClick()
@@ -22,5 +27,10 @@ public class ScrollManager : MonoBehaviour
 
         // hide the current scroll component
         gameObject.SetActive(false);
+
+        EventLogger.Log(new GameEvent {
+            eventTypeEnum = EventType.scroll_clicked,
+            description = nextScroll.name,
+        });
     }
 }

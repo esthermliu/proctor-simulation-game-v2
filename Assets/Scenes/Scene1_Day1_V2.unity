@@ -558,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1398020655}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &41370257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1140934841}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &114820271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,7 +2916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 611985903}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!1 &186123589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,7 +3083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 441143765}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &191456766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7064,7 +7064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 720767083}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &424267473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7211,7 +7211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 923522812}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &430177215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7359,7 +7359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1151691858}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!1 &431614927
 GameObject:
   m_ObjectHideFlags: 0
@@ -8503,7 +8503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 367052719}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &471841331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10523,7 +10523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 925469365}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &551062150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11128,7 +11128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1657431999}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!1 &590862980
 GameObject:
   m_ObjectHideFlags: 0
@@ -13017,7 +13017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1521378821}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &651649683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13514,7 +13514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 84809690}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &665257450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16014,7 +16014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 600117507}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &752960792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16312,7 +16312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1639621697}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &764402790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18109,7 +18109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1159398329}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &830115322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19297,7 +19297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 177246513}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &883703890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22331,7 +22331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1770859068}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &992086157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27258,7 +27258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1165377090}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!1 &1250396643
 GameObject:
   m_ObjectHideFlags: 0
@@ -27504,7 +27504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 772347257}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &1256517057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27670,7 +27670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 807806451}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &1273778351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28918,7 +28918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1167146372}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!1 &1334994213
 GameObject:
   m_ObjectHideFlags: 0
@@ -32975,7 +32975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1102435624}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &1533009786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34091,7 +34091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1346267700}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &1589262934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37398,7 +37398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 603430043}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &1750597341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39706,7 +39706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1831905393}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &1886809979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41026,7 +41026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1830298344}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!1 &1957912814
 GameObject:
   m_ObjectHideFlags: 0
@@ -43155,7 +43155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1210908817}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  logClick: 0
+  logClick: 1
 --- !u!114 &2077765588
 MonoBehaviour:
   m_ObjectHideFlags: 0
