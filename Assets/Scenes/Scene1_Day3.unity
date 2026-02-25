@@ -643,6 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1398020655}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &41370257
 MonoBehaviour:
@@ -1287,8 +1288,6 @@ MonoBehaviour:
   student: {fileID: 1826846337}
   studentTopIcons: {fileID: 346563082}
   isValid: 0
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 73797710}
   q1NoCheck: {fileID: 2096194257}
   q1NACheck: {fileID: 1079738825}
@@ -1863,6 +1862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 984168941}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &114820271
 MonoBehaviour:
@@ -2278,7 +2278,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene2_Day1_V2
+          m_StringArgument: Scene2_Day3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &126324496
@@ -2766,6 +2766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 517166592}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &163116072
 MonoBehaviour:
@@ -3252,8 +3253,6 @@ MonoBehaviour:
   student: {fileID: 2090917087}
   studentTopIcons: {fileID: 1380531900}
   isValid: 0
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1197806913}
   q1NoCheck: {fileID: 471886507}
   q1NACheck: {fileID: 770220389}
@@ -3409,6 +3408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 611985903}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &182460476
 GameObject:
@@ -3654,6 +3654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 441143765}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &191456766
 MonoBehaviour:
@@ -6595,6 +6596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1594217040}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &338265129
 MonoBehaviour:
@@ -8203,6 +8205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 720767083}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &424267473
 MonoBehaviour:
@@ -8350,6 +8353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 923522812}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &430177215
 MonoBehaviour:
@@ -8498,6 +8502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1151691858}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &434252009
 GameObject:
@@ -9636,6 +9641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 367052719}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &471841331
 MonoBehaviour:
@@ -10537,6 +10543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 1316703942}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: materials
@@ -11843,6 +11850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 925469365}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &551062150
 MonoBehaviour:
@@ -12600,6 +12608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1657431999}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &590862980
 GameObject:
@@ -14154,6 +14163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 363370265}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: ticket
@@ -14530,6 +14540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1521378821}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &651649683
 MonoBehaviour:
@@ -15027,6 +15038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 84809690}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &665257450
 MonoBehaviour:
@@ -16991,6 +17003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 380834261}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: ID
@@ -17453,6 +17466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 600117507}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &752960792
 MonoBehaviour:
@@ -17751,6 +17765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 532527015}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &764011046
 MonoBehaviour:
@@ -17842,6 +17857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1639621697}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &764402790
 MonoBehaviour:
@@ -18325,8 +18341,6 @@ MonoBehaviour:
   student: {fileID: 170333257}
   studentTopIcons: {fileID: 487197789}
   isValid: 0
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 2051919181}
   q1NoCheck: {fileID: 1413320586}
   q1NACheck: {fileID: 694809431}
@@ -20064,6 +20078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1159398329}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &830115322
 MonoBehaviour:
@@ -20518,6 +20533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 821493718}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: guide
@@ -21204,6 +21220,7 @@ MonoBehaviour:
   clockInButton: {fileID: 815976405}
   skipOrientationButton: {fileID: 1126914244}
   supervisorEndDay: 0
+  helpTexts: []
 --- !u!114 &882431184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21279,8 +21296,8 @@ MonoBehaviour:
   nextSmallReviewFolder: {fileID: 1249686297}
   nextSmallExamGuide: {fileID: 589513316}
   clockInButton: {fileID: 815976405}
-  timeManager: {fileID: 1387460749}
   supervisorTopCharacter: {fileID: 1578307023}
+  helpText: 
 --- !u!1 &882556007
 GameObject:
   m_ObjectHideFlags: 0
@@ -21407,6 +21424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 177246513}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &883703890
 MonoBehaviour:
@@ -24579,6 +24597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 100842448}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &992086157
 MonoBehaviour:
@@ -24802,6 +24821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 285199474}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &995146637
 MonoBehaviour:
@@ -25326,6 +25346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1633727667}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1016471496
 MonoBehaviour:
@@ -28590,8 +28611,6 @@ MonoBehaviour:
   student: {fileID: 1578436179}
   studentTopIcons: {fileID: 590862982}
   isValid: 1
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1931999265}
   q1NoCheck: {fileID: 1554019562}
   q1NACheck: {fileID: 1302190497}
@@ -30370,6 +30389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1165377090}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &1254231136
 GameObject:
@@ -30554,6 +30574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 772347257}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1256517057
 MonoBehaviour:
@@ -31231,6 +31252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 807806451}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1273778351
 MonoBehaviour:
@@ -33080,6 +33102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1167146372}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &1334320832
 GameObject:
@@ -36088,6 +36111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1542796494}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1490120924
 MonoBehaviour:
@@ -36950,6 +36974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1102435624}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1533009786
 MonoBehaviour:
@@ -37060,6 +37085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 609761282}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1542187724
 MonoBehaviour:
@@ -38507,6 +38533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1346267700}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1589262934
 MonoBehaviour:
@@ -41511,6 +41538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 603430043}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1750597341
 MonoBehaviour:
@@ -41602,6 +41630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 2102875850}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1758838082
 MonoBehaviour:
@@ -43227,8 +43256,6 @@ MonoBehaviour:
   student: {fileID: 248765986}
   studentTopIcons: {fileID: 573551523}
   isValid: 0
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1957912814}
   q1NoCheck: {fileID: 1689963095}
   q1NACheck: {fileID: 1793681919}
@@ -44344,6 +44371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1831905393}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1886809979
 MonoBehaviour:
@@ -44562,6 +44590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 461720352}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1889786557
 MonoBehaviour:
@@ -45939,6 +45968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1830298344}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &1957912814
 GameObject:
@@ -46048,6 +46078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 16835720}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &1959762470
 MonoBehaviour:
@@ -46195,6 +46226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 1846456831}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: 
@@ -48814,6 +48846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 378168835}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &2077765588
 MonoBehaviour:

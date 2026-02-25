@@ -817,6 +817,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1398020655}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &41370257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,6 +1584,7 @@ MonoBehaviour:
   examGuide: {fileID: 114820269}
   materials: {fileID: 41370255}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 883703888}
   nextExamGuideSmall: {fileID: 2077765586}
   studentIDEnlarged: {fileID: 1159398329}
@@ -1589,11 +1593,10 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 984168941}
   materialsEnlarged: {fileID: 1398020655}
   externalTicketEnlarged: {fileID: 0}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 1826846337}
   studentTopIcons: {fileID: 346563082}
   isValid: 0
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 73797710}
   q1NoCheck: {fileID: 2096194257}
   q1NACheck: {fileID: 1079738825}
@@ -2300,6 +2303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 984168941}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &114820271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2714,7 +2720,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene2_Day1_V2
+          m_StringArgument: Scene2_Day2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &126324496
@@ -3229,6 +3235,7 @@ MonoBehaviour:
   examTicket: {fileID: 1273778349}
   materials: {fileID: 471841329}
   externalTicket: {fileID: 1824346207}
+  accommodations: {fileID: 0}
 --- !u!114 &170333257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3509,6 +3516,7 @@ MonoBehaviour:
   examGuide: {fileID: 2077765586}
   materials: {fileID: 1589262932}
   externalTicket: {fileID: 995146635}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 883703888}
   nextExamGuideSmall: {fileID: 2077765586}
   studentIDEnlarged: {fileID: 925469365}
@@ -3517,11 +3525,10 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 378168835}
   materialsEnlarged: {fileID: 1346267700}
   externalTicketEnlarged: {fileID: 285199474}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 2090917087}
   studentTopIcons: {fileID: 1380531900}
   isValid: 0
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1197806913}
   q1NoCheck: {fileID: 471886507}
   q1NACheck: {fileID: 770220389}
@@ -3676,6 +3683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 611985903}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &182460476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3920,6 +3930,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 441143765}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &191456766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,6 +5118,7 @@ MonoBehaviour:
   examTicket: {fileID: 430177213}
   materials: {fileID: 651649681}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
 --- !u!114 &248765986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5621,7 +5635,6 @@ RectTransform:
   - {fileID: 1165719520}
   - {fileID: 1975738590}
   - {fileID: 384702029}
-  - {fileID: 1791789560}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6788,6 +6801,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1594217040}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &338265129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8394,6 +8410,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 720767083}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &424267473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8539,6 +8558,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 923522812}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &430177215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8685,6 +8707,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1151691858}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &434252009
 GameObject:
   m_ObjectHideFlags: 0
@@ -9732,6 +9757,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 367052719}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &471841331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10933,6 +10961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 1316703942}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: materials
@@ -12119,6 +12148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 925469365}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &551062150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13061,6 +13093,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1657431999}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &590862980
 GameObject:
   m_ObjectHideFlags: 0
@@ -14747,6 +14782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 363370265}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: ticket
@@ -15254,6 +15290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1521378821}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &651649683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15749,6 +15788,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 84809690}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &665257450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18239,6 +18281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 380834261}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: ID
@@ -18698,6 +18741,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 600117507}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &752960792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18994,6 +19040,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1639621697}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &764402790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19463,6 +19512,7 @@ MonoBehaviour:
   examGuide: {fileID: 992086155}
   materials: {fileID: 471841329}
   externalTicket: {fileID: 1824346207}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 665257448}
   nextExamGuideSmall: {fileID: 114820269}
   studentIDEnlarged: {fileID: 441143765}
@@ -19471,11 +19521,10 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 100842448}
   materialsEnlarged: {fileID: 367052719}
   externalTicketEnlarged: {fileID: 507785947}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 170333257}
   studentTopIcons: {fileID: 487197789}
   isValid: 1
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 2051919181}
   q1NoCheck: {fileID: 1413320586}
   q1NACheck: {fileID: 694809431}
@@ -22004,6 +22053,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1159398329}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &830115322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22552,6 +22604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 821493718}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: guide
@@ -23370,6 +23423,7 @@ MonoBehaviour:
   clockInButton: {fileID: 815976405}
   skipOrientationButton: {fileID: 1126914244}
   supervisorEndDay: 0
+  helpTexts: []
 --- !u!114 &882431184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23445,8 +23499,8 @@ MonoBehaviour:
   nextSmallReviewFolder: {fileID: 1249686297}
   nextSmallExamGuide: {fileID: 589513316}
   clockInButton: {fileID: 815976405}
-  timeManager: {fileID: 1387460749}
   supervisorTopCharacter: {fileID: 1578307023}
+  helpText: 
 --- !u!1 &882556007
 GameObject:
   m_ObjectHideFlags: 0
@@ -23572,6 +23626,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 177246513}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &883703890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26824,6 +26881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 100842448}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &992086157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27045,6 +27105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 285199474}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &995146637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27567,6 +27630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1633727667}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1016471496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30952,6 +31018,7 @@ MonoBehaviour:
   examGuide: {fileID: 589513316}
   materials: {fileID: 1325380196}
   externalTicket: {fileID: 1016471494}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 1886809977}
   nextExamGuideSmall: {fileID: 1750597339}
   studentIDEnlarged: {fileID: 1151691858}
@@ -30960,11 +31027,10 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 1657431999}
   materialsEnlarged: {fileID: 1167146372}
   externalTicketEnlarged: {fileID: 1633727667}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 1578436179}
   studentTopIcons: {fileID: 590862982}
   isValid: 0
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1931999265}
   q1NoCheck: {fileID: 1554019562}
   q1NACheck: {fileID: 1302190497}
@@ -32743,6 +32809,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1165377090}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1254231136
 GameObject:
   m_ObjectHideFlags: 0
@@ -32925,6 +32994,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 772347257}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1256517057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33601,6 +33673,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 807806451}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1273778351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35580,6 +35655,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1167146372}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1334320832
 GameObject:
   m_ObjectHideFlags: 0
@@ -39981,6 +40059,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1102435624}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1533009786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40089,6 +40170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 609761282}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1542187724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41117,6 +41201,7 @@ MonoBehaviour:
   examTicket: {fileID: 182213470}
   materials: {fileID: 1325380196}
   externalTicket: {fileID: 1016471494}
+  accommodations: {fileID: 0}
 --- !u!1 &1580442431
 GameObject:
   m_ObjectHideFlags: 0
@@ -41394,6 +41479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1346267700}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1589262934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44493,6 +44581,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 603430043}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1750597341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45421,81 +45512,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786015937}
   m_CullTransparentMesh: 1
---- !u!1 &1791789559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1791789560}
-  - component: {fileID: 1791789562}
-  - component: {fileID: 1791789561}
-  m_Layer: 5
-  m_Name: DELETE_LATER_ReferenceEnd1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1791789560
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791789559}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 263635775}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 216.2, y: 343.5}
-  m_SizeDelta: {x: 83, y: 204}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1791789561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791789559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8202479, g: 0.75, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 2548980193946264546, guid: 85da18b55f08b4502bf3defad322274b, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1791789562
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791789559}
-  m_CullTransparentMesh: 1
 --- !u!1 &1792017738
 GameObject:
   m_ObjectHideFlags: 0
@@ -45904,6 +45920,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 507785947}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1824346209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46017,6 +46036,7 @@ MonoBehaviour:
   examTicket: {fileID: 752960790}
   materials: {fileID: 41370255}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
 --- !u!114 &1826846337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46400,6 +46420,7 @@ MonoBehaviour:
   examGuide: {fileID: 1750597339}
   materials: {fileID: 651649681}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 1256517055}
   nextExamGuideSmall: {fileID: 992086155}
   studentIDEnlarged: {fileID: 1639621697}
@@ -46408,11 +46429,10 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 603430043}
   materialsEnlarged: {fileID: 1521378821}
   externalTicketEnlarged: {fileID: 0}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 248765986}
   studentTopIcons: {fileID: 573551523}
   isValid: 1
-  notificationManager: {fileID: 94005114}
-  timeManager: {fileID: 1387460749}
   q1YesCheck: {fileID: 1957912814}
   q1NoCheck: {fileID: 1689963095}
   q1NACheck: {fileID: 1793681919}
@@ -47659,6 +47679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1831905393}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1886809979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49637,6 +49660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1830298344}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1957912814
 GameObject:
   m_ObjectHideFlags: 0
@@ -49801,6 +49827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 1846456831}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: 
@@ -52815,6 +52842,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 378168835}
+  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
+  hoverScale: 1.1
 --- !u!114 &2077765588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53325,6 +53355,7 @@ MonoBehaviour:
   examTicket: {fileID: 1533009784}
   materials: {fileID: 1589262932}
   externalTicket: {fileID: 995146635}
+  accommodations: {fileID: 0}
 --- !u!114 &2090917087
 MonoBehaviour:
   m_ObjectHideFlags: 0

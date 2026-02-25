@@ -47,8 +47,16 @@ public class StartDay : MonoBehaviour
         // then, advance time forward by 10 minutes
         TimeManager.Instance.AdvanceTime(10);
 
-        HelpManager.Instance.SetHelpText(helpText);
-        HelpManager.Instance.ShowHelpPanel();
+        if (HelpManager.Instance != null)
+        {
+            HelpManager.Instance.SetHelpText(helpText);
+            HelpManager.Instance.ShowHelpPanel();
+        }
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.ResetDailyStats();
+        }
     }
 
     // Called when supervisor should just exit after the conversation ends

@@ -1007,6 +1007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1940623631}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &259166165
 GameObject:
@@ -1917,6 +1918,7 @@ MonoBehaviour:
   totalDuration: 110
   startMinutes: 3
   startSeconds: 0
+  helpText: 
 --- !u!4 &504664137
 Transform:
   m_ObjectHideFlags: 0
@@ -2662,6 +2664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1154336351}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &666623190
 GameObject:
@@ -4128,6 +4131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1014363844}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &879563606
 GameObject:
@@ -6661,6 +6665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1360244700}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!95 &1374263592
 Animator:
@@ -8236,6 +8241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1072793922}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &1697772204
 GameObject:
@@ -9189,7 +9195,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene3_Day1_V2
+          m_StringArgument: Scene3_Day2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1902147708

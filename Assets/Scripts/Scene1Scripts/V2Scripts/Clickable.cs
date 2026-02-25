@@ -39,10 +39,6 @@ IPointerEnterHandler, IPointerExitHandler
         if (!clickable) return;
         // 1) Hide the small version of the paper, reset color
         gameObject.SetActive(false);
-        //if (image != null)
-        //{
-        //    image.color = Color.white; // reset to original color
-        //}
 
         // reset to original scale
         transform.localScale = originalScale;
@@ -75,10 +71,6 @@ IPointerEnterHandler, IPointerExitHandler
     {
 
         if (!clickable) return;
-        //if (image != null)
-        //{
-        //    image.color = hoverColor;
-        //}
 
         transform.localScale = originalScale * hoverScale;
     }
@@ -86,11 +78,6 @@ IPointerEnterHandler, IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         if (!clickable) return;
-
-        //if (image != null)
-        //{
-        //    image.color = Color.white; // reset to original color
-        //}
 
         transform.localScale = originalScale;
     }

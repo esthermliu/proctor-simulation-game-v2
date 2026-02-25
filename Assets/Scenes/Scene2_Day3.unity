@@ -1115,6 +1115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 207074187}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &137509948
 MonoBehaviour:
@@ -1701,6 +1702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1940623631}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &251181223
 GameObject:
@@ -3871,6 +3873,7 @@ MonoBehaviour:
   totalDuration: 110
   startMinutes: 2
   startSeconds: 0
+  helpText: 
 --- !u!4 &504664137
 Transform:
   m_ObjectHideFlags: 0
@@ -4760,6 +4763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1154336351}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &666623190
 GameObject:
@@ -6497,6 +6501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1014363844}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &906125673
 GameObject:
@@ -8901,6 +8906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1360244700}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!95 &1374263592
 Animator:
@@ -10490,6 +10496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1072793922}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!1 &1686793613
 GameObject:
@@ -11915,7 +11922,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene3_Day1_V2
+          m_StringArgument: Scene3_Day3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1902147708
@@ -13266,6 +13273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Clickable
   enlargedPaper: {fileID: 1810674382}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  logClick: 1
   hoverScale: 1.1
 --- !u!114 &2124373978
 MonoBehaviour:

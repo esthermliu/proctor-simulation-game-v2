@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-
     public GameState state = new GameState();
 
     // TODO: remove money
@@ -109,4 +108,5 @@ public class GameManager : MonoBehaviour
     {
         state.ResetDailyStats();
     }
+
 }

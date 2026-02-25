@@ -559,6 +559,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1398020655}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &41370257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,6 +1160,7 @@ MonoBehaviour:
   examGuide: {fileID: 114820269}
   materials: {fileID: 41370255}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 883703888}
   nextExamGuideSmall: {fileID: 2077765586}
   studentIDEnlarged: {fileID: 1159398329}
@@ -1167,6 +1169,7 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 1140934841}
   materialsEnlarged: {fileID: 1398020655}
   externalTicketEnlarged: {fileID: 0}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 1826846337}
   studentTopIcons: {fileID: 346563082}
   isValid: 1
@@ -1603,6 +1606,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1140934841}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &114820271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2476,6 +2480,7 @@ MonoBehaviour:
   examTicket: {fileID: 1273778349}
   materials: {fileID: 471841329}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
 --- !u!114 &170333257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2750,6 +2755,7 @@ MonoBehaviour:
   examGuide: {fileID: 2077765586}
   materials: {fileID: 1589262932}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 883703888}
   nextExamGuideSmall: {fileID: 2077765586}
   studentIDEnlarged: {fileID: 925469365}
@@ -2758,6 +2764,7 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 1210908817}
   materialsEnlarged: {fileID: 1346267700}
   externalTicketEnlarged: {fileID: 0}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 2090917087}
   studentTopIcons: {fileID: 1380531900}
   isValid: 0
@@ -2917,6 +2924,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 611985903}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!1 &186123589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3084,6 +3092,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 441143765}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &191456766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4326,6 +4335,7 @@ MonoBehaviour:
   examTicket: {fileID: 430177213}
   materials: {fileID: 651649681}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
 --- !u!114 &248765986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7065,6 +7075,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 720767083}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &424267473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7212,6 +7223,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 923522812}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &430177215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7360,6 +7372,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1151691858}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!1 &431614927
 GameObject:
   m_ObjectHideFlags: 0
@@ -8504,6 +8517,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 367052719}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &471841331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10524,6 +10538,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 925469365}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &551062150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11129,6 +11144,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1657431999}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!1 &590862980
 GameObject:
   m_ObjectHideFlags: 0
@@ -13018,6 +13034,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1521378821}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &651649683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13515,6 +13532,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 84809690}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &665257450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16015,6 +16033,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 600117507}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &752960792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16313,6 +16332,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1639621697}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &764402790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16701,6 +16721,7 @@ MonoBehaviour:
   examGuide: {fileID: 992086155}
   materials: {fileID: 471841329}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 665257448}
   nextExamGuideSmall: {fileID: 114820269}
   studentIDEnlarged: {fileID: 441143765}
@@ -16709,6 +16730,7 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 1770859068}
   materialsEnlarged: {fileID: 367052719}
   externalTicketEnlarged: {fileID: 0}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 170333257}
   studentTopIcons: {fileID: 487197789}
   isValid: 1
@@ -18110,6 +18132,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1159398329}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &830115322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19297,6 +19320,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 177246513}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &883703890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22331,6 +22355,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1770859068}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &992086157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25666,6 +25691,7 @@ MonoBehaviour:
   examGuide: {fileID: 589513316}
   materials: {fileID: 1325380196}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 1886809977}
   nextExamGuideSmall: {fileID: 1750597339}
   studentIDEnlarged: {fileID: 1151691858}
@@ -25674,6 +25700,7 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 1657431999}
   materialsEnlarged: {fileID: 1167146372}
   externalTicketEnlarged: {fileID: 0}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 1578436179}
   studentTopIcons: {fileID: 590862982}
   isValid: 1
@@ -27258,6 +27285,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1165377090}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1250396643
 GameObject:
   m_ObjectHideFlags: 0
@@ -27504,6 +27532,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 772347257}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1256517057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27670,6 +27699,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 807806451}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1273778351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28918,6 +28948,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1167146372}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1334994213
 GameObject:
   m_ObjectHideFlags: 0
@@ -32975,6 +33006,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1102435624}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1533009786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33945,6 +33977,7 @@ MonoBehaviour:
   examTicket: {fileID: 182213470}
   materials: {fileID: 1325380196}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
 --- !u!1 &1581878486
 GameObject:
   m_ObjectHideFlags: 0
@@ -34091,6 +34124,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1346267700}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1589262934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37398,6 +37432,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 603430043}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1750597341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38409,6 +38444,7 @@ MonoBehaviour:
   examTicket: {fileID: 752960790}
   materials: {fileID: 41370255}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
 --- !u!114 &1826846337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38786,6 +38822,7 @@ MonoBehaviour:
   examGuide: {fileID: 1750597339}
   materials: {fileID: 651649681}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
   nextReviewFolderSmall: {fileID: 1256517055}
   nextExamGuideSmall: {fileID: 992086155}
   studentIDEnlarged: {fileID: 1639621697}
@@ -38794,6 +38831,7 @@ MonoBehaviour:
   examGuideEnlarged: {fileID: 603430043}
   materialsEnlarged: {fileID: 1521378821}
   externalTicketEnlarged: {fileID: 0}
+  accommodationsEnlarged: {fileID: 0}
   student: {fileID: 248765986}
   studentTopIcons: {fileID: 573551523}
   isValid: 1
@@ -39706,6 +39744,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1831905393}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &1886809979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41026,6 +41065,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1830298344}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!1 &1957912814
 GameObject:
   m_ObjectHideFlags: 0
@@ -43155,6 +43195,7 @@ MonoBehaviour:
   enlargedPaper: {fileID: 1210908817}
   hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   logClick: 1
+  hoverScale: 1.1
 --- !u!114 &2077765588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43533,6 +43574,7 @@ MonoBehaviour:
   examTicket: {fileID: 1533009784}
   materials: {fileID: 1589262932}
   externalTicket: {fileID: 0}
+  accommodations: {fileID: 0}
 --- !u!114 &2090917087
 MonoBehaviour:
   m_ObjectHideFlags: 0
