@@ -91,16 +91,15 @@ public class SupervisorSpeechManager : MonoBehaviour
         }
 
         // Hide all materials
-        smallID.SetActive(false);
-        smallExamTicket.SetActive(false);
-        smallMaterials.SetActive(false);
+        SetActiveIfNotNull(smallID, false);
+        SetActiveIfNotNull(smallExamTicket, false);
+        SetActiveIfNotNull(smallMaterials, false);
 
-        smallIDClickable.enlargedPaper.SetActive(false);
-        smallExamTicketClickable.enlargedPaper.SetActive(false);
-        smallMaterialsClickable.enlargedPaper.SetActive(false);
-        smallExamGuideClickable.enlargedPaper.SetActive(false);
-        smallFolderClickable.enlargedPaper.SetActive(false);
-
+        SetActiveIfNotNull(smallIDClickable?.enlargedPaper, false);
+        SetActiveIfNotNull(smallExamTicketClickable?.enlargedPaper, false);
+        SetActiveIfNotNull(smallMaterialsClickable?.enlargedPaper, false);
+        SetActiveIfNotNull(smallExamGuideClickable?.enlargedPaper, false);
+        SetActiveIfNotNull(smallFolderClickable?.enlargedPaper, false);
 
         // log the skip orientation event
         EventLogger.Log(new GameEvent
@@ -118,10 +117,21 @@ public class SupervisorSpeechManager : MonoBehaviour
 
         waitingForInteraction = false;
 
-        HelpManager.Instance.HideHelpPanel();
+        if (HelpManager.Instance != null)
+        {
+            HelpManager.Instance.HideHelpPanel();
+        }
 
         currentIndex++;
         ShowCurrentBubble();
+    }
+
+    private void SetActiveIfNotNull(GameObject obj, bool value)
+    {
+        if (obj != null)
+        {
+            obj.SetActive(value);
+        }
     }
 
 
@@ -191,8 +201,11 @@ public class SupervisorSpeechManager : MonoBehaviour
                 // then, enable this ID card to be clickable
                 smallIDClickable.SetClickable(true);
 
-                HelpManager.Instance.SetHelpText(helpTexts[0]);
-                HelpManager.Instance.ShowHelpPanel();
+                if (HelpManager.Instance != null)
+                {
+                    HelpManager.Instance.SetHelpText(helpTexts[0]);
+                    HelpManager.Instance.ShowHelpPanel();
+                }
             } else if (pauseIndices[1] == currentIndex)
             {
                 // if we are at the second pause, then show the exam ticket and make it clickable
@@ -204,12 +217,18 @@ public class SupervisorSpeechManager : MonoBehaviour
                 smallIDClickable.SetClickable(true);
                 smallIDClickable.SetPause2(true);
 
-                // enable the small exam guide to be clickable
-                smallExamGuideClickable.SetClickable(true);
-                smallExamGuideClickable.SetPause2(true);
+                // enable the small exam guide to be clickable (if not null)
+                if (smallExamGuideClickable != null)
+                {
+                    smallExamGuideClickable.SetClickable(true);
+                    smallExamGuideClickable.SetPause2(true);
+                }
 
-                HelpManager.Instance.SetHelpText(helpTexts[1]);
-                HelpManager.Instance.ShowHelpPanel();
+                if (HelpManager.Instance != null)
+                {
+                    HelpManager.Instance.SetHelpText(helpTexts[1]);
+                    HelpManager.Instance.ShowHelpPanel();
+                }
             } else if (pauseIndices[2] == currentIndex)
             {
                 // if we are at the third pause, then show the materials pouch and make it clickable
@@ -221,15 +240,21 @@ public class SupervisorSpeechManager : MonoBehaviour
                 smallExamGuideClickable.SetClickable(true);
                 smallExamGuideClickable.SetPause3(true);
 
-                HelpManager.Instance.SetHelpText(helpTexts[2]);
-                HelpManager.Instance.ShowHelpPanel();
+                if (HelpManager.Instance != null)
+                {
+                    HelpManager.Instance.SetHelpText(helpTexts[2]);
+                    HelpManager.Instance.ShowHelpPanel();
+                }
             } else if (pauseIndices[3] == currentIndex)
             {
                 // if we are at the last pause, then make the review folder clickable
                 smallFolderClickable.SetClickable(true);
 
-                HelpManager.Instance.SetHelpText(helpTexts[3]);
-                HelpManager.Instance.ShowHelpPanel();
+                if (HelpManager.Instance != null)
+                {
+                    HelpManager.Instance.SetHelpText(helpTexts[3]);
+                    HelpManager.Instance.ShowHelpPanel();
+                }
             }
             yield break; // IMPORTANT: stops dialogue flow
         } else if (triggerTopStudentsIndex == currentIndex)
@@ -245,7 +270,7 @@ public class SupervisorSpeechManager : MonoBehaviour
     }
 
 
-    private void ActivateTopCharacters()
+    public void ActivateTopCharacters()
     {
         gray1.SetActive(true);
         gray2.SetActive(true);

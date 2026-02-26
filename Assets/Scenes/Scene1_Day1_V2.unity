@@ -6309,6 +6309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialDraggable
   smallPaper: {fileID: 732042112}
   supervisorPause1Manager: {fileID: 882431185}
+  supervisorPause2Day2Manager: {fileID: 0}
+  rightClickable: 1
 --- !u!1 &384702028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9347,10 +9349,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 1316703942}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  hoverScale: 1.1
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: materials
+  day2: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -10165,8 +10168,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 23
+  m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12731,10 +12734,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 363370265}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  hoverScale: 1.1
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: ticket
+  day2: 0
 --- !u!1 &649227768
 GameObject:
   m_ObjectHideFlags: 0
@@ -15351,10 +15355,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 380834261}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  hoverScale: 1.1
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: ID
+  day2: 0
 --- !u!1 &734640584
 GameObject:
   m_ObjectHideFlags: 0
@@ -18416,10 +18421,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 821493718}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  hoverScale: 1.1
   supervisorPause2Manager: {fileID: 882431184}
   supervisorPause3Manager: {fileID: 882431186}
   whatAmI: guide
+  day2: 0
 --- !u!1 &865111708
 GameObject:
   m_ObjectHideFlags: 0
@@ -41230,10 +41236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 1846456831}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  hoverScale: 1.1
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: 
+  day2: 0
 --- !u!1 &1963973749
 GameObject:
   m_ObjectHideFlags: 0
