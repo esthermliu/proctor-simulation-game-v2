@@ -38,11 +38,11 @@ public class StartDay : MonoBehaviour
     public void BeginDay() {
 
         // show the first character's small items and hide the current small items
-        smallReviewFolder.SetActive(false);
-        smallExamGuide.SetActive(false);
+        SetActiveIfNotNull(smallReviewFolder, false);
+        SetActiveIfNotNull(smallExamGuide, false);
 
-        nextSmallReviewFolder.SetActive(true);
-        nextSmallExamGuide.SetActive(true);
+        SetActiveIfNotNull(nextSmallReviewFolder, true);
+        SetActiveIfNotNull(nextSmallExamGuide, true);
 
         // then, advance time forward by 10 minutes
         TimeManager.Instance.AdvanceTime(10);
@@ -56,6 +56,14 @@ public class StartDay : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.ResetDailyStats();
+        }
+    }
+
+    private void SetActiveIfNotNull(GameObject obj, bool value)
+    {
+        if (obj != null)
+        {
+            obj.SetActive(value);
         }
     }
 

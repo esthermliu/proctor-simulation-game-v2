@@ -4,15 +4,16 @@ using UnityEngine.UI;
 
 public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    
-    public static readonly Color DEFAULT_HOVER_COLOR = new Color(0.7f, 0.7f, 0.7f, 1f);
     public GameObject enlargedPaper;
-    public Color hoverColor = DEFAULT_HOVER_COLOR;
+    public float hoverScale = 1.1f;
 
     public SupervisorPause2Manager supervisorPause2Manager;
     public SupervisorPause3Manager supervisorPause3Manager;
 
     public string whatAmI; // ID, ticket, or guide
+
+    // keep track of which tutorial day we are on
+    public bool day2 = false;
 
     // keeps track of when this item can be clicked, set to false for everything at first
     private bool clickable = false;
@@ -24,6 +25,12 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
     private bool pause3 = false;
 
     private Image image;
+    private Vector3 originalScale;
+
+    void Awake()
+    {
+        originalScale = transform.localScale;
+    }
 
     void Start()
     {
@@ -40,15 +47,11 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
         // Check if the item can be clicked
         if (!clickable) return;
 
-        // reset color to default
-        if (image != null)
-        {
-            image.color = Color.white; // reset to original color
-        }
-
+        // reset to original scale
+        transform.localScale = originalScale;
 
         // check if we are in pause 2 and have to keep track of whether we were clicked or not
-        if (pause2)
+        if (pause2 && !day2)
         {
             if (whatAmI.Equals("ID"))
             {
@@ -93,19 +96,13 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!clickable) return;
-        if (image != null)
-        {
-            image.color = hoverColor;
-        }
+        transform.localScale = originalScale * hoverScale;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if (!clickable) return;
-        if (image != null)
-        {
-            image.color = Color.white; // reset to original color
-        }
+        transform.localScale = originalScale;
     }
 
     public void SetClickable(bool clickable)
