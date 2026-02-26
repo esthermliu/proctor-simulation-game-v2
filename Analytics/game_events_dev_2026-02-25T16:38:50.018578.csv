@@ -1,0 +1,9 @@
+gameVersion,sessionId,elapsedTime,index,eventType,subversion,timestamp,sceneName,description,hostingPlatform,gameState_totalHelped,gameState_totalReported,gameState_helpedToday,gameState_correctToday,gameState_totalFlagged,gameState_reportedToday,gameState_totalCorrect,gameState_flaggedToday
+0.1,af459b0a-94df-4adb-81d3-cc9a234b95a8,0,0,scene_entered,A,2026-02-22 19:12:31.676000+00:00,Scene0_Title,,itch,0,0,0,0,0,0,0,0
+0.1,,0,0,session_start,,2026-02-22 19:13:44.159000+00:00,Scene0_Title,,itch,0,0,0,0,0,0,0,0
+0.1,9021125c-884f-40b5-b7a6-1c6181dd5626,0,0,scene_entered,A,2026-02-22 19:13:35.881000+00:00,Scene1_Day1_V2,,itch,0,0,0,0,0,0,0,0
+0.1,2ea86360-8638-421c-9798-87c1e4d0aa51,0,0,scene_entered,A,2026-02-22 19:13:44.195000+00:00,Scene0_Title,,itch,0,0,0,0,0,0,0,0
+0.1,9021125c-884f-40b5-b7a6-1c6181dd5626,0,0,scene_entered,A,2026-02-22 19:13:23.685000+00:00,Scene0_Title,,itch,0,0,0,0,0,0,0,0
+0.1,,0,0,session_start,,2026-02-22 19:12:31.637000+00:00,Scene0_Title,,itch,0,0,0,0,0,0,0,0
+0.1,af459b0a-94df-4adb-81d3-cc9a234b95a8,0,0,scene_entered,A,2026-02-22 19:12:47.681000+00:00,Scene1_Day1_V2,,itch,0,0,0,0,0,0,0,0
+0.1,,0,0,session_start,,2026-02-22 19:13:23.640000+00:00,Scene0_Title,,itch,0,0,0,0,0,0,0,0

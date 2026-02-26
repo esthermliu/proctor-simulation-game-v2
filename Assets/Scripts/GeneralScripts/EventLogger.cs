@@ -32,6 +32,7 @@ public enum EventType
     scene_entered,
     item_clicked,
     orientation_skipped,
+    day_started,
     admission_decision_correct,
     admission_decision_incorrect,
     bad_behavior_clicked,

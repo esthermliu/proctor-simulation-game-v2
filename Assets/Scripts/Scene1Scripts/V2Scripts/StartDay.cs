@@ -57,6 +57,13 @@ public class StartDay : MonoBehaviour
         {
             GameManager.Instance.ResetDailyStats();
         }
+
+        EventLogger.Log(
+            new GameEvent
+            {
+                eventTypeEnum = EventType.day_started,
+            }
+        );
     }
 
     // Called when supervisor should just exit after the conversation ends
