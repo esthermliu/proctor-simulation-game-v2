@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HoverEnlarge : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class HoverEnlarge : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public float hoverScale = 1.1f;
-
 
     private Vector3 originalScale;
     private bool clickable = true;
@@ -21,6 +20,12 @@ public class HoverEnlarge : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     }
 
     public void OnPointerExit(PointerEventData eventData)
+    {
+        if (!clickable) return;
+        transform.localScale = originalScale;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (!clickable) return;
         transform.localScale = originalScale;

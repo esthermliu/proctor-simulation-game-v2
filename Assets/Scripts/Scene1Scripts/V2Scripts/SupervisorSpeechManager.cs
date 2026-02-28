@@ -203,7 +203,6 @@ public class SupervisorSpeechManager : MonoBehaviour
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[0]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             } else if (pauseIndices[1] == currentIndex)
@@ -226,7 +225,6 @@ public class SupervisorSpeechManager : MonoBehaviour
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[1]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             } else if (pauseIndices[2] == currentIndex)
@@ -242,7 +240,6 @@ public class SupervisorSpeechManager : MonoBehaviour
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[2]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             } else if (pauseIndices[3] == currentIndex)
@@ -252,7 +249,6 @@ public class SupervisorSpeechManager : MonoBehaviour
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[3]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             }
