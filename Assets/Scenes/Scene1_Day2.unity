@@ -6390,8 +6390,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialDraggable
   smallPaper: {fileID: 0}
   supervisorPause1Manager: {fileID: 0}
+  supervisorPause2Manager: {fileID: 0}
+  supervisorPause3Manager: {fileID: 0}
   supervisorPause2Day2Manager: {fileID: 882431188}
   rightClickable: 0
+  whatAmI: 
+  day1: 0
 --- !u!1 &367052719
 GameObject:
   m_ObjectHideFlags: 0
@@ -6720,8 +6724,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialDraggable
   smallPaper: {fileID: 732042112}
   supervisorPause1Manager: {fileID: 882431185}
+  supervisorPause2Manager: {fileID: 0}
+  supervisorPause3Manager: {fileID: 0}
   supervisorPause2Day2Manager: {fileID: 0}
   rightClickable: 0
+  whatAmI: 
+  day1: 0
 --- !u!1 &384702028
 GameObject:
   m_ObjectHideFlags: 0
@@ -13128,8 +13136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 363370265}
   hoverScale: 1.1
-  supervisorPause2Manager: {fileID: 0}
-  supervisorPause3Manager: {fileID: 0}
   whatAmI: ticket
   day1: 0
   day2: 1
@@ -16431,8 +16437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 380834261}
   hoverScale: 1.1
-  supervisorPause2Manager: {fileID: 0}
-  supervisorPause3Manager: {fileID: 0}
   whatAmI: ID
   day1: 0
   day2: 1
@@ -20493,6 +20497,7 @@ MonoBehaviour:
   smallID: {fileID: 732042112}
   smallExamTicket: {fileID: 630293342}
   smallMaterials: {fileID: 0}
+  smallReviewFolder: {fileID: 0}
   smallIDClickable: {fileID: 732042117}
   smallExamTicketClickable: {fileID: 630293347}
   smallExamGuideClickable: {fileID: 0}
@@ -41011,7 +41016,7 @@ MonoBehaviour:
   textComponent: {fileID: 547610758}
   textMessage: GOOD AFTERNOON. THE UNIVERSITY IS HOSTING <b>EXTERNAL EXAMINEES</b>
     TODAY.
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!1 &1886809977
 GameObject:
