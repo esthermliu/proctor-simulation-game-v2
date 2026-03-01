@@ -13131,6 +13131,7 @@ MonoBehaviour:
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: ticket
+  day1: 0
   day2: 1
 --- !u!1 &635208038
 GameObject:
@@ -16433,6 +16434,7 @@ MonoBehaviour:
   supervisorPause2Manager: {fileID: 0}
   supervisorPause3Manager: {fileID: 0}
   whatAmI: ID
+  day1: 0
   day2: 1
 --- !u!1 &734640584
 GameObject:

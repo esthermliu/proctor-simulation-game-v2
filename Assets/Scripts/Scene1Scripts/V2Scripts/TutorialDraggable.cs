@@ -9,11 +9,24 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
     [Header("Link to Supervisor Pause 1 Manager (if ID card)")]
     public SupervisorPause1Manager supervisorPause1Manager;
 
-    [Header("Link to Supervisor Pause 2 Manager (ONLY DAY 2)")]
+    [Header("Link to Supervisor Pause 2 Manager (ONLY Day 1)")]
+    public SupervisorPause2Manager supervisorPause2Manager;
+
+    [Header("Link to Supervisor Pause 3 Manager (ONLY Day 1)")]
+    public SupervisorPause3Manager supervisorPause3Manager;
+
+    [Header("Link to Supervisor DAY 2 Pause 2 Manager (ONLY DAY 2)")]
     public SupervisorPause2Day2Manager supervisorPause2Day2Manager;
 
     [Header("Right-Clickable?")]
     public bool rightClickable = true;
+
+    [Header("For Day 1 Tutorial")]
+    public string whatAmI; // ID, ticket, or guide
+
+    // keep track of which tutorial day we are on
+    [Header("Which Day")]
+    public bool day1 = false;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -36,6 +49,39 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
                 {
                     // move the tutorial along once we have right clicked the external ticket
                     supervisorPause2Day2Manager.CompletePause2();
+                }
+
+                // FOR DAY 1 PAUSE 2 and PAUSE 3
+                if (smallPaper != null &&
+                    smallPaper.GetComponent<TutorialClickable>() != null &&
+                    smallPaper.GetComponent<TutorialClickable>().IsDay1())
+                {
+                    TutorialClickable smallPaperTutorialClickable = smallPaper.GetComponent<TutorialClickable>();
+                    if (smallPaperTutorialClickable.IsPause2())
+                    {
+                        if (whatAmI.Equals("ID"))
+                        {
+                            supervisorPause2Manager.IDCardReturned();
+                        }
+                        else if (whatAmI.Equals("ticket"))
+                        {
+                            supervisorPause2Manager.ExamTicketReturned();
+                        }
+                        else if (whatAmI.Equals("guide"))
+                        {
+                            supervisorPause2Manager.ExamGuideReturned();
+                        }
+                    } else if (smallPaperTutorialClickable.IsPause3())
+                    {
+                        if (whatAmI.Equals("materials"))
+                        {
+                            supervisorPause3Manager.MaterialsReturned();
+                        }
+                        else if (whatAmI.Equals("guide"))
+                        {
+                            supervisorPause3Manager.ExamGuideReturned();
+                        }
+                    }
                 }
 
                 // hide enlarged version

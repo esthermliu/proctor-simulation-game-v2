@@ -17,9 +17,6 @@ public class StartDay : MonoBehaviour
     [Header("Supervisor top character")]
     public Animator supervisorTopCharacter;
 
-    //[Header("Help Text")]
-    //public string helpText;
-
     public void OnClockIn()
     {
         // this will end the tutorial and start the day
@@ -49,8 +46,6 @@ public class StartDay : MonoBehaviour
 
         if (HelpManager.Instance != null && !HelpManager.Instance.HelpPanelOpen())
         {
-            //HelpManager.Instance.SetHelpText(helpText);
-            
             HelpManager.Instance.ShowHelpPanel();
         }
 

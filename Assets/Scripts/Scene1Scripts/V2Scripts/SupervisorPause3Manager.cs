@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class SupervisorPause3Manager : MonoBehaviour
 {
-    [Header("Pause 3 Complete Inspection Button")]
-    public GameObject completeInspectionButton;
-
     [SerializeField] private SupervisorSpeechManager speechManager;
 
     [Header("Pause 3 objects")]
@@ -17,34 +14,34 @@ public class SupervisorPause3Manager : MonoBehaviour
     public TutorialClickable smallMaterialsClickable;
     public TutorialClickable smallExamGuideClickable;
 
-    // keep track of which items have been clicked, so we know when to show the complete inspection button
-    private bool materialsClicked = false;
-    private bool examGuideClicked = false;
+    // keep track of which items have been returned, so know when to move on
+    private bool materialsReturned = false;
+    private bool examGuideReturned = false;
 
     // keep track of when pause 3 is done
     private bool completedPause3 = false;
 
-    public void MaterialsClicked()
+    public void MaterialsReturned()
     {
-        materialsClicked = true;
-        CheckAllItemsClicked();
+        materialsReturned = true;
+        CheckAllItemsReturned();
     }
 
-    public void ExamGuideClicked()
+    public void ExamGuideReturned()
     {
-        examGuideClicked = true;
-        CheckAllItemsClicked();
+        examGuideReturned = true;
+        CheckAllItemsReturned();
     }
 
     // show the button once all items have been clicked
-    public void CheckAllItemsClicked()
+    public void CheckAllItemsReturned()
     {
         // don't show button if no longer in phase 3
         if (completedPause3) return;
 
-        if (materialsClicked && examGuideClicked)
+        if (materialsReturned && examGuideReturned)
         {
-            completeInspectionButton.SetActive(true);
+            CompletePause3();
         }
     }
 
@@ -70,9 +67,6 @@ public class SupervisorPause3Manager : MonoBehaviour
         // 4) Ensure that pause 3 is no longer ongoing for all small versions
         smallMaterialsClickable.SetPause3(false);
         smallExamGuideClickable.SetPause3(false);
-
-        // 4) Hide the complete inspection button
-        completeInspectionButton.SetActive(false);
 
         // continue with dialogue
         speechManager.ResumeDialogue();

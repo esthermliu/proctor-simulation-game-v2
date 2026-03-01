@@ -7,12 +7,11 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
     public GameObject enlargedPaper;
     public float hoverScale = 1.1f;
 
-    public SupervisorPause2Manager supervisorPause2Manager;
-    public SupervisorPause3Manager supervisorPause3Manager;
-
     public string whatAmI; // ID, ticket, or guide
 
     // keep track of which tutorial day we are on
+    [Header("Which Day")]
+    public bool day1 = false;
     public bool day2 = false;
 
     // keeps track of when this item can be clicked, set to false for everything at first
@@ -49,31 +48,6 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
 
         // reset to original scale
         transform.localScale = originalScale;
-
-        // check if we are in pause 2 and have to keep track of whether we were clicked or not
-        if (pause2 && !day2)
-        {
-            if (whatAmI.Equals("ID"))
-            {
-                supervisorPause2Manager.IDCardClicked();
-            } else if (whatAmI.Equals("ticket"))
-            {
-                supervisorPause2Manager.ExamTicketClicked();
-            } else if (whatAmI.Equals("guide"))
-            {
-                supervisorPause2Manager.ExamGuideClicked();
-            }
-        } else if (pause3)
-        {
-            if (whatAmI.Equals("materials"))
-            {
-                supervisorPause3Manager.MaterialsClicked();
-            } else if (whatAmI.Equals("guide"))
-            {
-                supervisorPause3Manager.ExamGuideClicked();
-            }
-        }
-
 
         // 1) Hide the small version of the paper
         gameObject.SetActive(false);
@@ -118,5 +92,20 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
     public void SetPause3(bool occurring)
     {
         pause3 = occurring;
+    }
+
+    public bool IsDay1()
+    {
+        return day1;
+    }
+
+    public bool IsPause2()
+    {
+        return pause2;
+    }
+
+    public bool IsPause3()
+    {
+        return pause3;
     }
 }
