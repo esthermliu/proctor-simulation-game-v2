@@ -347,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000026703, y: 0.000019073}
+  m_AnchoredPosition: {x: -6.83, y: -11.32}
   m_SizeDelta: {x: 126.6238, y: 57.2411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &177174627
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "WE\u2019LL BE IN TOUCH."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1081,8 +1081,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -16.3}
-  m_SizeDelta: {x: 287.5892, y: 123.9877}
+  m_AnchoredPosition: {x: 0.000030517578, y: -38.2}
+  m_SizeDelta: {x: 350.1294, y: 114.9291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272442569
 MonoBehaviour:
@@ -1104,7 +1104,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "FOR NOW, PLEASE READ THROUGH TODAY\u2019S REPORT AND <u><b>SIGN AT THE
+    END</b></u>."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -1131,8 +1132,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1831,8 +1832,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -329.71136, y: 467.1123}
-  m_SizeDelta: {x: 451.1593, y: 337.604}
+  m_AnchoredPosition: {x: -319, y: 472.02}
+  m_SizeDelta: {x: 498.79, y: 368.0422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554662383
 MonoBehaviour:
@@ -1847,7 +1848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 1919870125}
-  textMessage: THE FORMAL HIRING OUTCOME WILL BE FINALIZED <b>NEXT WEEK</b>.
+  textMessage: THE <b>FORMAL HIRING OUTCOME</b> WILL BE \nFINALIZED NEXT WEEK.
   typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &554662384
@@ -3030,7 +3031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.97}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0}
   m_SizeDelta: {x: 200.1217, y: 28.1168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817533719
@@ -3053,7 +3054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: YES, THAT'S RIGHT.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -3080,8 +3081,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3220,6 +3221,7 @@ GameObject:
   - component: {fileID: 886044690}
   - component: {fileID: 886044689}
   - component: {fileID: 886044688}
+  - component: {fileID: 886044691}
   m_Layer: 5
   m_Name: 2_Bubble (I)
   m_TagString: Untagged
@@ -3244,8 +3246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -424.33, y: 452}
-  m_SizeDelta: {x: 308.0233, y: 277.5116}
+  m_AnchoredPosition: {x: -405.3, y: 452}
+  m_SizeDelta: {x: 377.93, y: 302.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886044688
 MonoBehaviour:
@@ -3260,7 +3262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 817533719}
-  textMessage: CORRECT.
+  textMessage: YES, THAT'S RIGHT.
   typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &886044689
@@ -3301,6 +3303,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886044686}
   m_CullTransparentMesh: 1
+--- !u!95 &886044691
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886044686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &901090416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,8 +3498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: 452}
-  m_SizeDelta: {x: 483, y: 328}
+  m_AnchoredPosition: {x: -286.6, y: 483.1}
+  m_SizeDelta: {x: 557.5881, y: 415.6802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048143674
 MonoBehaviour:
@@ -3490,8 +3514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 272442569}
-  textMessage: "FOR NOW, PLEASE READ THROUGH TODAY\u2019S REPORT AND <b>SIGN AT THE
-    END</b> WHEN YOU\u2019RE FINISHED."
+  textMessage: "FOR NOW, PLEASE READ THROUGH TODAY\u2019S REPORT AND <u><b>SIGN AT
+    THE END</b></u>."
   typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &1048143675
@@ -3998,8 +4022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -363.9, y: 416.77936}
-  m_SizeDelta: {x: 293.9139, y: 238.2487}
+  m_AnchoredPosition: {x: -344, y: 467.19}
+  m_SizeDelta: {x: 403.784, y: 358.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350270656
 MonoBehaviour:
@@ -4759,6 +4783,7 @@ GameObject:
   - component: {fileID: 1775089013}
   - component: {fileID: 1775089012}
   - component: {fileID: 1775089011}
+  - component: {fileID: 1775089014}
   m_Layer: 5
   m_Name: 1_Bubble (I)
   m_TagString: Untagged
@@ -4783,8 +4808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449.985, y: 208.11444}
-  m_SizeDelta: {x: 475.97, y: 385.7711}
+  m_AnchoredPosition: {x: 531, y: 96}
+  m_SizeDelta: {x: 613.6552, y: 487.5991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775089011
 MonoBehaviour:
@@ -4799,7 +4824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 2043413113}
-  textMessage: GOOD AFTERNOON. \nI BELIEVE TODAY IS MY LAST DAY.
+  textMessage: GOOD AFTERNOON. \nI BELIEVE TODAY IS MY <b>LAST DAY</b>.
   typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &1775089012
@@ -4840,6 +4865,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775089009}
   m_CullTransparentMesh: 1
+--- !u!95 &1775089014
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775089009}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1827019650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,8 +5285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038147, y: -12.7}
-  m_SizeDelta: {x: 229.5627, y: 90.1577}
+  m_AnchoredPosition: {x: -2.7, y: -18.29}
+  m_SizeDelta: {x: 323.7525, y: 112.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1919870125
 MonoBehaviour:
@@ -5261,7 +5308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: THE <b>FORMAL HIRING OUTCOME</b> WILL BE \nFINALIZED NEXT WEEK.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -5288,8 +5335,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5837,8 +5884,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -0.000022411}
-  m_SizeDelta: {x: 217.9298, y: 88.5597}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 214.8884, y: 108.3044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2043413113
 MonoBehaviour:
@@ -5860,7 +5907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: GOOD AFTERNOON. \nI BELIEVE TODAY IS MY <b>LAST DAY</b>.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -5887,8 +5934,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
