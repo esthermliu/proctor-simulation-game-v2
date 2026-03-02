@@ -26,6 +26,7 @@ public class SupervisorSpeechManager : MonoBehaviour
     [SerializeField] private GameObject smallID;
     [SerializeField] private GameObject smallExamTicket;
     [SerializeField] private GameObject smallMaterials;
+    [SerializeField] private GameObject smallReviewFolder;
 
     [Header("Tutorial Clickables")]
     [SerializeField] private TutorialClickable smallIDClickable;
@@ -195,15 +196,24 @@ public class SupervisorSpeechManager : MonoBehaviour
         {
             waitingForInteraction = true;
             if (pauseIndices[0] == currentIndex) {
+                // DO NOT ALLOW PLAYER TO SKIP ORIENTATION ANYMORE
+                if (skipOrientationButton != null)
+                {
+                    skipOrientationButton.SetActive(false);
+                }
+
                 // show the ID card at first pause
                 smallID.SetActive(true);
 
-                // then, enable this ID card to be clickable
-                smallIDClickable.SetClickable(true);
+                // jankiest thing ever lmao
+                if (!smallIDClickable.IsDay1())
+                {
+                    // then, enable this ID card to be clickable
+                    smallIDClickable.SetClickable(true);
+                }
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[0]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             } else if (pauseIndices[1] == currentIndex)
@@ -213,20 +223,23 @@ public class SupervisorSpeechManager : MonoBehaviour
                 smallExamTicketClickable.SetClickable(true);
                 smallExamTicketClickable.SetPause2(true);
 
-                // enable the small ID card to be clickable
-                smallIDClickable.SetClickable(true);
+                // jankiest thing ever lmao
+                if (!smallIDClickable.IsDay1())
+                {
+                    // then, enable this ID card to be clickable
+                    smallIDClickable.SetClickable(true);
+                }
                 smallIDClickable.SetPause2(true);
 
                 // enable the small exam guide to be clickable (if not null)
                 if (smallExamGuideClickable != null)
                 {
-                    smallExamGuideClickable.SetClickable(true);
+                    //smallExamGuideClickable.SetClickable(true);
                     smallExamGuideClickable.SetPause2(true);
                 }
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[1]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             } else if (pauseIndices[2] == currentIndex)
@@ -236,23 +249,26 @@ public class SupervisorSpeechManager : MonoBehaviour
                 smallMaterialsClickable.SetClickable(true);
                 smallMaterialsClickable.SetPause3(true);
 
-                // also make the exam guide clickable
-                smallExamGuideClickable.SetClickable(true);
+                // Don't make exam guide clickable yet
+                //smallExamGuideClickable.SetClickable(true);
                 smallExamGuideClickable.SetPause3(true);
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[2]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             } else if (pauseIndices[3] == currentIndex)
             {
-                // if we are at the last pause, then make the review folder clickable
-                smallFolderClickable.SetClickable(true);
+                // if we are at the last pause, then make the review folder appear (not clickable yet)
+                //smallFolderClickable.SetClickable(true);
+                if (smallReviewFolder != null)
+                {
+                    smallReviewFolder.SetActive(true);
+                }
+
 
                 if (HelpManager.Instance != null)
                 {
-                    HelpManager.Instance.SetHelpText(helpTexts[3]);
                     HelpManager.Instance.ShowHelpPanel();
                 }
             }

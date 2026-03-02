@@ -27,6 +27,10 @@ public class GrayAnimationTrigger : MonoBehaviour
         {
             // Get the StartDay component on the supervisor and call the OnClockIn function
             supervisorStartDay.OnClockIn();
+
+            // make sure we don't go forward by 20 minutes (this is very jank)
+            // this is bc onClockIn also calls BeginDay
+            TimeManager.Instance.AdvanceTime(-10);
         }
     }
 

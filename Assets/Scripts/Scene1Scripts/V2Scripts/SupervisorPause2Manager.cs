@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class SupervisorPause2Manager : MonoBehaviour
 {
-    [Header("Pause 2 Complete Inspection Button")]
-    public GameObject completeInspectionButton;
-
     [SerializeField] private SupervisorSpeechManager speechManager;
 
     [Header("Pause 2 objects")]
@@ -20,44 +17,42 @@ public class SupervisorPause2Manager : MonoBehaviour
     public TutorialClickable smallExamTicketClickable;
     public TutorialClickable smallExamGuideClickable;
 
-    // keep track of which items have been clicked, so we know when to show the complete inspection button
-    private bool examTicketClicked = false;
-    private bool IDClicked = false;
-    private bool examGuideClicked = false;
+    // keep track of which items have been clicked, so we know when to move on
+    private bool examTicketReturned = false;
+    private bool IDReturned = false;
+    private bool examGuideReturned = false;
 
     // keep track of when pause 2 is done
     private bool completedPause2 = false;
 
-    public void ExamTicketClicked()
+
+    public void ExamTicketReturned()
     {
-        Debug.Log("ExamTicketClicked");
-        examTicketClicked = true;
-        CheckAllItemsClicked();
+        examTicketReturned = true;
+        CheckAllItemsReturned();
     }
 
-    public void IDCardClicked()
+    public void IDCardReturned()
     {
-        Debug.Log("IDCardClicked");
-        IDClicked = true;
-        CheckAllItemsClicked();
+        IDReturned = true;
+        CheckAllItemsReturned();
     }
 
-    public void ExamGuideClicked()
+    public void ExamGuideReturned()
     {
-        Debug.Log("ExamGuideClicked");
-        examGuideClicked = true;
-        CheckAllItemsClicked();
+        examGuideReturned = true;
+        CheckAllItemsReturned();
     }
 
-    // show the button once all items have been clicked
-    public void CheckAllItemsClicked()
+    // move dialogue on when all returned
+    public void CheckAllItemsReturned()
     {
-        // don't show button if no longer in phase 2
+        // don't complete pause 2 more than once
         if (completedPause2) return;
 
-        if (examTicketClicked && IDClicked && examGuideClicked)
+        if (examTicketReturned && IDReturned && examGuideReturned)
         {
-            completeInspectionButton.SetActive(true);
+            CompletePause2();
         }
     }
 
@@ -68,11 +63,12 @@ public class SupervisorPause2Manager : MonoBehaviour
 
         completedPause2 = true;
 
+        // For new tutorial, some stuff is redundant, but can keep anyway ig (extra check)
+
         // 1) Hide the enlarged versions of the objects
         largeID.SetActive(false);
         largeExamTicket.SetActive(false);
         largeExamGuide.SetActive(false);
-
 
         // 2) Show the small versions
         smallID.SetActive(true);
@@ -88,9 +84,6 @@ public class SupervisorPause2Manager : MonoBehaviour
         smallIDClickable.SetPause2(false);
         smallExamTicketClickable.SetPause2(false);
         smallExamGuideClickable.SetPause2(false);
-
-        // 4) Hide the complete inspection button
-        completeInspectionButton.SetActive(false);
 
         // continue with dialogue
         speechManager.ResumeDialogue();

@@ -22,27 +22,32 @@ public class HelpManager : MonoBehaviour
         }
     }
 
-    public GameObject helpComponent;
+    public GameObject smallHelpComponent;
+    public GameObject largeHelpComponent;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        helpComponent.SetActive(false);
+        smallHelpComponent.SetActive(false);
     }
 
     public void ShowHelpPanel()
     {
-        helpComponent.SetActive(true);
+        // do NOT show small version if large version is open
+        if (largeHelpComponent.activeSelf)
+        {
+            return;
+        }
+        smallHelpComponent.SetActive(true);
+    }
+
+    public bool HelpPanelOpen()
+    {
+        return largeHelpComponent.activeSelf;
     }
 
     public void HideHelpPanel()
     {
-        helpComponent.SetActive(false);
-    }
-
-    public void SetHelpText(string text)
-    {
-        helpComponent.GetComponentsInChildren<UnityEngine.UI.Image>(true)[1].GetComponentsInChildren<TMPro.TextMeshProUGUI>(true)[1].text = text;
+        smallHelpComponent.SetActive(false);
     }
 
     public void LogHelpClicked() 

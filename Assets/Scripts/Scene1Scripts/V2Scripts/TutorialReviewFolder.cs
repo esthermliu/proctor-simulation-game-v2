@@ -6,6 +6,8 @@ public class TutorialReviewFolder : MonoBehaviour
     public GameObject smallIDCard;
     public GameObject smallExamTicket;
     public GameObject smallMaterials;
+    public GameObject smallExamGuide;
+    public GameObject smallReviewFolder;
 
     [Header("Review folder")]
     public GameObject q1YesCheck;
@@ -22,9 +24,6 @@ public class TutorialReviewFolder : MonoBehaviour
 
 
     [SerializeField] private SupervisorSpeechManager speechManager;
-
-    public GameObject smallReviewFolder;
-    public TutorialClickable smallReviewFolderClickable;
 
 
     //========= Admit/Deny Button OnClick Events =========
@@ -55,14 +54,8 @@ public class TutorialReviewFolder : MonoBehaviour
             return;
         }
 
-        // disable the small review folder and make it unclickable
-        smallReviewFolderClickable.SetClickable(false);
-
         // then, continue with the tutorial
         speechManager.ResumeDialogue();
-
-        //// then, advance the time; NVM do this on the clock-in button instead
-        //timeManager.AdvanceTime(10);
         
         // close out of the large folder
         gameObject.SetActive(false);
@@ -71,9 +64,10 @@ public class TutorialReviewFolder : MonoBehaviour
         smallIDCard.SetActive(false);
         smallExamTicket.SetActive(false);
         smallMaterials.SetActive(false);
+        smallExamGuide.SetActive(false);
 
-        // show the small folder again
-        smallReviewFolder.SetActive(true);
+        // hide the small review folder
+        smallReviewFolder.SetActive(false);
     }
 
     //========= Q1 Button OnClick Events =========
