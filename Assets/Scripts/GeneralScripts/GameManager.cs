@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        MusicManager.Instance.BeginTheme(scene.name);
         // Log the scene entered event with the session ID and scene name
         EventLogger.Log(
             new GameEvent
