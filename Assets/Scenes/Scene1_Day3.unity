@@ -4829,11 +4829,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -6356,8 +6356,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialDraggable
   smallPaper: {fileID: 0}
   supervisorPause1Manager: {fileID: 882431185}
+  supervisorPause2Manager: {fileID: 0}
+  supervisorPause3Manager: {fileID: 0}
   supervisorPause2Day2Manager: {fileID: 0}
   rightClickable: 0
+  whatAmI: 
+  day1: 0
 --- !u!1 &384702028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14732,9 +14736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialClickable
   enlargedPaper: {fileID: 380834261}
   hoverScale: 1.1
-  supervisorPause2Manager: {fileID: 0}
-  supervisorPause3Manager: {fileID: 0}
   whatAmI: ID
+  day1: 0
   day2: 0
 --- !u!1 &734640584
 GameObject:
@@ -17864,6 +17867,7 @@ MonoBehaviour:
   smallID: {fileID: 732042112}
   smallExamTicket: {fileID: 0}
   smallMaterials: {fileID: 0}
+  smallReviewFolder: {fileID: 0}
   smallIDClickable: {fileID: 732042117}
   smallExamTicketClickable: {fileID: 0}
   smallExamGuideClickable: {fileID: 0}
