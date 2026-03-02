@@ -59,7 +59,7 @@ public class SupervisorSpeechManager : MonoBehaviour
             skipOrientationButton.SetActive(true);
         }
 
-        currentIndex = 0;
+        currentIndex = 4;
         ShowCurrentBubble();
     }
 

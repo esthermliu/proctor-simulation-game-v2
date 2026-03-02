@@ -5,13 +5,17 @@ public class TimeManager : MonoBehaviour
 {
     public static TimeManager Instance { get; private set; }
 
-    public TMP_Text timeText;
+    public TMP_Text hourColonText;
+    public TMP_Text minuteHalfText;
     public int startHour;
     public int startMinutes;
 
     private int totalMinutes = 0; // total minutes elapsed
 
     private int studentDuration = 2; // 2 minutes per student
+
+    private bool showColon = true;
+    private float colonToggleTimer;
 
     private void Awake()
     {
@@ -28,6 +32,17 @@ public class TimeManager : MonoBehaviour
         if (Instance == this)
         {
             Instance = null;
+        }
+    }
+
+    private void Update()
+    {
+        colonToggleTimer += Time.deltaTime;
+        if (colonToggleTimer >= 1f)
+        {
+            colonToggleTimer = 0f;
+            showColon = !showColon;
+            UpdateTimeDisplay();
         }
     }
 
@@ -54,6 +69,8 @@ public class TimeManager : MonoBehaviour
         int displayHour = hours % 12;
         if (displayHour == 0) displayHour = 12;
 
-        timeText.text = $"{displayHour}:{minutes:00} {ampm}";
+        string separator = showColon ? ":" : " ";
+        hourColonText.text = $"{displayHour}{separator}";
+        minuteHalfText.text = $"{minutes:00} {ampm}";
     }
 }

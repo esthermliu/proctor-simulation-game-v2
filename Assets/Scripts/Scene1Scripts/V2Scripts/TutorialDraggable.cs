@@ -105,6 +105,35 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
         transform.SetAsLastSibling();
     }
 
+    public void TranslateToXPosition(float xPosition)
+    {
+        StopAllCoroutines();
+        StartCoroutine(TranslateCoroutine(new Vector3(xPosition, transform.position.y, 0)));
+    }
+
+    public void TranslateToYPosition(float yPosition)
+    {
+        StopAllCoroutines();
+        StartCoroutine(TranslateCoroutine(new Vector3(transform.position.x, yPosition, 0)));
+    }
+
+    private System.Collections.IEnumerator TranslateCoroutine(Vector3 endPos)
+    {
+        Debug.Log("start pos: " + transform.position + " end pos: " + endPos);
+        Vector3 startPos = transform.position;
+        float duration = 0.3f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            transform.position = Vector3.Lerp(startPos, endPos, t);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = endPos;
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         // Drag paper along with mouse
