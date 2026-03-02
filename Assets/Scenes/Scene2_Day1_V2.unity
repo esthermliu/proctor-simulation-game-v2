@@ -680,8 +680,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.3, y: -21.5}
-  m_SizeDelta: {x: 232.964, y: 123.2504}
+  m_AnchoredPosition: {x: 3, y: 0}
+  m_SizeDelta: {x: 232.964, y: 108.9341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139613433
 MonoBehaviour:
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: I'VE OBSERVED YOU GLANCING AROUND THE ROOM.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -730,8 +730,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1095,8 +1095,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9000244, y: -2.7999268}
-  m_SizeDelta: {x: 188.5413, y: 108.3161}
+  m_AnchoredPosition: {x: 3.1, y: 14.86}
+  m_SizeDelta: {x: 217.9515, y: 108.3161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315295051
 MonoBehaviour:
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: FIDGETING? THAT'S NOT AGAINST THE RULES, IS IT?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -1145,8 +1145,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2662,6 +2662,7 @@ GameObject:
   - component: {fileID: 609502278}
   - component: {fileID: 609502277}
   - component: {fileID: 609502276}
+  - component: {fileID: 609502279}
   m_Layer: 5
   m_Name: 1_Explanation (I)
   m_TagString: Untagged
@@ -2686,8 +2687,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 567, y: 381}
-  m_SizeDelta: {x: 401, y: 311}
+  m_AnchoredPosition: {x: 585, y: 433.10345}
+  m_SizeDelta: {x: 553.4979, y: 415.2069}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609502276
 MonoBehaviour:
@@ -2703,7 +2704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 1240719226}
   textMessage: I'M JUST TRYING TO REMEMBER SOMETHING.
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &609502277
 MonoBehaviour:
@@ -2727,7 +2728,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 2214792622366666523, guid: 43cdb51757bc844a1b89b74c7d4dd208, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2743,6 +2744,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609502274}
   m_CullTransparentMesh: 1
+--- !u!95 &609502279
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609502274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3142,8 +3165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 357}
-  m_SizeDelta: {x: 281, y: 268}
+  m_AnchoredPosition: {x: 3.9, y: 365.6}
+  m_SizeDelta: {x: 399.01, y: 327.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666623192
 MonoBehaviour:
@@ -3167,7 +3190,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 4752737061350566393, guid: 59e19729dce1c483ca48913257794de3, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3210,7 +3233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffect
   textComponent: {fileID: 1964781334}
   textMessage: THANKS.
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 1
 --- !u!1 &689114020
 GameObject:
@@ -4061,7 +4084,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: ALL THAT INFORMATION, LOST SOMEWHERE IN THE CORNERS OF MY MIND...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -4088,8 +4111,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4157,8 +4180,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.4, y: -18}
-  m_SizeDelta: {x: 229.6253, y: 121.8228}
+  m_AnchoredPosition: {x: 0, y: -14.1}
+  m_SizeDelta: {x: 298.8565, y: 108.5091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &817207228
 GameObject:
@@ -4639,7 +4662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 802913016}
   textMessage: ALL THAT INFORMATION, LOST SOMEWHERE IN THE CORNERS OF MY MIND...
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &947034886
 MonoBehaviour:
@@ -4696,8 +4719,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 600, y: 363}
-  m_SizeDelta: {x: 459, y: 339}
+  m_AnchoredPosition: {x: 591.2273, y: 432.2}
+  m_SizeDelta: {x: 588.9287, y: 415.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &951583571
 GameObject:
@@ -4711,6 +4734,7 @@ GameObject:
   - component: {fileID: 951583574}
   - component: {fileID: 951583573}
   - component: {fileID: 951583575}
+  - component: {fileID: 951583576}
   m_Layer: 5
   m_Name: Question (I)
   m_TagString: Untagged
@@ -4735,8 +4759,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 354}
-  m_SizeDelta: {x: 372, y: 305}
+  m_AnchoredPosition: {x: 18, y: 407.4192}
+  m_SizeDelta: {x: 514.0534, y: 434.0345}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951583573
 MonoBehaviour:
@@ -4760,7 +4784,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -7697330675734593458, guid: bd25ea1bec1b44d0491c893eaf44ffff, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4790,8 +4814,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffect
   textComponent: {fileID: 1948018018}
   textMessage: WILL WE GET PARTIAL CREDIT IF WE SHOW OUR WORK?
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 1
+--- !u!95 &951583576
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951583571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &972680674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,6 +5657,7 @@ GameObject:
   - component: {fileID: 1082865993}
   - component: {fileID: 1082865992}
   - component: {fileID: 1082865995}
+  - component: {fileID: 1082865996}
   m_Layer: 5
   m_Name: PencilsDownBubble (I)
   m_TagString: Untagged
@@ -5710,6 +5757,28 @@ MonoBehaviour:
   guy2Animator: {fileID: 1391866495}
   hideDelay: 3
   endDayEmailNotification: {fileID: 1984981168}
+--- !u!95 &1082865996
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082865989}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1107438297
 GameObject:
   m_ObjectHideFlags: 0
@@ -6487,8 +6556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.1, y: -32.6}
-  m_SizeDelta: {x: 247.5131, y: 123.5674}
+  m_AnchoredPosition: {x: 0, y: -15.2}
+  m_SizeDelta: {x: 186.0222, y: 108.9076}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240719226
 MonoBehaviour:
@@ -6510,7 +6579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: I'M JUST TRYING TO REMEMBER SOMETHING.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -6537,8 +6606,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7153,8 +7222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -28.1}
-  m_SizeDelta: {x: 287.7038, y: 108.3161}
+  m_AnchoredPosition: {x: 0, y: 3.5}
+  m_SizeDelta: {x: 304.6687, y: 68.9348}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336767855
 MonoBehaviour:
@@ -7176,7 +7245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: I GET NERVOUS SOMETIMES. \nTHAT'S ALL.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -7203,8 +7272,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7579,6 +7648,7 @@ GameObject:
   - component: {fileID: 1353490177}
   - component: {fileID: 1353490176}
   - component: {fileID: 1353490175}
+  - component: {fileID: 1353490178}
   m_Layer: 5
   m_Name: 1_Interrogate (I)
   m_TagString: Untagged
@@ -7603,8 +7673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 715, y: -24}
-  m_SizeDelta: {x: 421, y: 342}
+  m_AnchoredPosition: {x: 678.62134, y: 15.25}
+  m_SizeDelta: {x: 529.8492, y: 420.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353490175
 MonoBehaviour:
@@ -7620,7 +7690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 139613433}
   textMessage: I'VE OBSERVED YOU GLANCING AROUND THE ROOM.
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &1353490176
 MonoBehaviour:
@@ -7660,6 +7730,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353490173}
   m_CullTransparentMesh: 1
+--- !u!95 &1353490178
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353490173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1360244700
 GameObject:
   m_ObjectHideFlags: 0
@@ -8115,6 +8207,7 @@ GameObject:
   - component: {fileID: 1574740273}
   - component: {fileID: 1574740275}
   - component: {fileID: 1574740276}
+  - component: {fileID: 1574740277}
   m_Layer: 5
   m_Name: BeginExamBubble (I)
   m_TagString: Untagged
@@ -8214,6 +8307,28 @@ MonoBehaviour:
   guy1Animator: {fileID: 365316437}
   guy2Animator: {fileID: 1391866495}
   hideDelay: 1
+--- !u!95 &1574740277
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574740271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1580248770
 GameObject:
   m_ObjectHideFlags: 0
@@ -8682,6 +8797,7 @@ GameObject:
   - component: {fileID: 1647083676}
   - component: {fileID: 1647083675}
   - component: {fileID: 1647083674}
+  - component: {fileID: 1647083677}
   m_Layer: 5
   m_Name: 1_Explanation (I)
   m_TagString: Untagged
@@ -8706,8 +8822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -767, y: 287}
-  m_SizeDelta: {x: 321, y: 276}
+  m_AnchoredPosition: {x: -730.2, y: 358.9}
+  m_SizeDelta: {x: 455.1974, y: 400.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1647083674
 MonoBehaviour:
@@ -8723,7 +8839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 315295051}
   textMessage: FIDGETING? THAT'S NOT AGAINST THE RULES, IS IT?
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &1647083675
 MonoBehaviour:
@@ -8763,6 +8879,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647083672}
   m_CullTransparentMesh: 1
+--- !u!95 &1647083677
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647083672}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1669304189
 GameObject:
   m_ObjectHideFlags: 0
@@ -8797,8 +8935,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.9, y: -25.3}
-  m_SizeDelta: {x: 188.5413, y: 108.3161}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 188.5413, y: 70.9389}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669304191
 MonoBehaviour:
@@ -8820,7 +8958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: YOUR BEHAVIOR IS SUSPICIOUS.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -8847,8 +8985,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9232,8 +9370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 370}
-  m_SizeDelta: {x: 402, y: 315}
+  m_AnchoredPosition: {x: 10.3, y: 367}
+  m_SizeDelta: {x: 438.4056, y: 348.7968}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1697772206
 MonoBehaviour:
@@ -9257,7 +9395,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -3489261429555686102, guid: 195b3e6791d194d5b995445c82aaf1e2, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9287,7 +9425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterEffect
   textComponent: {fileID: 1810847641}
   textMessage: THAT DOESN'T ANSWER MY QUESTION...
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 1
 --- !u!1 &1701341003
 GameObject:
@@ -9472,6 +9610,7 @@ GameObject:
   - component: {fileID: 1781530418}
   - component: {fileID: 1781530417}
   - component: {fileID: 1781530416}
+  - component: {fileID: 1781530419}
   m_Layer: 5
   m_Name: 1_Interrogate (I)
   m_TagString: Untagged
@@ -9496,8 +9635,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 704, y: 11}
-  m_SizeDelta: {x: 442, y: 313}
+  m_AnchoredPosition: {x: 672.78735, y: 60.21997}
+  m_SizeDelta: {x: 504.4253, y: 411.4399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781530416
 MonoBehaviour:
@@ -9513,7 +9652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 1669304191}
   textMessage: YOUR BEHAVIOR IS SUSPICIOUS.
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &1781530417
 MonoBehaviour:
@@ -9553,6 +9692,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781530414}
   m_CullTransparentMesh: 1
+--- !u!95 &1781530419
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781530414}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b7055ddd98aa480091ec288ace41c8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1810847639
 GameObject:
   m_ObjectHideFlags: 0
@@ -9587,8 +9748,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.4, y: -10}
-  m_SizeDelta: {x: 230.5772, y: 101.286}
+  m_AnchoredPosition: {x: 4.11, y: 11}
+  m_SizeDelta: {x: 266.9451, y: 73.4752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810847641
 MonoBehaviour:
@@ -9610,7 +9771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: THAT DOESN'T ANSWER MY QUESTION...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -9637,8 +9798,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10816,8 +10977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -4.3}
-  m_SizeDelta: {x: 204.8377, y: 116.5583}
+  m_AnchoredPosition: {x: 0, y: 3.16}
+  m_SizeDelta: {x: 258.0876, y: 108.6083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948018018
 MonoBehaviour:
@@ -10839,7 +11000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: WILL WE GET PARTIAL CREDIT IF WE SHOW OUR WORK?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -10866,8 +11027,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10990,7 +11151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.7}
+  m_AnchoredPosition: {x: 0, y: 4.83}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964781334
@@ -11013,7 +11174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: THANKS.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
   m_sharedMaterial: {fileID: -5269715608899677664, guid: 9cba3c7147ab141769c0c91866d5c18a, type: 2}
@@ -11040,8 +11201,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11665,8 +11826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -767, y: 287}
-  m_SizeDelta: {x: 352, y: 265}
+  m_AnchoredPosition: {x: -710, y: 349.1}
+  m_SizeDelta: {x: 489.7, y: 498.8789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014778834
 MonoBehaviour:
@@ -11682,7 +11843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TypewriterText
   textComponent: {fileID: 1336767855}
   textMessage: I GET NERVOUS SOMETIMES. THAT'S ALL.
-  typeSpeed: 0.04
+  typeSpeed: 0.035
   autoStartOnEnable: 0
 --- !u!114 &2014778835
 MonoBehaviour:
@@ -11706,7 +11867,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 4013071577886257518, guid: a1bc0c588ecf7419bba8eeadb2a193f8, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
