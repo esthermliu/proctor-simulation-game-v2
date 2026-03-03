@@ -49,6 +49,8 @@ public class ReviewFolder : MonoBehaviour
     public GameObject admitCheck;
     public GameObject denyCheck;
 
+    public GameObject completeZoneHover;
+
     private bool decisionMade = false;
 
     public void Admit()
@@ -165,30 +167,8 @@ public class ReviewFolder : MonoBehaviour
     // This is connected to the CompleteZone button
     public void OnCompleteClicked()
     {
-        // 1) The review must be complete before the player can complete it
-        //      --> Check if both checkmarks are missing in Q1 OR Q2 OR Q3 OR admit/deny
-        bool q1Incomplete = !q1YesCheck.activeSelf && !q1NoCheck.activeSelf;
-        bool q2Incomplete = !q2YesCheck.activeSelf && !q2NoCheck.activeSelf;
-        bool q3Incomplete = !q3YesCheck.activeSelf && !q3NoCheck.activeSelf;
-        bool decisionIncomplete = !admitCheck.activeSelf && !denyCheck.activeSelf;
-
-
-        // NEW: logic for extra N/A check completion (for days 2 and 3)
-        if (q1NACheck != null)
-        {
-            q1Incomplete &= !q1NACheck.activeSelf;
-            q2Incomplete &= !q2NACheck.activeSelf;
-            q3Incomplete &= !q3NACheck.activeSelf;
-
-            bool q4Incomplete = !q4YesCheck.activeSelf && !q4NoCheck.activeSelf && !q4NACheck.activeSelf;
-            if (q4Incomplete)
-            {
-                return;
-            }
-        }
-
-
-        if (q1Incomplete || q2Incomplete || q3Incomplete || decisionIncomplete)
+        // redundant check since button shouldn't appear until all questions answered, but can leave in
+        if (!AllQuestionsAnswered())
         {
             return;
         }
@@ -256,6 +236,7 @@ public class ReviewFolder : MonoBehaviour
     //========= Q4 Button OnClick Events =========
     public void OnQ4YesClicked()
     {
+        
         OnCheckboxClick(q4YesCheck, q4NoCheck, q4NACheck);
     }
 
@@ -272,6 +253,47 @@ public class ReviewFolder : MonoBehaviour
     //===================================
     //        Helper functions 
     //===================================
+
+    // Check if all questions have been answered
+    // true if all questions answered, false otherwise
+    private bool AllQuestionsAnswered()
+    {
+        // 1) The review must be complete before the player can complete it
+        //      --> Check if both checkmarks are missing in Q1 OR Q2 OR Q3 OR admit/deny
+        bool q1Incomplete = !q1YesCheck.activeSelf && !q1NoCheck.activeSelf;
+        bool q2Incomplete = !q2YesCheck.activeSelf && !q2NoCheck.activeSelf;
+        bool q3Incomplete = !q3YesCheck.activeSelf && !q3NoCheck.activeSelf;
+        bool decisionIncomplete = !admitCheck.activeSelf && !denyCheck.activeSelf;
+
+
+        // NEW: logic for extra N/A check completion (for days 2 and 3)
+        if (q1NACheck != null)
+        {
+            q1Incomplete &= !q1NACheck.activeSelf;
+            q2Incomplete &= !q2NACheck.activeSelf;
+            q3Incomplete &= !q3NACheck.activeSelf;
+
+            bool q4Incomplete = !q4YesCheck.activeSelf && !q4NoCheck.activeSelf && !q4NACheck.activeSelf;
+            if (q4Incomplete)
+            {
+                return false;
+            }
+        }
+
+        return !q1Incomplete && !q2Incomplete && !q3Incomplete && !decisionIncomplete;
+    }
+
+    // Check if all questions answered and we can activate mark complete hover
+    private void CheckIfActivateMarkCompleteHover()
+    {
+        // Check if all questions answered and can activate hover
+        if (AllQuestionsAnswered())
+        {
+            completeZoneHover.SetActive(true);
+        } else {
+            completeZoneHover.SetActive(false); 
+        }
+    }
 
     // thisBox: the box being clicked
     // otherBox: the other option not being clicked
@@ -295,6 +317,9 @@ public class ReviewFolder : MonoBehaviour
         {
             thisBox.SetActive(true);
         }
+
+        // check if we can activate hover
+        CheckIfActivateMarkCompleteHover();
     }
 
 

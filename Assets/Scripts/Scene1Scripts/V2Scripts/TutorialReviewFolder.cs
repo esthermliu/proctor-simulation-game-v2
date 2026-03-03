@@ -22,8 +22,12 @@ public class TutorialReviewFolder : MonoBehaviour
     public GameObject admitCheck;
     public GameObject denyCheck;
 
+    public GameObject completeZoneHover;
+
 
     [SerializeField] private SupervisorSpeechManager speechManager;
+
+    private bool tutorialCanActivateCompleteHover = false;
 
 
     //========= Admit/Deny Button OnClick Events =========
@@ -43,13 +47,8 @@ public class TutorialReviewFolder : MonoBehaviour
     // This is connected to the CompleteZone button
     public void OnCompleteClicked()
     {
-        // 1) The review must be complete before the player can complete it
-        //      --> Check if both checkmarks are missing in Q1 OR Q2 OR Q3 OR admit/deny
-        bool q1Incomplete = !q1YesCheck.activeSelf && !q1NoCheck.activeSelf;
-        bool q2Incomplete = !q2YesCheck.activeSelf && !q2NoCheck.activeSelf;
-        bool q3Incomplete = !q3YesCheck.activeSelf && !q3NoCheck.activeSelf;
-        bool decisionIncomplete = !admitCheck.activeSelf && !denyCheck.activeSelf;
-        if (q1Incomplete || q2Incomplete || q3Incomplete || decisionIncomplete)
+        // redundant check since button shouldn't appear until all questions answered, but can leave in
+        if (!AllQuestionsAnswered())
         {
             return;
         }
@@ -103,9 +102,45 @@ public class TutorialReviewFolder : MonoBehaviour
         OnCheckboxClick(q3NoCheck, q3YesCheck);
     }
 
+    // TUTORIAL box X clicked before complete hover can be activated?
+    public void TutorialCanActivateCompleteHover()
+    {
+        tutorialCanActivateCompleteHover = true;
+    }
+
     //===================================
     //        Helper functions 
     //===================================
+
+    // Check if all questions have been answered
+    // true if all questions answered, false otherwise
+    private bool AllQuestionsAnswered()
+    {
+        // 1) The review must be complete before the player can complete it
+        //      --> Check if both checkmarks are missing in Q1 OR Q2 OR Q3 OR admit/deny
+        bool q1Incomplete = !q1YesCheck.activeSelf && !q1NoCheck.activeSelf;
+        bool q2Incomplete = !q2YesCheck.activeSelf && !q2NoCheck.activeSelf;
+        bool q3Incomplete = !q3YesCheck.activeSelf && !q3NoCheck.activeSelf;
+        bool decisionIncomplete = !admitCheck.activeSelf && !denyCheck.activeSelf;
+
+        return !q1Incomplete && !q2Incomplete && !q3Incomplete && !decisionIncomplete;
+    }
+
+
+    // Check if all questions answered and we can activate mark complete hover
+    public void CheckIfActivateMarkCompleteHover()
+    {
+        // Check if all questions answered and can activate hover
+        // ALSO have to check whether the tutorial box X has been clicked!!
+        if (AllQuestionsAnswered() && tutorialCanActivateCompleteHover)
+        {
+            completeZoneHover.SetActive(true);
+        }
+        else
+        {
+            completeZoneHover.SetActive(false);
+        }
+    }
 
     // thisBox: the box being clicked
     // otherBox: the other option not being clicked
@@ -123,6 +158,9 @@ public class TutorialReviewFolder : MonoBehaviour
         {
             thisBox.SetActive(true);
         }
+
+        // check if we can activate hover
+        CheckIfActivateMarkCompleteHover();
     }
 
 }
