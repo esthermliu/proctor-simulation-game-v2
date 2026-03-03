@@ -22,10 +22,17 @@ public class Scene2Manager : MonoBehaviour
     [Header("Pencils Down Bubble")]
     public GameObject pencilsDownBubble;
 
+    [Header("Event times")]
     public float badTime1 = 11f;
     public float questionTime = 45f;
     public float badTime2 = 80f;
     public float badTime3 = -1f;
+
+    [Header("Bad Behavior Papers")]
+    public GameObject badBehavior1Papers;
+    public GameObject badBehavior2Papers;
+    public GameObject badBehavior3Papers;
+    public GameObject questionPapers;
 
     private bool bad1Triggered = false;
     private bool questionTriggered = false;
@@ -34,13 +41,12 @@ public class Scene2Manager : MonoBehaviour
 
     private bool sceneEnded = false;
 
-    public TMP_Text timerText;
-
     // ==============================
     // TIMER SETTINGS
     // ==============================
 
     [Header("Timer Settings")]
+    public TMP_Text timerText;
 
     // How long the scene lasts (seconds)
     public float totalDuration = 110f;
@@ -150,6 +156,27 @@ public class Scene2Manager : MonoBehaviour
         students[questionStudentIndex].HideGuide();
         students[questionStudentIndex].HideGoodResponse();
         students[questionStudentIndex].HideBadResponse();
+
+        // Hide any investigation panels + speech bubbles
+        if (badBehavior1Papers != null)
+        {
+            badBehavior1Papers.SetActive(false);
+        }
+
+        if (badBehavior2Papers != null)
+        {
+            badBehavior2Papers.SetActive(false);
+        }
+
+        if (badBehavior3Papers != null)
+        {
+            badBehavior3Papers.SetActive(false);
+        }
+
+        if (questionPapers != null)
+        {
+            questionPapers.SetActive(false);
+        }
 
         // 4) Hide the help panel
         //HelpManager.Instance.HideHelpPanel();
