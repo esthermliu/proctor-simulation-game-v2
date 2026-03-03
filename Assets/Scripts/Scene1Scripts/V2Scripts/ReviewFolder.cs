@@ -11,10 +11,6 @@ public class ReviewFolder : MonoBehaviour
     public GameObject externalTicket;
     public GameObject accommodations;
 
-    [Header("Next Paper parents (small)")]
-    public GameObject nextReviewFolderSmall;
-    public GameObject nextExamGuideSmall;
-
     [Header("Paper parents (large)")]
     public GameObject studentIDEnlarged;
     public GameObject examRegistrationEnlarged;
@@ -308,7 +304,6 @@ public class ReviewFolder : MonoBehaviour
         studentIDPaper.SetActive(false);
         examRegistrationPaper.SetActive(false);
         materials.SetActive(false);
-        examGuide.SetActive(false);
         reviewFolder.SetActive(false);
 
         // remove all enlarged items
@@ -332,16 +327,7 @@ public class ReviewFolder : MonoBehaviour
             accommodationsEnlarged.SetActive(false);
         }
 
-        // get the next misconduct review sheet and exam guide
-        // NOTE: If there isn't another student, keep the latest options
-        if (nextReviewFolderSmall != null)
-        {
-            nextReviewFolderSmall.SetActive(true);
-        }
-
-        if (nextExamGuideSmall != null)
-        {
-            nextExamGuideSmall.SetActive(true);
-        }
+        // reset the small exam guide to the table
+        examGuide.SetActive(true);
     }
 }

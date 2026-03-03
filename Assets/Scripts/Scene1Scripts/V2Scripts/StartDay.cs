@@ -8,9 +8,7 @@ public class StartDay : MonoBehaviour
 
     [Header("First character's items")]
     public GameObject firstStudent;
-    public GameObject nextSmallReviewFolder;
     public GameObject nextSmallExamGuide;
-    public GameObject largeReviewFolder;
     public GameObject largeExamGuide;
 
     [Header("Clock In Button")]
@@ -36,16 +34,11 @@ public class StartDay : MonoBehaviour
 
     public void BeginDay() {
 
-        // show the first character's small items and hide the current small items
+        // hide the supervisor's small items
         SetActiveIfNotNull(smallReviewFolder, false);
         SetActiveIfNotNull(smallExamGuide, false);
 
-        // make sure we don't accidentally show the small review folder + exam guide when large items are open
-        if (!largeReviewFolder.activeSelf)
-        {
-            SetActiveIfNotNull(nextSmallReviewFolder, true);
-        }
-
+        // show the actual exam guide for the day
         if (!largeExamGuide.activeSelf)
         {
             SetActiveIfNotNull(nextSmallExamGuide, true);
