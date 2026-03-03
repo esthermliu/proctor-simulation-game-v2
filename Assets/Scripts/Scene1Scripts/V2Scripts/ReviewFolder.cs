@@ -334,7 +334,14 @@ public class ReviewFolder : MonoBehaviour
 
         // get the next misconduct review sheet and exam guide
         // NOTE: If there isn't another student, keep the latest options
-        nextReviewFolderSmall.SetActive(true);
-        nextExamGuideSmall.SetActive(true);
+        if (nextReviewFolderSmall != null)
+        {
+            nextReviewFolderSmall.SetActive(true);
+        }
+
+        if (nextExamGuideSmall != null)
+        {
+            nextExamGuideSmall.SetActive(true);
+        }
     }
 }

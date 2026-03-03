@@ -2947,8 +2947,8 @@ MonoBehaviour:
   materials: {fileID: 1589262932}
   externalTicket: {fileID: 995146635}
   accommodations: {fileID: 764011044}
-  nextReviewFolderSmall: {fileID: 883703888}
-  nextExamGuideSmall: {fileID: 2077765586}
+  nextReviewFolderSmall: {fileID: 0}
+  nextExamGuideSmall: {fileID: 0}
   studentIDEnlarged: {fileID: 925469365}
   examRegistrationEnlarged: {fileID: 1102435624}
   reviewFolderEnlarged: {fileID: 177246513}
@@ -17662,6 +17662,8 @@ MonoBehaviour:
   firstStudent: {fileID: 1578436173}
   nextSmallReviewFolder: {fileID: 1249686297}
   nextSmallExamGuide: {fileID: 589513316}
+  largeReviewFolder: {fileID: 1165377090}
+  largeExamGuide: {fileID: 1657431999}
   clockInButton: {fileID: 815976405}
   supervisorTopCharacter: {fileID: 1578307023}
 --- !u!1 &883703888

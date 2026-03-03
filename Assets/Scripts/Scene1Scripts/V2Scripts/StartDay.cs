@@ -10,6 +10,8 @@ public class StartDay : MonoBehaviour
     public GameObject firstStudent;
     public GameObject nextSmallReviewFolder;
     public GameObject nextSmallExamGuide;
+    public GameObject largeReviewFolder;
+    public GameObject largeExamGuide;
 
     [Header("Clock In Button")]
     public GameObject clockInButton;
@@ -38,8 +40,17 @@ public class StartDay : MonoBehaviour
         SetActiveIfNotNull(smallReviewFolder, false);
         SetActiveIfNotNull(smallExamGuide, false);
 
-        SetActiveIfNotNull(nextSmallReviewFolder, true);
-        SetActiveIfNotNull(nextSmallExamGuide, true);
+        // make sure we don't accidentally show the small review folder + exam guide when large items are open
+        if (!largeReviewFolder.activeSelf)
+        {
+            SetActiveIfNotNull(nextSmallReviewFolder, true);
+        }
+
+        if (!largeExamGuide.activeSelf)
+        {
+            SetActiveIfNotNull(nextSmallExamGuide, true);
+        }
+        
 
         // then, advance time forward by 10 minutes
         TimeManager.Instance.AdvanceTime(10);
