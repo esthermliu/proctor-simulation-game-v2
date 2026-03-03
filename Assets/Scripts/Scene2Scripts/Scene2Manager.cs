@@ -146,7 +146,6 @@ public class Scene2Manager : MonoBehaviour
         // 1) Show the Pencils Down bubble
         pencilsDownBubble.SetActive(true);
 
-
         // 2) Make extra check that any questions were answered, show notification otherwise
         students[questionStudentIndex].CheckQuestionAnswered();
 
