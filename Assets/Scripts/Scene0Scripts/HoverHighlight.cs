@@ -6,8 +6,13 @@ public class HoverHighlight : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     public GameObject hoverOverlay;
 
+    public bool disabled = false;
+
     public void OnPointerEnter(PointerEventData eventData)
     {
+        // don't show highlight if effect is disabled
+        if (disabled) return;
+
         // make the pencil overlay image appear
         hoverOverlay.SetActive(true);
 
@@ -18,7 +23,15 @@ public class HoverHighlight : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        // don't show highlight if effect is disabled
+        if (disabled) return;
+
         // when NOT hovering, make pencil overlay image disappear
         hoverOverlay.SetActive(false);
+    }
+
+    public void SetDisable(bool disable)
+    {
+        this.disabled = disable;
     }
 }
