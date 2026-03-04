@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class RevealPapers : MonoBehaviour
 {
+    [Header("Always exist")]
     public GameObject studentID;
     public GameObject examTicket;
     public GameObject materials;
+    public GameObject reviewFolder;
+
+    [Header("Optional")]
     public GameObject externalTicket;
     public GameObject accommodations;
 
@@ -34,5 +38,11 @@ public class RevealPapers : MonoBehaviour
         {
             accommodations.SetActive(true);
         }
+
+        if (reviewFolder != null)
+        {
+            reviewFolder.SetActive(true);
+        }
+
     }
 }

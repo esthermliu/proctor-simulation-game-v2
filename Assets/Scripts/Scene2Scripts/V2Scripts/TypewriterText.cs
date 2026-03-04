@@ -67,4 +67,19 @@ public class TypewriterEffect : MonoBehaviour
         typingCoroutine = null;
         OnTypingComplete?.Invoke();
     }
+
+    public void StopTyping(bool clearText = false)
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+
+        if (clearText)
+            textComponent.maxVisibleCharacters = 0;
+
+        // Optional: prevent any listeners from firing later
+        OnTypingComplete = null;
+    }
 }

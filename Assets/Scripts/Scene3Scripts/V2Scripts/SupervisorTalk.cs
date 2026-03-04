@@ -10,6 +10,9 @@ public class SupervisorTalk : MonoBehaviour, IPointerClickHandler
     [Header("Dialogue Manager")]
     public DialogueManager dialogueManager;
 
+    [Header("Tutorial Box")]
+    public GameObject tutorialBox;
+
     // Don't really need to check for double clicking (since sets game object to inactive), but can keep anyway
     private bool clicked = false;
 
@@ -21,6 +24,12 @@ public class SupervisorTalk : MonoBehaviour, IPointerClickHandler
 
         // Hide talk prompt (script is attached to talk prompt)
         gameObject.SetActive(false);
+
+        // Hide the yellow tutorial box in case they didn't exit out (null check bc only day 1 tutorial box)
+        if (tutorialBox != null)
+        {
+            tutorialBox.SetActive(false);
+        }
 
         // Trigger the start of the dialogue
         dialogueManager.StartDialogue();

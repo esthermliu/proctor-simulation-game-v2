@@ -36,13 +36,13 @@ IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+
         if (!clickable) return;
         // 1) Hide the small version of the paper, reset color
         gameObject.SetActive(false);
 
         // reset to original scale
         transform.localScale = originalScale;
-
 
         // 2) Show the enlarged version of the paper IF it exists
         if (enlargedPaper != null)
@@ -69,7 +69,6 @@ IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
         if (!clickable) return;
 
         transform.localScale = originalScale * hoverScale;

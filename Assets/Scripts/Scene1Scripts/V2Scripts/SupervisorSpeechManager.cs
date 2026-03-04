@@ -76,6 +76,9 @@ public class SupervisorSpeechManager : MonoBehaviour
         // we can connect it to an animation event on gray character for student 1, which will call a function
         // that has the rest of the code below
 
+        // stop the dialogue
+        StopDialogue();
+
         // Activate all the gray characters
         ActivateTopCharacters();
 
@@ -86,10 +89,15 @@ public class SupervisorSpeechManager : MonoBehaviour
         skipOrientationButton.SetActive(false);
 
         // Hide all dialogue bubbles (should only need to disable the one at which the skip orientation button was clicked)
-        dialogueBubbles[currentIndex].SetActive(false);
-        if (currentIndex + 1 < dialogueBubbles.Length) {
-            dialogueBubbles[currentIndex + 1].SetActive(false);
-        }
+        //dialogueBubbles[currentIndex].SetActive(false);
+        //// TO BE EXTRA SAFE, deactivate ALL bubbles
+        //foreach (var bubble in dialogueBubbles)
+        //{
+        //    bubble.SetActive(false);
+        //}
+        //if (currentIndex + 1 < dialogueBubbles.Length) {
+        //    dialogueBubbles[currentIndex + 1].SetActive(false);
+        //}
 
         // Hide all materials
         SetActiveIfNotNull(smallID, false);
@@ -110,6 +118,22 @@ public class SupervisorSpeechManager : MonoBehaviour
         });
 
         GetComponent<StartDay>().BeginDay();
+    }
+
+    private void StopDialogue()
+    {
+        StopAllCoroutines();
+
+        foreach (var bubble in dialogueBubbles)
+        {
+            var typewriter = bubble.GetComponent<TypewriterEffect>();
+            if (typewriter != null)
+            {
+                typewriter.StopTyping();
+            }
+                
+            bubble.SetActive(false);
+        }
     }
 
     public void ResumeDialogue()
@@ -227,7 +251,7 @@ public class SupervisorSpeechManager : MonoBehaviour
                 if (!smallIDClickable.IsDay1())
                 {
                     // then, enable this ID card to be clickable
-                    smallIDClickable.SetClickable(true);
+                    //smallIDClickable.SetClickable(true);
                 }
                 smallIDClickable.SetPause2(true);
 
