@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f9e21dd4a881f4fff8f8a602bd10fa41
+guid: 0b4778727b9ce4b9b87df083a09070e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -575579452090554970
-    second: ExamGuide_Day3_BIO_0
+      213: 2708693112191850812
+    second: Day1_HsciHover_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ExamGuide_Day3_BIO_0
+      name: Day1_HsciHover_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 21
-        width: 1046
-        height: 673
+        x: 0
+        y: 1
+        width: 48
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a5e022b9812308f0800000000000000
-      internalID: -575579452090554970
+      spriteID: c391eb5c806379520800000000000000
+      internalID: 2708693112191850812
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ExamGuide_Day3_BIO_0: -575579452090554970
+      Day1_HsciHover_0: 2708693112191850812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
