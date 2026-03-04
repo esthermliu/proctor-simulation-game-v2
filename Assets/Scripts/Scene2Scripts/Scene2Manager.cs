@@ -136,6 +136,11 @@ public class Scene2Manager : MonoBehaviour
         {
             HelpManager.Instance.ShowHelpPanel();
         } 
+
+        EventLogger.Log(new GameEvent
+        {
+            eventTypeEnum = EventType.exam_started,
+        });
     }
 
     void EndScene()

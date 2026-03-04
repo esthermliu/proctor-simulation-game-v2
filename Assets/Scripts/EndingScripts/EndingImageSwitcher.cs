@@ -42,14 +42,26 @@ public class EndingImageSwitcher : MonoBehaviour
         {
             case EndingType.Good:
                 imageComponent.sprite = goodEndingSprite;
+                EventLogger.Log(new GameEvent {
+                    eventTypeEnum = EventType.ending_determined,
+                    description = "Good",
+                });
                 break;
 
             case EndingType.Okay:
                 imageComponent.sprite = okayEndingSprite;
+                EventLogger.Log(new GameEvent {
+                    eventTypeEnum = EventType.ending_determined,
+                    description = "Okay",
+                });
                 break;
 
             case EndingType.Bad:
                 imageComponent.sprite = badEndingSprite;
+                EventLogger.Log(new GameEvent {
+                    eventTypeEnum = EventType.ending_determined,
+                    description = "Bad",
+                });
                 break;
         }
     }

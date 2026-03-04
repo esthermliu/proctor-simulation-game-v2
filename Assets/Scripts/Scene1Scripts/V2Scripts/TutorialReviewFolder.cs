@@ -67,6 +67,12 @@ public class TutorialReviewFolder : MonoBehaviour
 
         // hide the small review folder
         smallReviewFolder.SetActive(false);
+
+        EventLogger.Log(new GameEvent
+        {
+            eventTypeEnum = EventType.pause_completed,
+            description = "day1_pause4",
+        });
     }
 
     //========= Q1 Button OnClick Events =========

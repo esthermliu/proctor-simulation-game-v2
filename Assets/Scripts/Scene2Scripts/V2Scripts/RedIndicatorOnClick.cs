@@ -26,6 +26,7 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler
         if (scene2Manager.ExistsOngoingEvent()) {
             EventLogger.Log(new GameEvent {
                 eventTypeEnum = EventType.bad_behavior_clicked_during_ongoing_event,
+                studentName = student.name,
                 elapsedTime = scene2Manager.ElapsedTime,
             });
             return;
@@ -33,6 +34,7 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler
 
         EventLogger.Log(new GameEvent {
             eventTypeEnum = EventType.bad_behavior_clicked,
+            studentName = student.name,
             elapsedTime = scene2Manager.ElapsedTime,
         });
 

@@ -5,7 +5,6 @@ public class GameEvent
 {
     public double gameVersion = Constants.GAME_VERSION; 
     public string subversion = GameManager.Instance?.subversion; // for A/B testing
-    public string hostingPlatform = Constants.HOSTING_PLATFORM;
 
     [SerializeField]
     private string eventType;
@@ -19,6 +18,8 @@ public class GameEvent
     public string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
     public string description = null;
+    public bool isCorrect = false;
+    public string studentName = null;
     public int index = 0;
     public float elapsedTime = 0f; // for scene 2 only
     public GameState gameState = GameManager.Instance?.state;
@@ -31,26 +32,26 @@ public enum EventType
     credits_page_entered,
     scene_entered,
     item_clicked,
+    pause_completed,
     orientation_skipped,
     day_started,
-    admission_decision_correct,
-    admission_decision_incorrect,
+    admission_decision,
+    exam_started,
     bad_behavior_clicked,
     bad_behavior_clicked_during_ongoing_event,
     bad_behavior_missed,
     question_clicked,
     question_clicked_during_ongoing_event,
     question_missed,
-    question_answered_correctly,
-    question_answered_incorrectly,
+    question_answered,
     investigation_initiated,
     investigation_declined,
     help_clicked,
     scroll_clicked,
-    report_correct,
-    report_incorrect,
+    report_decision,
     supervisor_talk_clicked,
     eval_signed,
+    ending_determined,
 }
 
 

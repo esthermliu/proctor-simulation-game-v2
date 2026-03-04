@@ -48,7 +48,9 @@ public class QuestionManager : MonoBehaviour
         student.QuestionAnswered();
 
         EventLogger.Log(new GameEvent {
-            eventTypeEnum = EventType.question_answered_correctly,
+            eventTypeEnum = EventType.question_answered,
+            isCorrect = true,
+            studentName = student.name,
             elapsedTime = scene2Manager.ElapsedTime,
         });
     }
@@ -62,8 +64,10 @@ public class QuestionManager : MonoBehaviour
         student.ShowBadResponse();
 
         EventLogger.Log(new GameEvent {
-            eventTypeEnum = EventType.question_answered_incorrectly,
+            eventTypeEnum = EventType.question_answered,
+            isCorrect = false,
             elapsedTime = scene2Manager.ElapsedTime,
+            studentName = student.name,
         });
     }
 }

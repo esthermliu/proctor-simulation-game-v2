@@ -25,7 +25,8 @@ window.firebaseManager = {
         const data = JSON.parse(jsonData);
         await addDoc(collection(db, collectionName), {
             ...data,
-            timestamp: serverTimestamp()
+            timestamp: serverTimestamp(),
+            host: window.location.hostname,
         });
     }
 };

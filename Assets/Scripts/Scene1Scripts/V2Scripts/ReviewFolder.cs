@@ -74,8 +74,10 @@ public class ReviewFolder : MonoBehaviour
 
             EventLogger.Log(new GameEvent
             {
-                eventTypeEnum = EventType.admission_decision_correct,
-                description = "Admitted student " + student.name
+                eventTypeEnum = EventType.admission_decision,
+                description = "Admitted",
+                studentName = student.name,
+                isCorrect = true,
             });
 
         }
@@ -86,8 +88,10 @@ public class ReviewFolder : MonoBehaviour
 
             EventLogger.Log(new GameEvent
             {
-                eventTypeEnum = EventType.admission_decision_incorrect,
-                description = "Admitted student " + student.name
+                eventTypeEnum = EventType.admission_decision,
+                description = "Denied",
+                studentName = student.name,
+                isCorrect = false,
             });
         }
 
@@ -122,8 +126,10 @@ public class ReviewFolder : MonoBehaviour
             }
             EventLogger.Log(new GameEvent
             {
-                eventTypeEnum = EventType.admission_decision_correct,
-                description = "Denied student " + student.name
+                eventTypeEnum = EventType.admission_decision,
+                description = "Denied",
+                studentName = student.name,
+                isCorrect = true,
             });
         }
         else
@@ -132,8 +138,10 @@ public class ReviewFolder : MonoBehaviour
             NotificationManager.Instance.ShowIncorrectIcon();
             EventLogger.Log(new GameEvent
             {
-                eventTypeEnum = EventType.admission_decision_incorrect,
-                description = "Denied student " + student.name
+                eventTypeEnum = EventType.admission_decision,
+                description = "Denied",
+                studentName = student.name,
+                isCorrect = false,
             });
         }
 

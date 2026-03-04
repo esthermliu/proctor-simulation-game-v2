@@ -60,6 +60,7 @@ public class Investigate : MonoBehaviour
 
         EventLogger.Log(new GameEvent {
             eventTypeEnum = EventType.investigation_initiated,
+            studentName = student.name,
             elapsedTime = scene2Manager.ElapsedTime,
         });
         
@@ -80,6 +81,7 @@ public class Investigate : MonoBehaviour
 
         EventLogger.Log(new GameEvent {
             eventTypeEnum = EventType.investigation_declined,
+            studentName = student.name,
             elapsedTime = scene2Manager.ElapsedTime,
         });
     }

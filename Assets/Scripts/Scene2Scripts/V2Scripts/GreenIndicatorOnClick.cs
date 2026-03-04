@@ -27,12 +27,14 @@ public class GreenIndicatorOnClick : MonoBehaviour, IPointerClickHandler
             EventLogger.Log(new GameEvent {
                 eventTypeEnum = EventType.question_clicked_during_ongoing_event,
                 elapsedTime = scene2Manager.ElapsedTime,
+                studentName = student.name,
             });
             return;
         }
 
         EventLogger.Log(new GameEvent {
             eventTypeEnum = EventType.question_clicked,
+            studentName = student.name,
             elapsedTime = scene2Manager.ElapsedTime,
         });
 

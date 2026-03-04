@@ -130,7 +130,7 @@ public class Student : MonoBehaviour
             EventLogger.Log(new GameEvent {
                 eventTypeEnum = EventType.bad_behavior_missed,
                 elapsedTime = Scene2Manager.Instance.ElapsedTime,
-                description = gameObject.name, // name of the student
+                studentName = gameObject.name, // name of the student
             });
         }
     }
@@ -149,7 +149,7 @@ public class Student : MonoBehaviour
             EventLogger.Log(new GameEvent {
                 eventTypeEnum = EventType.question_missed,
                 elapsedTime = Scene2Manager.Instance.ElapsedTime,
-                description = gameObject.name, // name of the student
+                studentName = gameObject.name, // name of the student
             });
         }
     }
@@ -177,18 +177,20 @@ public class Student : MonoBehaviour
         if (!correct)
         {
             EventLogger.Log(new GameEvent {
-                eventTypeEnum = EventType.report_incorrect,
+                eventTypeEnum = EventType.report_decision,
                 elapsedTime = Scene2Manager.Instance.ElapsedTime,
-                description = gameObject.name, // name of the student
+                studentName = gameObject.name, // name of the student
+                isCorrect = false,
             });
             // show the incorrect notification on delay
             StartCoroutine(DelayedIncorrectNotification());
         } else
         {
             EventLogger.Log(new GameEvent {
-                eventTypeEnum = EventType.report_correct,
+                eventTypeEnum = EventType.report_decision,
                 elapsedTime = Scene2Manager.Instance.ElapsedTime,
-                description = gameObject.name, // name of the student
+                studentName = gameObject.name, // name of the student
+                isCorrect = true,
             });
             // at this point, we know that the report or lack or report was CORRECT
             // if we reported, then increment report student

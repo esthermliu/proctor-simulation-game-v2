@@ -70,5 +70,11 @@ public class SupervisorPause3Manager : MonoBehaviour
 
         // continue with dialogue
         speechManager.ResumeDialogue();
+
+        EventLogger.Log(new GameEvent
+        {
+            eventTypeEnum = EventType.pause_completed,
+            description = "day1_pause3",
+        });
     }
 }
