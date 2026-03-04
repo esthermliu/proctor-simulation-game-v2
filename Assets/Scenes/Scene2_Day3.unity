@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 9142345}
   - component: {fileID: 9142344}
   - component: {fileID: 9142346}
+  - component: {fileID: 9142347}
   m_Layer: 0
   m_Name: YesButton (A)
   m_TagString: Untagged
@@ -293,6 +294,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9142347}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 251181228}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &9142347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &21284919
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +615,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44243923}
+  m_CullTransparentMesh: 1
+--- !u!1 &62520050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62520051}
+  - component: {fileID: 62520053}
+  - component: {fileID: 62520052}
+  m_Layer: 5
+  m_Name: RedLine (I)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &62520051
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62520050}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1639204257}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035156, y: -1.08}
+  m_SizeDelta: {x: 212, y: 7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &62520052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62520050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2311505227138676062, guid: e247da62d01da409ab5e492a8b503495, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &62520053
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62520050}
   m_CullTransparentMesh: 1
 --- !u!1 &84270282
 GameObject:
@@ -1043,6 +1159,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99965562}
   m_CullTransparentMesh: 1
+--- !u!1 &109370291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109370292}
+  - component: {fileID: 109370294}
+  - component: {fileID: 109370293}
+  m_Layer: 5
+  m_Name: RedLine (I)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &109370292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109370291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 443317939}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035156, y: -1.51}
+  m_SizeDelta: {x: 212, y: 7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &109370293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109370291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2311505227138676062, guid: e247da62d01da409ab5e492a8b503495, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &109370294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109370291}
+  m_CullTransparentMesh: 1
 --- !u!1 &123117315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1598,81 @@ RectTransform:
   m_AnchoredPosition: {x: -22.2, y: -1.5}
   m_SizeDelta: {x: 33.8461, y: 38.6462}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &190908185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190908186}
+  - component: {fileID: 190908188}
+  - component: {fileID: 190908187}
+  m_Layer: 5
+  m_Name: RedLine (I)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &190908186
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190908185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2057651652}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000061035156, y: -1.42}
+  m_SizeDelta: {x: 212, y: 7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &190908187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190908185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2311505227138676062, guid: e247da62d01da409ab5e492a8b503495, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &190908188
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190908185}
+  m_CullTransparentMesh: 1
 --- !u!1 &207074187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,6 +1966,7 @@ GameObject:
   - component: {fileID: 251181226}
   - component: {fileID: 251181225}
   - component: {fileID: 251181227}
+  - component: {fileID: 251181228}
   m_Layer: 0
   m_Name: NoButton (A)
   m_TagString: Untagged
@@ -1821,6 +2088,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9142347}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 251181228}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &251181228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251181223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &251314535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2590,7 @@ MonoBehaviour:
   investigateNoCheck: {fileID: 781261265}
   reportYesCheck: {fileID: 316914205}
   reportNoCheck: {fileID: 1498849907}
+  completeZoneHover: {fileID: 2057651651}
   scene2Manager: {fileID: 504664136}
 --- !u!114 &353402159
 MonoBehaviour:
@@ -3076,6 +3384,7 @@ GameObject:
   - component: {fileID: 390796738}
   - component: {fileID: 390796737}
   - component: {fileID: 390796736}
+  - component: {fileID: 390796739}
   m_Layer: 0
   m_Name: YesButton (A)
   m_TagString: Untagged
@@ -3197,6 +3506,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390796734}
   m_CullTransparentMesh: 1
+--- !u!114 &390796739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390796734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &414840579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,6 +3657,7 @@ GameObject:
   - component: {fileID: 434578893}
   - component: {fileID: 434578892}
   - component: {fileID: 434578891}
+  - component: {fileID: 434578894}
   m_Layer: 0
   m_Name: NoButton (A)
   m_TagString: Untagged
@@ -3453,6 +3779,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434578889}
   m_CullTransparentMesh: 1
+--- !u!114 &434578894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434578889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &443317938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,6 +3807,8 @@ GameObject:
   - component: {fileID: 443317942}
   - component: {fileID: 443317941}
   - component: {fileID: 443317940}
+  - component: {fileID: 443317944}
+  - component: {fileID: 443317943}
   m_Layer: 0
   m_Name: MarkComplete (A)
   m_TagString: Untagged
@@ -3483,7 +3827,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 109370292}
   m_Father: {fileID: 471319424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3585,6 +3930,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443317938}
   m_CullTransparentMesh: 1
+--- !u!114 &443317943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443317938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4f443e05c4b4e6f9529718fe380c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  hoverOverlay: {fileID: 109370291}
+  disabled: 1
+--- !u!114 &443317944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443317938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 1
+  disableCursorEffect: 1
 --- !u!1 &450406867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +4227,7 @@ MonoBehaviour:
   investigateNoCheck: {fileID: 169052374}
   reportYesCheck: {fileID: 1856728887}
   reportNoCheck: {fileID: 30638811}
+  completeZoneHover: {fileID: 443317938}
   scene2Manager: {fileID: 504664136}
 --- !u!114 &471319426
 MonoBehaviour:
@@ -4425,6 +4801,7 @@ GameObject:
   - component: {fileID: 539392571}
   - component: {fileID: 539392570}
   - component: {fileID: 539392569}
+  - component: {fileID: 539392572}
   m_Layer: 0
   m_Name: NoButton (A)
   m_TagString: Untagged
@@ -4546,6 +4923,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539392567}
   m_CullTransparentMesh: 1
+--- !u!114 &539392572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539392567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &583354772
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,6 +6117,7 @@ GameObject:
   - component: {fileID: 787490595}
   - component: {fileID: 787490594}
   - component: {fileID: 787490593}
+  - component: {fileID: 787490596}
   m_Layer: 0
   m_Name: YesButton (A)
   m_TagString: Untagged
@@ -5845,6 +6239,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787490591}
   m_CullTransparentMesh: 1
+--- !u!114 &787490596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787490591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &792705492
 GameObject:
   m_ObjectHideFlags: 0
@@ -5857,6 +6267,7 @@ GameObject:
   - component: {fileID: 792705495}
   - component: {fileID: 792705494}
   - component: {fileID: 792705496}
+  - component: {fileID: 792705497}
   m_Layer: 0
   m_Name: NoButton (A)
   m_TagString: Untagged
@@ -5978,6 +6389,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1433516504}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 792705497}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &792705497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792705492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &793224799
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,6 +7162,7 @@ GameObject:
   - component: {fileID: 906125677}
   - component: {fileID: 906125676}
   - component: {fileID: 906125675}
+  - component: {fileID: 906125678}
   m_Layer: 0
   m_Name: NoButton (A)
   m_TagString: Untagged
@@ -6832,6 +7284,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906125673}
   m_CullTransparentMesh: 1
+--- !u!114 &906125678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906125673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &947034884
 GameObject:
   m_ObjectHideFlags: 0
@@ -7583,6 +8051,7 @@ GameObject:
   - component: {fileID: 1110998755}
   - component: {fileID: 1110998754}
   - component: {fileID: 1110998753}
+  - component: {fileID: 1110998756}
   m_Layer: 0
   m_Name: YesButton (A)
   m_TagString: Untagged
@@ -7704,6 +8173,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110998751}
   m_CullTransparentMesh: 1
+--- !u!114 &1110998756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110998751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &1120005226
 GameObject:
   m_ObjectHideFlags: 0
@@ -9921,6 +10406,7 @@ GameObject:
   - component: {fileID: 1433516502}
   - component: {fileID: 1433516501}
   - component: {fileID: 1433516503}
+  - component: {fileID: 1433516504}
   m_Layer: 0
   m_Name: YesButton (A)
   m_TagString: Untagged
@@ -10042,6 +10528,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1433516504}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 792705497}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1433516504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433516499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &1482376491
 GameObject:
   m_ObjectHideFlags: 0
@@ -11147,6 +11673,8 @@ GameObject:
   - component: {fileID: 1639204260}
   - component: {fileID: 1639204259}
   - component: {fileID: 1639204258}
+  - component: {fileID: 1639204262}
+  - component: {fileID: 1639204261}
   m_Layer: 0
   m_Name: MarkComplete (A)
   m_TagString: Untagged
@@ -11165,7 +11693,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 62520051}
   m_Father: {fileID: 1878082911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -11267,6 +11796,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639204256}
   m_CullTransparentMesh: 1
+--- !u!114 &1639204261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639204256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4f443e05c4b4e6f9529718fe380c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  hoverOverlay: {fileID: 62520050}
+  disabled: 1
+--- !u!114 &1639204262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639204256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 1
+  disableCursorEffect: 1
 --- !u!1 &1667672251
 GameObject:
   m_ObjectHideFlags: 0
@@ -11416,6 +11975,7 @@ GameObject:
   - component: {fileID: 1674139849}
   - component: {fileID: 1674139848}
   - component: {fileID: 1674139850}
+  - component: {fileID: 1674139851}
   m_Layer: 0
   m_Name: YesButton (A)
   m_TagString: Untagged
@@ -11537,6 +12097,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1674139851}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1988910616}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1674139851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674139846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &1676421205
 GameObject:
   m_ObjectHideFlags: 0
@@ -13080,6 +13680,7 @@ MonoBehaviour:
   investigateNoCheck: {fileID: 1701341003}
   reportYesCheck: {fileID: 1831528031}
   reportNoCheck: {fileID: 1885824652}
+  completeZoneHover: {fileID: 1639204256}
   scene2Manager: {fileID: 504664136}
 --- !u!114 &1878082913
 MonoBehaviour:
@@ -14116,6 +14717,7 @@ GameObject:
   - component: {fileID: 1988910614}
   - component: {fileID: 1988910613}
   - component: {fileID: 1988910615}
+  - component: {fileID: 1988910616}
   m_Layer: 0
   m_Name: NoButton (A)
   m_TagString: Untagged
@@ -14237,6 +14839,46 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1674139851}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1988910616}
+        m_TargetAssemblyTypeName: CursorOnHover, Assembly-CSharp
+        m_MethodName: SetDisableCursorEffect
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1988910616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988910611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 0
+  disableCursorEffect: 0
 --- !u!1 &2057651651
 GameObject:
   m_ObjectHideFlags: 0
@@ -14249,6 +14891,8 @@ GameObject:
   - component: {fileID: 2057651655}
   - component: {fileID: 2057651654}
   - component: {fileID: 2057651653}
+  - component: {fileID: 2057651657}
+  - component: {fileID: 2057651656}
   m_Layer: 0
   m_Name: MarkComplete (A)
   m_TagString: Untagged
@@ -14267,7 +14911,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 190908186}
   m_Father: {fileID: 353402157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -14369,6 +15014,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057651651}
   m_CullTransparentMesh: 1
+--- !u!114 &2057651656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057651651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4f443e05c4b4e6f9529718fe380c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverHighlight
+  hoverOverlay: {fileID: 190908185}
+  disabled: 1
+--- !u!114 &2057651657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057651651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0732cc7b0be14bdd8d232a439142b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorOnHover
+  pencilCursor: {fileID: 2800000, guid: f6eb5aefb39dc4bdd903516decf3b4f8, type: 3}
+  hotspot: {x: 0, y: 57}
+  isCompleteHoverZone: 1
+  disableCursorEffect: 1
 --- !u!1 &2096203708
 GameObject:
   m_ObjectHideFlags: 0

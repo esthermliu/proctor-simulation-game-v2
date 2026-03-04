@@ -7,13 +7,28 @@ public class CursorOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public Vector2 hotspot = Vector2.zero; // where the "tip" clicks
     public bool isCompleteHoverZone = false;
 
+    [Header("Disable hover effect?")]
+    public bool disableCursorEffect = false;
+
     public void OnPointerEnter(PointerEventData eventData)
     {
+        // don't change cursor if effect is disabled
+        if (disableCursorEffect)
+        {
+            return;
+        }
+
         Cursor.SetCursor(pencilCursor, hotspot, CursorMode.Auto);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        // don't change cursor if effect is disabled
+        if (disableCursorEffect)
+        {
+            return;
+        }
+
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
@@ -26,5 +41,13 @@ public class CursorOnHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
 
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void SetDisableCursorEffect(bool disable)
+    {
+        disableCursorEffect = disable;
+
+        // if disabled, then change the cursor back to normal (unless we disabled the complete hover zone)
+        OnDisable();
     }
 }

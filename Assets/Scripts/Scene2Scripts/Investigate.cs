@@ -19,6 +19,9 @@ public class Investigate : MonoBehaviour
     public GameObject reportYesCheck;
     public GameObject reportNoCheck;
 
+    [Header("Mark as complete")]
+    public GameObject completeZoneHover;
+
     [Header("Link to Scene 2 Manager")]
     public Scene2Manager scene2Manager;
 
@@ -107,15 +110,8 @@ public class Investigate : MonoBehaviour
 
         if (q1Unanswered || q2Unanswered) return;
 
-
-        // MOVED LOGIC TO STUDENT SO WE KNOW IF CORRECT REPORT OR NOT
-        //// Otherwise, all questions answered, allow for review to be over
-        //// if YES checkmark for report is true, call GameManager ReportStudent
-        //// (adding the null check so we can run scene 2 on its own)
-        //if (GameManager.Instance != null && reportYesCheck.activeSelf)
-        //{
-        //    GameManager.Instance.ReportStudent();
-        //}
+        
+      
 
         // notify Student script if we reported student
         if (reportYesCheck.activeSelf)
@@ -126,7 +122,7 @@ public class Investigate : MonoBehaviour
         // Check whether the report decision was correct or not
         student.CheckReport();
 
-        //// Hide the review folder
+        // Hide the review folder
         student.HideInvestigate();
 
         // Event ended, allow player to click on other events
@@ -144,6 +140,38 @@ public class Investigate : MonoBehaviour
     //        Helper functions 
     //===================================
 
+    // Check if all questions have been answered
+    // true if all questions answered, false otherwise
+    private bool AllQuestionsAnswered()
+    {
+        // check whether all questions are answered; otherwise do not allow button to be clicked
+        bool q1Unanswered = (!investigateYesCheck.activeSelf) && (!investigateNoCheck.activeSelf);
+        bool q2Unanswered = (!reportYesCheck.activeSelf) && (!reportNoCheck.activeSelf);
+
+        return !q1Unanswered && !q2Unanswered;
+    }
+
+    // Check if all questions answered and we can activate mark complete hover
+    private void CheckIfActivateMarkCompleteHover()
+    {
+        CursorOnHover completeZoneHoverCursor = completeZoneHover.GetComponent<CursorOnHover>();
+        HoverHighlight completeZoneHoverHighlight = completeZoneHover.GetComponent<HoverHighlight>();
+
+        if (completeZoneHoverCursor == null || completeZoneHoverHighlight == null) return;
+
+        // Check if all questions answered and can activate hover
+        if (AllQuestionsAnswered())
+        {
+            completeZoneHoverCursor.SetDisableCursorEffect(false);
+            completeZoneHoverHighlight.SetDisable(false);
+        }
+        else
+        {
+            completeZoneHoverCursor.SetDisableCursorEffect(true);
+            completeZoneHoverHighlight.SetDisable(true);
+        }
+    }
+
     // thisBox: the box being clicked
     // otherBox: the other option not being clicked
     private void OnCheckboxClick(GameObject thisBox, GameObject otherBox)
@@ -160,6 +188,9 @@ public class Investigate : MonoBehaviour
         {
             thisBox.SetActive(true);
         }
+
+        // check if we can activate hover
+        CheckIfActivateMarkCompleteHover();
     }
 
 
