@@ -26,16 +26,11 @@ public class MusicManager : MonoBehaviour
     public void BeginTheme(string sceneName)
     {
         Debug.Log("Beginning theme for scene: " + sceneName);
-        // If a theme is already playing, fade it out
-        if (currentTheme != null)
-        {
-            StartCoroutine(FadeOut(currentTheme, 1.0f));
-        }
 
         AudioSource nextTheme = null;
 
         // Choose theme based on scene name
-        if (sceneName == "Scene0_Title")
+        if (sceneName == "Scene0_Title" || sceneName == "Ending")
         {
             nextTheme = TitleTheme;
         }
@@ -52,8 +47,13 @@ public class MusicManager : MonoBehaviour
             nextTheme = ReviewTheme;
         }
 
-        if (nextTheme != null)
+        if (nextTheme != null && (currentTheme == null || nextTheme != currentTheme))
         {
+            // If a theme is already playing, fade it out
+            if (currentTheme != null)
+            {
+                StartCoroutine(FadeOut(currentTheme, 1.0f));
+            }
             currentTheme = nextTheme;
             currentTheme.volume = 0f;
             if (!currentTheme.isPlaying)
