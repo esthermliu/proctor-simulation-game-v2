@@ -62,6 +62,9 @@ public class Scene2Manager : MonoBehaviour
     private bool ongoingEvent = false;
     private bool startTime = false;
 
+    private float colonToggleTimer = 0f;
+    private bool showColon = true;
+
     private void Awake()
     {
         Instance = this;
@@ -80,6 +83,13 @@ public class Scene2Manager : MonoBehaviour
         // Internal timer counts up from 0
         elapsedTime += Time.deltaTime;
         elapsedTime = Mathf.Clamp(elapsedTime, 0f, totalDuration);
+
+        colonToggleTimer += Time.deltaTime;
+        if (colonToggleTimer >= 0.5f)
+        {
+            colonToggleTimer = 0f;
+            showColon = !showColon;
+        }
 
         UpdateTimerUI();
 
@@ -127,7 +137,8 @@ public class Scene2Manager : MonoBehaviour
         int minutes = totalSeconds / 60;
         int seconds = totalSeconds % 60;
 
-        timerText.text = $"0{minutes}:{seconds:00}";
+        string separator = showColon ? ":" : " ";
+        timerText.text = $"0{minutes}{separator}{seconds:00}";
     }
 
     public void BeginExam() {

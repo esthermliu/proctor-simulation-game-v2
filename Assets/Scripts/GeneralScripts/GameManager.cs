@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         sessionId = System.Guid.NewGuid().ToString();
+        // Randomly set subversion to either "A" or "B"
+        subversion = (Random.Range(0, 2) == 0) ? "A" : "B";
+        
         // Log the game start event with the session ID
         EventLogger.Log(new GameEvent
         {

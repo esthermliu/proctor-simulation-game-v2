@@ -38,7 +38,7 @@ public class TimeManager : MonoBehaviour
     private void Update()
     {
         colonToggleTimer += Time.deltaTime;
-        if (colonToggleTimer >= 1f)
+        if (colonToggleTimer >= 0.5f)
         {
             colonToggleTimer = 0f;
             showColon = !showColon;
