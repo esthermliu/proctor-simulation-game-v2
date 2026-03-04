@@ -26,6 +26,10 @@ public class TitleScreenManager : MonoBehaviour
     public GameObject creditsPage;
     public GameObject creditsPaperEdge;
 
+    public void Start() {
+        GameManager.Instance.state = new GameState();
+    }
+
     // This function will be called when the button is clicked
     //public void PlayGame()
     //{
