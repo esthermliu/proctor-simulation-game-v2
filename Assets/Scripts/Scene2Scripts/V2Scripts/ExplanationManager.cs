@@ -9,6 +9,8 @@ public class ExplanationManager : MonoBehaviour
     [Header("Timing")]
     [SerializeField] private float delayBetweenBubbles = 1f;
 
+    public System.Action OnExplanationComplete;
+
     private int currentIndex = 0;
 
     public void StartExplanation()
@@ -20,7 +22,13 @@ public class ExplanationManager : MonoBehaviour
     private void ShowCurrentBubble()
     {
         if (currentIndex >= explanationBubbles.Length)
+        {
+            // Everything is finished
+            Debug.Log("EXPLANATION COMPLETE");
+            OnExplanationComplete?.Invoke();
             return;
+        }
+            
 
         GameObject bubble = explanationBubbles[currentIndex];
         bubble.SetActive(true);

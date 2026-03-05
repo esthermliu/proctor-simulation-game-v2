@@ -34,6 +34,9 @@ public class Scene2Manager : MonoBehaviour
     public GameObject badBehavior3Papers;
     public GameObject questionPapers;
 
+    [Header("Student clickboxes")]
+    public GameObject[] studentClickboxes;
+
     private bool bad1Triggered = false;
     private bool questionTriggered = false;
     private bool bad2Triggered = false;
@@ -193,6 +196,15 @@ public class Scene2Manager : MonoBehaviour
             questionPapers.SetActive(false);
         }
 
+        // TODO: allow the hover effect to work again?
+        foreach (GameObject clickbox in studentClickboxes)
+        {
+            if (clickbox != null)
+            {
+                clickbox.SetActive(true);
+            }
+        }
+
         // 4) Hide the help panel
         //HelpManager.Instance.HideHelpPanel();
     }
@@ -209,11 +221,30 @@ public class Scene2Manager : MonoBehaviour
     public void SetOngoingEvent()
     {
         ongoingEvent = true;
+
+        // Disable all click boxes for all other students, making it
+        // clear that during an ongoing event, you cannot click students!!
+        foreach (GameObject clickbox in studentClickboxes)
+        {
+            if (clickbox != null)
+            {
+                clickbox.SetActive(false);
+            }
+        }
     }
 
     public void ResetOngoingEvent()
     {
         ongoingEvent = false;
+
+        // Re-enable all click boxes for all other students, so hover effect works
+        foreach (GameObject clickbox in studentClickboxes)
+        {
+            if (clickbox != null)
+            {
+                clickbox.SetActive(true);
+            }
+        }
     }
 
     public void EnableStartTime()
