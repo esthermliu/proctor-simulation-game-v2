@@ -53,7 +53,7 @@ public class SupervisorSpeechManager : MonoBehaviour
     // stops moving
     public void StartDialogue()
     {
-        if (skipOrientationButton != null && GameManager.Instance.subversion == "A")
+        if (skipOrientationButton != null && GameManager.Instance != null && GameManager.Instance.subversion == "A")
         {
             // Need to show the "Skip Orientation" Button (only in A version)
             skipOrientationButton.SetActive(true);
