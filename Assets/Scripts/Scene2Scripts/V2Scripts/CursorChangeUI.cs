@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class CursorChangeUI : MonoBehaviour,
     IPointerEnterHandler, IPointerExitHandler,
-    IPointerDownHandler, IPointerUpHandler, IDragHandler
+    IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IDragHandler
 {
     public Texture2D hoverCursor;
     public Texture2D clickCursor;
@@ -61,5 +62,18 @@ public class CursorChangeUI : MonoBehaviour,
     void OnDisable()
     {
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
+    }
+
+    // Fix for touchpad taps
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        StartCoroutine(ClickFlash());
+    }
+
+    IEnumerator ClickFlash()
+    {
+        Cursor.SetCursor(clickCursor, hotspot, cursorMode);
+        yield return new WaitForSeconds(0.06f);
+        Cursor.SetCursor(hoverCursor, hotspot, cursorMode);
     }
 }
