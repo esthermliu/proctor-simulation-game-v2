@@ -28,6 +28,9 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
     [Header("Which Day")]
     public bool day1 = false;
 
+    [Header("Audio source (optional)")]
+    public AudioSource audioSource;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (rightClickable) {
@@ -39,6 +42,13 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
 
             if (rightClick || ctrlClick)
             {
+                // if there is an audio source, play click sound
+                if (audioSource != null)
+                {
+                    audioSource.PlayOneShot(audioSource.clip);
+                }
+
+
                 if (supervisorPause1Manager != null)
                 {
                     // move the tutorial along

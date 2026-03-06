@@ -6,6 +6,9 @@ public class Draggable : MonoBehaviour, IDragHandler, IPointerDownHandler
     [Header("Link to the small version")]
     public GameObject smallPaper;
 
+    [Header("Audio source (optional)")]
+    public AudioSource audioSource;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         // 1) Check if player attempting to hide paper(right click or ctrl + click)
@@ -15,6 +18,12 @@ public class Draggable : MonoBehaviour, IDragHandler, IPointerDownHandler
 
         if (rightClick || ctrlClick)
         {
+            // if there is an audio source, play click sound
+            if (audioSource != null)
+            {
+                audioSource.PlayOneShot(audioSource.clip);
+            }
+
             // hide enlarged version
             gameObject.SetActive(false);
 

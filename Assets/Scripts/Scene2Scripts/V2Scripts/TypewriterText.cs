@@ -12,6 +12,9 @@ public class TypewriterEffect : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float typeSpeed = 0.04f;
 
+    [Header("Audio (Optional)")]
+    [SerializeField] private AudioSource audioSource;
+
     [Header("Auto Start")]
     [SerializeField] private bool autoStartOnEnable = false;
 
@@ -21,13 +24,10 @@ public class TypewriterEffect : MonoBehaviour
 
     private void Awake()
     {
-        // Safety: auto-grab TMP if not assigned
         if (textComponent == null)
             textComponent = GetComponent<TextMeshProUGUI>();
     }
 
-
-    // Auto-start text on enable (for some objects)
     private void OnEnable()
     {
         if (autoStartOnEnable)
@@ -36,7 +36,6 @@ public class TypewriterEffect : MonoBehaviour
         }
     }
 
-    // Call this from a button, click, or event
     public void StartTyping(string message)
     {
         if (typingCoroutine != null)
@@ -45,7 +44,6 @@ public class TypewriterEffect : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeText(message));
     }
 
-    // Overloading function that types message in public field
     public void StartTyping()
     {
         StartTyping(textMessage);
@@ -58,10 +56,22 @@ public class TypewriterEffect : MonoBehaviour
 
         int totalChars = message.Length;
 
+        // START AUDIO if assigned
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+
         for (int i = 0; i <= totalChars; i++)
         {
             textComponent.maxVisibleCharacters = i;
             yield return new WaitForSeconds(typeSpeed);
+        }
+
+        // STOP AUDIO when typing is done
+        if (audioSource != null)
+        {
+            audioSource.Stop();
         }
 
         typingCoroutine = null;
@@ -76,10 +86,14 @@ public class TypewriterEffect : MonoBehaviour
             typingCoroutine = null;
         }
 
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
+
         if (clearText)
             textComponent.maxVisibleCharacters = 0;
 
-        // Optional: prevent any listeners from firing later
         OnTypingComplete = null;
     }
 }
