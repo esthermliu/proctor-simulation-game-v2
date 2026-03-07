@@ -1015,6 +1015,7 @@ MonoBehaviour:
   supervisorAnimator: {fileID: 1932155551}
   dialogueManager: {fileID: 1827019651}
   tutorialBox: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &289410474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,7 +1256,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1901,6 +1902,7 @@ MonoBehaviour:
   textComponent: {fileID: 1919870125}
   textMessage: THERE WERE SEVERAL <b>EXTERNAL EXAMINEES</b> TODAY.
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &554662384
 MonoBehaviour:
@@ -3132,6 +3134,7 @@ MonoBehaviour:
   textComponent: {fileID: 302129128}
   textMessage: "THAT\u2019LL BE ALL."
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &845035118
 MonoBehaviour:
@@ -3438,6 +3441,7 @@ MonoBehaviour:
   textComponent: {fileID: 817533719}
   textMessage: YES, GOOD AFTERNOON.
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &886044689
 MonoBehaviour:
@@ -3690,6 +3694,7 @@ MonoBehaviour:
   textComponent: {fileID: 272442569}
   textMessage: "WE\u2019LL SEE HOW WELL YOU HANDLED THEIR CASES."
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &1048143675
 MonoBehaviour:
@@ -3783,6 +3788,7 @@ MonoBehaviour:
   textComponent: {fileID: 1799543562}
   textMessage: YOUR EVALUATION IS READY. REVIEW AND <u><b>SIGN AT THE END</b></u>.
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &1120377103
 MonoBehaviour:
@@ -4257,6 +4263,7 @@ MonoBehaviour:
   textComponent: {fileID: 177174627}
   textMessage: YOUR NEXT SHIFT IS <b>THIS FRIDAY</b>. \nEXPECT ADDITIONAL CONSIDERATIONS.
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &1350270657
 MonoBehaviour:
@@ -4348,6 +4355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Draggable
   smallPaper: {fileID: 1510996242}
+  audioSource: {fileID: 0}
 --- !u!114 &1426741908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5181,6 +5189,7 @@ MonoBehaviour:
   textComponent: {fileID: 2043413113}
   textMessage: "HI, I\u2019VE COMPLETED MY SHIFT FOR THE DAY."
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &1775089012
 MonoBehaviour:

@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Draggable
   smallPaper: {fileID: 762386770}
+  audioSource: {fileID: 0}
 --- !u!114 &134450670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +1239,7 @@ MonoBehaviour:
   supervisorAnimator: {fileID: 1932155551}
   dialogueManager: {fileID: 1827019651}
   tutorialBox: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &289410474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,7 +1343,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1850,6 +1852,7 @@ MonoBehaviour:
   textComponent: {fileID: 1919870125}
   textMessage: THE <b>FORMAL HIRING OUTCOME</b> WILL BE \nFINALIZED NEXT WEEK.
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &554662384
 MonoBehaviour:
@@ -3264,6 +3267,7 @@ MonoBehaviour:
   textComponent: {fileID: 817533719}
   textMessage: YES, THAT'S RIGHT.
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &886044689
 MonoBehaviour:
@@ -3517,6 +3521,7 @@ MonoBehaviour:
   textMessage: "FOR NOW, PLEASE READ THROUGH TODAY\u2019S REPORT AND <u><b>SIGN AT
     THE END</b></u>."
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &1048143675
 MonoBehaviour:
@@ -4040,6 +4045,7 @@ MonoBehaviour:
   textComponent: {fileID: 177174627}
   textMessage: "WE\u2019LL BE IN TOUCH."
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &1350270657
 MonoBehaviour:
@@ -4855,6 +4861,7 @@ MonoBehaviour:
   textComponent: {fileID: 2043413113}
   textMessage: GOOD AFTERNOON. \nI BELIEVE TODAY IS MY <b>LAST DAY</b>.
   typeSpeed: 0.035
+  audioSource: {fileID: 0}
   autoStartOnEnable: 0
 --- !u!114 &1775089012
 MonoBehaviour:

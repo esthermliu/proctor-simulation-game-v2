@@ -13,6 +13,9 @@ public class SupervisorTalk : MonoBehaviour, IPointerClickHandler
     [Header("Tutorial Box")]
     public GameObject tutorialBox;
 
+    [Header("Audio Source (optional)")]
+    public AudioSource audioSource;
+
     // Don't really need to check for double clicking (since sets game object to inactive), but can keep anyway
     private bool clicked = false;
 
@@ -21,6 +24,12 @@ public class SupervisorTalk : MonoBehaviour, IPointerClickHandler
         // prevent double clicking
         if (clicked) return;
         clicked = true;
+
+        // Click is registered, so play audio (if it exists)
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
 
         // Hide talk prompt (script is attached to talk prompt)
         gameObject.SetActive(false);
