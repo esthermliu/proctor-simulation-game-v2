@@ -8911,7 +8911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneFadeIn
   fadeCanvasGroup: {fileID: 384702032}
   fadeInDuration: 1
-  fadeOutDuration: 0.25
+  fadeOutDuration: 1
 --- !u!1 &385748872
 GameObject:
   m_ObjectHideFlags: 0
@@ -18437,7 +18437,7 @@ GameObject:
   - component: {fileID: 714976708}
   - component: {fileID: 714976709}
   m_Layer: 5
-  m_Name: ButtonPress1
+  m_Name: ClockIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26063,7 +26063,7 @@ MonoBehaviour:
           m_StringArgument: Scene2_Day1_V2
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1805036655}
+      - m_Target: {fileID: 714976709}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1

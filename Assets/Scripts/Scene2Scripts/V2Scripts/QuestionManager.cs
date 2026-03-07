@@ -18,8 +18,11 @@ public class QuestionManager : MonoBehaviour
     [Header("Answer Buttons")]
     public GameObject[] optionButtons;
 
-    [Header("Guide image")]
+    [Header("Guide Image")]
     public GameObject guideImage;
+
+    [Header("Audio Source (optional)")]
+    public AudioSource audioSource;
 
     private Animator studentAnimator;
 
@@ -107,6 +110,12 @@ public class QuestionManager : MonoBehaviour
     private IEnumerator HideGuideWithDelay()
     {
         yield return new WaitForSeconds(1f);
+
+        // play the audio sound (if there is one)
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
 
         // hide the good response + guide
         student.HideGoodResponse();

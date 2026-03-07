@@ -11,6 +11,9 @@ public class CursorChangeUI : MonoBehaviour,
     public Vector2 hotspot = Vector2.zero;
     CursorMode cursorMode = CursorMode.Auto;
 
+    [Header("Audio Source (optional)")]
+    public AudioSource audioSource;
+
     private bool isPointerDown = false;
     private RectTransform rt;
 
@@ -67,6 +70,11 @@ public class CursorChangeUI : MonoBehaviour,
     // Fix for touchpad taps
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+        }
+
         StartCoroutine(ClickFlash());
     }
 

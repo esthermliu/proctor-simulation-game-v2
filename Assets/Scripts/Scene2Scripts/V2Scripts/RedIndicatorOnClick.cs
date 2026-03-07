@@ -11,6 +11,9 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler, IPointer
     public Vector2 hotspot = Vector2.zero;
     private CursorMode cursorMode = CursorMode.Auto;
 
+    [Header("Audio Source (optional)")]
+    public AudioSource audioSource;
+
     private Student student;
     private Animator studentAnimator;
 
@@ -62,6 +65,12 @@ public class RedIndicatorOnClick : MonoBehaviour, IPointerClickHandler, IPointer
 
         // Otherwise, there is no ongoing event, so set this as the current ongoing event
         scene2Manager.SetOngoingEvent();
+
+        // AUDIO: since this is the ongoing event, play the click sound
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
 
         // Increment number of flagged students
         if (GameManager.Instance != null)
