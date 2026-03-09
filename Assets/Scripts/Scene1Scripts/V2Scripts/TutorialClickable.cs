@@ -14,6 +14,9 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
     public bool day1 = false;
     public bool day2 = false;
 
+    [Header("Audio Source (optional)")]
+    public AudioSource audioSource;
+
     // keeps track of when this item can be clicked, set to false for everything at first
     private bool clickable = false;
 
@@ -52,6 +55,11 @@ public class TutorialClickable : MonoBehaviour, IPointerDownHandler, IPointerEnt
         // 1) Hide the small version of the paper
         gameObject.SetActive(false);
 
+        // If there is an audio source, then play the click sound
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+        }
 
         // 2) Show the enlarged version of the paper IF it exists
         if (enlargedPaper != null)

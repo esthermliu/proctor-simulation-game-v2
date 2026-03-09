@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement; // Needed to load scenes
 
 public class TitleScreenManager : MonoBehaviour
 {
-
     [Header("Title References")]
     public GameObject titlePage;
     public GameObject titlePencilA;

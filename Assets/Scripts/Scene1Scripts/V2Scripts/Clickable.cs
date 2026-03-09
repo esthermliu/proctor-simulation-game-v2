@@ -15,6 +15,9 @@ IPointerEnterHandler, IPointerExitHandler
     protected bool clickable = true;
     public float hoverScale = 1.1f;
 
+    [Header("Audio Source (optional)")]
+    public AudioSource audioSource;
+
     private Image image;
     private Vector3 originalScale;
 
@@ -43,6 +46,12 @@ IPointerEnterHandler, IPointerExitHandler
 
         // reset to original scale
         transform.localScale = originalScale;
+
+        // If there is an audio source, then play the click sound
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+        }
 
         // 2) Show the enlarged version of the paper IF it exists
         if (enlargedPaper != null)

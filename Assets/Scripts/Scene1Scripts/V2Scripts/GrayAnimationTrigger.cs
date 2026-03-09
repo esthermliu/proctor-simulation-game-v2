@@ -9,7 +9,10 @@ public class GrayAnimationTrigger : MonoBehaviour
     public StartDay supervisorStartDay;
 
     public bool skip = false;
-    
+
+    [Header("Walking audio (optional)")]
+    public AudioSource loopAudio;
+
     public void NextGrayAnimation(string triggerName)
     {
         if (nextGrayAnimator != null)
@@ -37,5 +40,19 @@ public class GrayAnimationTrigger : MonoBehaviour
     public void SetSkip(bool skip)
     {
         this.skip = skip;
+    }
+
+    public void StopLoopSound()
+    {
+        if (loopAudio != null)
+        {
+            loopAudio.Stop();
+        }
+    }
+
+    public void StartLoopSound()
+    {
+        loopAudio.loop = true;
+        loopAudio.Play();
     }
 }

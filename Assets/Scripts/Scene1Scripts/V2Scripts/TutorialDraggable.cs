@@ -28,6 +28,13 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
     [Header("Which Day")]
     public bool day1 = false;
 
+    [Header("Audio source (optional)")]
+    public AudioSource audioSource;
+
+    [Header("Target Position (for tutorial translation)")]
+    public float targetX;
+    public float targetY;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (rightClickable) {
@@ -39,6 +46,13 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
 
             if (rightClick || ctrlClick)
             {
+                // if there is an audio source, play click sound
+                if (audioSource != null)
+                {
+                    audioSource.PlayOneShot(audioSource.clip);
+                }
+
+
                 if (supervisorPause1Manager != null)
                 {
                     // move the tutorial along
@@ -118,6 +132,18 @@ public class TutorialDraggable : MonoBehaviour, IDragHandler, IPointerDownHandle
         StopAllCoroutines();
         RectTransform rt = GetComponent<RectTransform>();
         StartCoroutine(TranslateCoroutine(new Vector3(rt.anchoredPosition.x, yPosition, 0)));
+    }
+
+    public void TranslatePaper()
+    {
+        TranslateToPosition(targetX, targetY);
+    }
+
+    public void TranslateToPosition(float xPosition, float yPosition)
+    {
+        StopAllCoroutines();
+        RectTransform rt = GetComponent<RectTransform>();
+        StartCoroutine(TranslateCoroutine(new Vector3(xPosition, yPosition, 0)));
     }
 
     private System.Collections.IEnumerator TranslateCoroutine(Vector3 endPos)

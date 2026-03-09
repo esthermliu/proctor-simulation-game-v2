@@ -34,6 +34,12 @@ public class Scene2Manager : MonoBehaviour
     public GameObject badBehavior3Papers;
     public GameObject questionPapers;
 
+    [Header("Student clickboxes")]
+    public GameObject[] studentClickboxes;
+
+    [Header("Audio Source (optional)")]
+    public AudioSource audioSource;
+
     private bool bad1Triggered = false;
     private bool questionTriggered = false;
     private bool bad2Triggered = false;
@@ -146,7 +152,8 @@ public class Scene2Manager : MonoBehaviour
         if (HelpManager.Instance != null)
         {
             HelpManager.Instance.ShowHelpPanel();
-        } 
+        }
+
 
         EventLogger.Log(new GameEvent
         {
@@ -173,29 +180,38 @@ public class Scene2Manager : MonoBehaviour
         students[questionStudentIndex].HideBadResponse();
 
         // Hide any investigation panels + speech bubbles
-        if (badBehavior1Papers != null)
-        {
-            badBehavior1Papers.SetActive(false);
-        }
+        HidePanelIfActive<Investigate>(badBehavior1Papers);
+        HidePanelIfActive<Investigate>(badBehavior2Papers);
+        HidePanelIfActive<Investigate>(badBehavior3Papers);
+        HidePanelIfActive<QuestionManager>(questionPapers);
 
-        if (badBehavior2Papers != null)
+        // allow the hover effect to work again
+        foreach (GameObject clickbox in studentClickboxes)
         {
-            badBehavior2Papers.SetActive(false);
-        }
-
-        if (badBehavior3Papers != null)
-        {
-            badBehavior3Papers.SetActive(false);
-        }
-
-        if (questionPapers != null)
-        {
-            questionPapers.SetActive(false);
+            if (clickbox != null)
+            {
+                clickbox.SetActive(true);
+            }
         }
 
         // 4) Hide the help panel
         //HelpManager.Instance.HideHelpPanel();
     }
+
+    private void HidePanelIfActive<T>(GameObject panel) where T : Component
+    {
+        if (panel == null) return;
+
+        T component = panel.GetComponentInChildren<T>();
+
+        if (component != null && component.gameObject.activeSelf && audioSource != null)
+        {
+            audioSource.Play();
+        }
+
+        panel.SetActive(false);
+    }
+
 
     // ================================================
     // Ongoing event control
@@ -209,11 +225,30 @@ public class Scene2Manager : MonoBehaviour
     public void SetOngoingEvent()
     {
         ongoingEvent = true;
+
+        // Disable all click boxes for all other students, making it
+        // clear that during an ongoing event, you cannot click students!!
+        foreach (GameObject clickbox in studentClickboxes)
+        {
+            if (clickbox != null)
+            {
+                clickbox.SetActive(false);
+            }
+        }
     }
 
     public void ResetOngoingEvent()
     {
         ongoingEvent = false;
+
+        // Re-enable all click boxes for all other students, so hover effect works
+        foreach (GameObject clickbox in studentClickboxes)
+        {
+            if (clickbox != null)
+            {
+                clickbox.SetActive(true);
+            }
+        }
     }
 
     public void EnableStartTime()

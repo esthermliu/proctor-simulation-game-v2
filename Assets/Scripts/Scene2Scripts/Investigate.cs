@@ -25,11 +25,17 @@ public class Investigate : MonoBehaviour
     [Header("Link to Scene 2 Manager")]
     public Scene2Manager scene2Manager;
 
+    [Header("Explanation Manager")]
+    public ExplanationManager explanationManager;
+
     // ========== PRIVATE FIELDS ===============
 
     // keep track of if the investigation question was answered
     private bool investigateAnswered = false;
     private Animator studentAnimator;
+
+    // keep track of if explanation is complete
+    private bool explanationFinished = false;
 
 
     void Start()
@@ -39,6 +45,17 @@ public class Investigate : MonoBehaviour
         {
             studentAnimator = student.GetComponent<Animator>();
         }
+
+        if (explanationManager != null)
+        {
+            explanationManager.OnExplanationComplete += HandleExplanationFinished;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (explanationManager != null)
+            explanationManager.OnExplanationComplete -= HandleExplanationFinished;
     }
 
 
@@ -82,6 +99,9 @@ public class Investigate : MonoBehaviour
         investigateYesButton.interactable = false;
         investigateNoButton.interactable = false;
 
+        // set explanationFinished to true
+        this.explanationFinished = true;
+
         EventLogger.Log(new GameEvent {
             eventTypeEnum = EventType.investigation_declined,
             studentName = student.name,
@@ -106,14 +126,7 @@ public class Investigate : MonoBehaviour
     // ============== BUTTON FUNCTIONS FOR COMPLETE REVIEW =============
     public void OnCompleteReviewClicked()
     {
-        // check whether all questions are answered; otherwise do not allow button to be clicked
-        bool q1Unanswered = (!investigateYesCheck.activeSelf) && (!investigateNoCheck.activeSelf);
-        bool q2Unanswered = (!reportYesCheck.activeSelf) && (!reportNoCheck.activeSelf);
-
-        if (q1Unanswered || q2Unanswered) return;
-
-        
-      
+        if (!AllQuestionsAnswered() || !explanationFinished) return;
 
         // notify Student script if we reported student
         if (reportYesCheck.activeSelf)
@@ -161,16 +174,24 @@ public class Investigate : MonoBehaviour
 
         if (completeZoneHoverCursor == null || completeZoneHoverHighlight == null) return;
 
-        // Check if all questions answered and can activate hover
-        if (AllQuestionsAnswered())
+        // Check if all questions answered, explanation finished, and can activate hover
+        if (AllQuestionsAnswered() && explanationFinished)
         {
-            completeZoneHoverCursor.SetDisableCursorEffect(false);
-            completeZoneHoverHighlight.SetDisable(false);
+            completeZoneHover.SetActive(true);
+
+
+            //completeZoneHoverCursor.SetDisableCursorEffect(false);
+            //completeZoneHoverHighlight.SetDisable(false);
+
+            
+
+            //completeZoneHover.GetComponent<Button>().interactable = true;
         }
         else
         {
-            completeZoneHoverCursor.SetDisableCursorEffect(true);
-            completeZoneHoverHighlight.SetDisable(true);
+            completeZoneHover.SetActive(false);
+            //completeZoneHoverCursor.SetDisableCursorEffect(true);
+            //completeZoneHoverHighlight.SetDisable(true);
         }
     }
 
@@ -195,5 +216,10 @@ public class Investigate : MonoBehaviour
         CheckIfActivateMarkCompleteHover();
     }
 
+    private void HandleExplanationFinished()
+    {
+        explanationFinished = true;
+        CheckIfActivateMarkCompleteHover();
+    }
 
 }

@@ -23,7 +23,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 210
+        value: 216.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -231,7 +231,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 210
+        value: 216.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -268,6 +268,13 @@ AnimationClip:
     messageOptions: 0
   - time: 5.2
     functionName: HideCharacterAfterAnimation
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.2
+    functionName: StopLoopSound
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
