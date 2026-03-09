@@ -7,13 +7,14 @@ function resizeUnityCanvas() {
   let width, height;
 
   if (windowAspect > targetAspect) {
-    // Window too wide → pillarbox
+    // Window too wide; pillarbox
     height = window.innerHeight;
     width = height * targetAspect;
   } else {
-    // Window too tall → letterbox
+    // Window too tall; letterbox
     width = window.innerWidth;
     height = width / targetAspect;
+    canvas.style.marginTop = ((window.innerHeight - height) / 2) + "px";
   }
 
   canvas.style.width = width + "px";

@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameEvent
 {
-    public double gameVersion = Constants.GAME_VERSION; 
+    public string gameVersion = Constants.GAME_VERSION; 
     public string subversion = GameManager.Instance?.subversion; // for A/B testing
 
     [SerializeField]
@@ -62,7 +62,7 @@ public static class EventLogger
         #if UNITY_WEBGL && !UNITY_EDITOR
 
         // Log the event to Firebase
-        FirebaseProxy.LogDocument("game_events_2", gameEvent);
+        FirebaseProxy.LogDocument("game_events_3", gameEvent);
 
         #else
 
