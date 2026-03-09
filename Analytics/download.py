@@ -6,7 +6,7 @@ import datetime
 
 # constants
 SERVICE_ACCOUNT_KEY_PATH = '/Users/gaphg/Downloads/pencils-down-player-analytics-firebase-adminsdk-fbsvc-c14df221cd.json'
-COLLECTION_NAME = 'game_events_dev' # change to 'game_events' for real data
+COLLECTION_NAME = 'game_events_2' # change to 'game_events' for real data
 
 cred = credentials.Certificate(SERVICE_ACCOUNT_KEY_PATH)
 app = firebase_admin.initialize_app(cred)
