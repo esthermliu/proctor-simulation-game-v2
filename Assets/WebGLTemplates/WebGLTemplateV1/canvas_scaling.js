@@ -14,7 +14,7 @@ function resizeUnityCanvas() {
     // Window too tall; letterbox
     width = window.innerWidth;
     height = width / targetAspect;
-    canvas.style.marginTop = ((window.innerHeight - height) / 2) + "px";
+    //canvas.style.marginTop = ((window.innerHeight - height) / 2) + "px";
   }
 
   canvas.style.width = width + "px";
