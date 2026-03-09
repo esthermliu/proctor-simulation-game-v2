@@ -14,13 +14,14 @@ public class GameManager : MonoBehaviour
 
     // Analytics data
     public string sessionId = null;
-    public string subversion = "A"; // TODO: set this based on A/B testing
+    public string subversion = "A";
 
     private void Awake()
     {
         sessionId = System.Guid.NewGuid().ToString();
         // Randomly set subversion to either "A" or "B"
-        subversion = (Random.Range(0, 2) == 0) ? "A" : "B";
+        // UPDATE IN FINAL RELEASE: always set to "A"
+        //subversion = (Random.Range(0, 2) == 0) ? "A" : "B";
         
         // Log the game start event with the session ID
         EventLogger.Log(new GameEvent
