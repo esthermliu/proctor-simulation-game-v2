@@ -4,40 +4,82 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity Web Player | {{{ PRODUCT_NAME }}}</title>
+
     #if SHOW_DIAGNOSTICS
     <link rel="stylesheet" href="<<<TemplateData/diagnostics.css>>>">
     <script src="<<<TemplateData/diagnostics.js>>>"></script>
     #endif
+
     <style>
-      /* Center the canvas and fill viewport */
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: {{{ BACKGROUND_COLOR }}};
-        overflow: hidden;
-      }
 
-      #unity-canvas {
-        display: block;
-        background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}};
-      }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: {{{ BACKGROUND_COLOR }}};
+  overflow: hidden;
+}
 
-      #if SHOW_DIAGNOSTICS
-            #unity-footer {
-            position: fixed;
-            bottom: 10px;
-            right: 0px;
-            }
-      #endif
+#unity-canvas {
+  display: block;
+  visibility: hidden;
+  background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}};
+}
+
+/* Loading bar */
+
+#unity-loading-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#unity-logo {
+  width: 154px;
+  height: 130px;
+  background: url('TemplateData/unity-logo-dark.png') no-repeat center;
+}
+
+#unity-progress-bar-empty {
+  width: 141px;
+  height: 18px;
+  margin-top: 10px;
+  background: url('TemplateData/progress-bar-empty-dark.png') no-repeat center;
+}
+
+#unity-progress-bar-full {
+  width: 0%;
+  height: 18px;
+  background: url('TemplateData/progress-bar-full-dark.png') no-repeat center;
+}
+
+#if SHOW_DIAGNOSTICS
+#unity-footer {
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+}
+#endif
+
     </style>
 </head>
+
 <body>
+
+    <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+        </div>
+    </div>
+
     <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} tabindex="-1"></canvas>
+
     #if SHOW_DIAGNOSTICS
     <div id="unity-footer">
         <img id="diagnostics-icon" src="TemplateData/webmemd-icon.png">
@@ -45,49 +87,76 @@
     #endif
 
     <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+
     <script>
-      const canvas = document.querySelector("#unity-canvas");
 
-      // Mobile viewport fix
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        const meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.head.appendChild(meta);
+const canvas = document.querySelector("#unity-canvas");
+const loadingBar = document.querySelector("#unity-loading-bar");
+const progressBarFull = document.querySelector("#unity-progress-bar-full");
 
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        canvas.style.position = "fixed";
-      }
+/* Mobile viewport fix */
 
-      createUnityInstance(canvas, {
-        arguments: [],
-        dataUrl: "Build/{{{ DATA_FILENAME }}}",
-        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+
+  const meta = document.createElement('meta');
+  meta.name = 'viewport';
+  meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+  document.head.appendChild(meta);
+
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+  canvas.style.position = "fixed";
+}
+
+createUnityInstance(canvas, {
+  arguments: [],
+  dataUrl: "Build/{{{ DATA_FILENAME }}}",
+  frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+
 #if USE_THREADS
-        workerUrl: "Build/{{{ WORKER_FILENAME }}}",
+  workerUrl: "Build/{{{ WORKER_FILENAME }}}",
 #endif
+
 #if USE_WASM
-        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+  codeUrl: "Build/{{{ CODE_FILENAME }}}",
 #endif
+
 #if SYMBOLS_FILENAME
-        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+  symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
 #endif
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
-        productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
-        productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
-      }).then((unityInstance) => {
+
+  streamingAssetsUrl: "StreamingAssets",
+  companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
+  productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
+  productVersion: {{{ JSON.stringify(PRODUCT_VERSION) }}},
+
+},
+
+(progress) => {
+  progressBarFull.style.width = (100 * progress) + "%";
+}
+
+).then((unityInstance) => {
+
+  loadingBar.style.display = "none";
+  canvas.style.visibility = "visible";
+
 #if SHOW_DIAGNOSTICS
-        document.getElementById("diagnostics-icon").onclick = () => {
-          unityDiagnostics.openDiagnosticsDiv(unityInstance.GetMetricsInfo);
-        };
+  document.getElementById("diagnostics-icon").onclick = () => {
+    unityDiagnostics.openDiagnosticsDiv(unityInstance.GetMetricsInfo);
+  };
 #endif
-      }).catch((message) => alert(message));
+
+}).catch((message) => {
+  alert(message);
+});
+
     </script>
 
-    <!-- Keep your modules -->
+    <!-- Your existing modules (unchanged) -->
+
     <script type="module" src="canvas_scaling.js"></script>
     <script type="module" src="firebase_manager.js"></script>
+
 </body>
 </html>
